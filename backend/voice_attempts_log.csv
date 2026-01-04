@@ -1,0 +1,95 @@
+timestamp,question_id,question_text,transcript,grade_level,grade_marks,coverage
+2026-01-02T12:52:44,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8
+2026-01-02T13:06:28,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8
+2026-01-02T13:07:15,Q28,What is the function of the 'Network Layer'?,it is responsible for determining the path routing and logical address ip address of the data that the data is connected to the system,PARTIAL,7,0.625
+2026-01-02T13:08:23,Q161,What is 'SRAM' (Static RAM)?,copy another error,NO_KEYWORDS_DEFINED,0,0.0
+2026-01-02T23:45:01,Q5,What is a 'Volatile Memory'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,INCORRECT,0,0.10526315789473684
+2026-01-02T23:46:06,Q104,Why is a resistor used with an LED in Arduino circuits?,to limit the current flowing through the led so that it does not burn out,PARTIAL,7,0.5882352941176471
+2026-01-03T08:14:13,Q143,What is 'Referential Integrity'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,PARTIAL,7,0.6531192801819837
+2026-01-03T08:15:20,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8004248143765508
+2026-01-03T08:16:28,Q224,What is 'Economic Feasibility'?,assessment of the coast effectiveness of the project,WEAK,3,0.441392081998152
+2026-01-03T08:21:29,Q224,What is 'Economic Feasibility'?,assessment of the coast effectiveness of the project,PARTIAL,7,0.6666666666666666
+2026-01-03T08:22:04,Q224,What is 'Economic Feasibility'?,that the region of the court there are variable is visible and accessible,INCORRECT,0,0.0
+2026-01-03T08:22:13,Q239,What is 'Variable Scope'?,that the region of the court there are variable is visible and accessible,WEAK,3,0.4444444444444444
+2026-01-03T08:23:04,Q104,Why is a resistor used with an LED in Arduino circuits?,to limit the current flowing through the led so that it does not burn out,GOOD,10,1.0
+2026-01-03T08:27:36,Q3,Define 'Information'.,thank you so much and may i give you a specific data that conveys this specific learning room in fuse school for physician making,WEAK,3,0.4444444444444444
+2026-01-03T08:29:12,Q29,What is a 'MAC Address'?,a media access control msi addresses a unique identifier assistant to an ether interface and central in msi for use and ether address,PARTIAL,7,0.6923076923076923
+2026-01-03T08:30:53,Q180,What is a 'Trojan Horse'?,malware the misless users of each crew can often disheve itself as legitimate software,PARTIAL,7,0.6
+2026-01-03T08:31:35,Q93,What is elif in Python?,short for e fails is allowed you to check multiple expressions for true and executed block of code as one of the conditions evaluates to true,GOOD,10,0.75
+2026-01-03T08:33:08,Q152,What is the function of the 'Program Counter' (PC)?,it holds the memory address of the next interaction to be fetched and executed by the cpu,GOOD,10,0.875
+2026-01-03T08:41:15,Q201,What is 'Unicode'?,i got it once again i m going to start helping i have this little one down here we don t drink misky uk ikatapun ka ko there s some spices in here too childish to eat this is the huffering this one is clumsy this kind of deprives from me like you onceusto you this is the nakagata head karinalua sure roach roach look at me are you ok is this a drum one of the drummers is flying the meters whoa the atmosphere is hot flushed in that a bit a bit touched marry going back marry marry going online holding all prosecutors all install all investigating all suspicious many of them everyone in the community,INCORRECT,0,0.0
+2026-01-03T08:48:48,Q164,What is 'BIOS' (Basic Input/Output System)?,firmware is stored on a rom chip that instantly and this hardware is hearing the boot process first,PARTIAL,7,0.6363636363636364
+2026-01-03T08:49:23,Q129,What is 'Throughput'?,the actual amount of data that is successfully opened for one place to another in a given time period,GOOD,10,0.9090909090909091
+2026-01-03T08:59:41,Q219,What is 'Referential Integrity'?,a data concept ensure that relationship between table remaining consistent for in key value must match a primary key in the parent table,GOOD,10,0.75
+2026-01-03T09:00:31,Q216,What is 'SQL Injection'?,a code injection technology used a attack data driven plegation by instant malicious discrete statements found that individualsembindive failed eas todd,PARTIAL,7,0.5714285714285714
+2026-01-03T09:01:16,Q141,What is the ALTER TABLE command used for?,it used to add delete or modify columns in exist table,GOOD,10,0.8571428571428571
+2026-01-03T09:01:39,Q153,What is the 'Accumulator' in a CPU?,it is a registered test hold the current instruction begin execute or decode,INCORRECT,0,0.2222222222222222
+2026-01-03T09:02:36,Q75,What is 'Prototyping' in SDLC?,and interactive development technique you were a permanent version of the stuff there is created to get use of feedback before full development,GOOD,10,0.7692307692307693
+2026-01-03T09:03:19,Q17,What is a 'Device Driver'?,um uh uh device drive is a computer program that operations or controls a particular type of device that is attached to a computer,GOOD,10,0.8888888888888888
+2026-01-03T09:03:49,Q157,Define 'System Bus'.,a system bus uses signal computer bus that contains the major components of computer system combining the functions of a data address and control bus,GOOD,10,0.8333333333333334
+2026-01-03T11:27:02,Q89,What is 'Indentation' in Python?,white space at the beginning of the line used to define the scope of loop functions and control structures,GOOD,10,0.75
+2026-01-03T11:30:59,Q201,What is 'Unicode'?,an international encoding is standard for use with different language and scripts by which each letter digit or symbol is assigned a unique numerical values,GOOD,10,1.0
+2026-01-03T11:37:36,Q222,What is 'Feasibility Study'?,network is off eighty,INCORRECT,0,0.0
+2026-01-03T11:38:07,Q191,What is a 'Flip-Flop'?,and don t even hesitate or try to make an issue again i just like it,INCORRECT,0,0.0
+2026-01-03T11:38:31,Q220,What is 'SDLC' (Systems Development Life Cycle)?,i m not good at it my my my self is is is not good correct,INCORRECT,0,0.0
+2026-01-03T11:38:52,Q49,What is 'White Box Testing'?,,INCORRECT,0,0.0
+2026-01-03T11:39:20,Q187,What is a 'Combinational Circuit'?,thank you for watching,INCORRECT,0,0.0
+2026-01-03T15:21:52,Q122,What is 'Sign-Magnitude' representation?,grr well oh cool,INCORRECT,0,0.0
+2026-01-03T15:22:33,Q135,What is an 'IP Address'?,alright thank you very much,INCORRECT,0,0.0
+2026-01-03T15:23:53,Q77,What is 'Parallel Implementation'?,turning board the old 10 news systems in the deep for a period to ensure the news is involved h,WEAK,3,0.4666666666666667
+2026-01-03T15:25:33,Q26,What is the 'OSI Model'?,the open system is the interaction osi only is the conceptual framework used to describe the function of an actor system divide into several areas,PARTIAL,7,0.7142857142857143
+2026-01-03T15:26:11,Q28,What is the function of the 'Network Layer'?,it is responsible for determining the path routing and logical addressing ip addressing of a data value,GOOD,10,0.8888888888888888
+2026-01-03T22:12:57,Q104,Why is a resistor used with an LED in Arduino circuits?,to limit the current flowing through the led so that it does not burn out,GOOD,10,1.0
+2026-01-03T22:13:42,Q104,Why is a resistor used with an LED in Arduino circuits?,spooling is executed or no air temp really held and executed by device program or system,INCORRECT,0,0.0
+2026-01-03T22:16:01,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-01-03T22:16:09,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-01-03T22:18:10,Q5,What is a 'Volatile Memory'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,INCORRECT,0,0.09090909090909091
+2026-01-03T22:18:34,Q224,What is 'Economic Feasibility'?,assessment of the coast effectiveness of the project,PARTIAL,7,0.6666666666666666
+2026-01-03T22:40:15,Q5,What is a 'Volatile Memory'?,volatile memory is computer storage that only maintains its data while the device took power example ram,GOOD,10,1.0
+2026-01-03T22:40:57,Q35,What is a 'Feasibility Study'?,and assessment of the practice by a prettier,INCORRECT,0,0.125
+2026-01-03T22:41:34,Q75,What is 'Prototyping' in SDLC?,and iterative development technology where a permanently version of this of ti is created to get use of feedback before full development,GOOD,10,0.7692307692307693
+2026-01-03T22:42:24,Q150,What is 'System Testing'?,testing conducts on a complete integrated system to evaluate the systems compiles with its specific require,GOOD,10,0.7777777777777778
+2026-01-03T22:43:02,Q157,Define 'System Bus'.,a system bus is a signal computer bus that connects the major component of a computer system,PARTIAL,7,0.5
+2026-01-03T22:43:38,Q191,What is a 'Flip-Flop'?,a circuit that has two stable state and can be used to store state information a single,GOOD,10,0.9166666666666666
+2026-01-03T22:44:44,Q18,What is 'Spooling'?,spooling is a process where data is temporarily held be used and executed by a device program or system common in printing,GOOD,10,1.0
+2026-01-03T23:05:30,Q7,What is 'Two's Complement'?,it is a mathematical operation by the number of numbers using the represent sign integrate integer and similarity substraction operations,PARTIAL,7,0.6363636363636364
+2026-01-03T23:05:50,Q10,Describe the function of an 'AND' gate.,and and get products higher output one only if only inputs are high,GOOD,10,0.75
+2026-01-03T23:08:53,Q73,What is '3NF' (Third Normal Form)?,the religion is in three and if it is in two and if and that s not a city of dependencies none key attributes depend only one the better very right maricky,PARTIAL,7,0.5
+2026-01-03T23:09:04,Q72,What is '2NF' (Second Normal Form)?,,INCORRECT,0,0.0
+2026-01-03T23:09:20,Q171,What is 'Polling'?,hey oh hey hey hey say hey hey so,INCORRECT,0,0.0
+2026-01-03T23:14:29,Q86,What is a 'Float' data type in Python?,ah oh at this time finalwood bruno sax impression sounds,INCORRECT,0,0.0
+2026-01-03T23:14:39,Q225,What is 'Operational Feasibility'?,,INCORRECT,0,0.0
+2026-01-03T23:15:24,Q164,What is 'BIOS' (Basic Input/Output System)?,uh family store on a room cheap that implies and test hard there during the booth process post,PARTIAL,7,0.6363636363636364
+2026-01-03T23:18:09,Q224,What is 'Economic Feasibility'?,assessment of the coast effectiveness of the project,PARTIAL,7,0.6666666666666666
+2026-01-03T23:18:43,Q5,What is a 'Volatile Memory'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,INCORRECT,0,0.09090909090909091
+2026-01-03T23:19:09,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-01-03T23:24:53,Q50,What is 'Parallel Deployment'?,i,INCORRECT,0,0.0
+2026-01-03T23:25:34,Q36,What are 'Functional Requirements'?,requirements that define specific behaviors or functions of the system that the same system should do,GOOD,10,0.8888888888888888
+2026-01-03T23:26:21,Q34,What is the 'Waterfall Model'?,it is a linear sequence designing for software development with process flows dole me art,INCORRECT,0,0.23529411764705882
+2026-01-03T23:27:03,Q22,What is 'Full-Duplex Mode'?,data can be transmitted both directions similarity example telephone conversions,GOOD,10,0.875
+2026-01-03T23:27:45,Q132,What is 'Half-Duplex' transmission?,a communication mod where data can flow in path both directions but not similarity example work and doke,GOOD,10,0.7692307692307693
+2026-01-03T23:28:22,Q166,Define 'Access Time' in memory.,a small amount of memories of computer motherboard like that then the time individual between the request for data and the delivery of data from the memory,GOOD,10,0.8571428571428571
+2026-01-03T23:28:37,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-01-03T23:29:02,Q5,What is a 'Volatile Memory'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,INCORRECT,0,0.09090909090909091
+2026-01-03T23:29:23,Q5,What is a 'Volatile Memory'?,spooling is executed or no air temp really held and executed by device program or system,INCORRECT,0,0.09090909090909091
+2026-01-03T23:36:12,Q152,What is the function of the 'Program Counter' (PC)?,,INCORRECT,0,0.0
+2026-01-03T23:36:48,Q152,What is the function of the 'Program Counter' (PC)?,,INCORRECT,0,0.0
+2026-01-03T23:37:57,Q5,What is a 'Volatile Memory'?,,INCORRECT,0,0.0
+2026-01-03T23:41:57,Q5,What is a 'Volatile Memory'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,INCORRECT,0,0.09090909090909091
+2026-01-03T23:42:36,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-01-03T23:43:00,Q143,What is 'Referential Integrity'?,a property of data state tin that all of its referring refers to our valid essential foreign key value must match a primary key value in the parent table,GOOD,10,0.8666666666666667
+2026-01-03T23:43:39,Q152,What is the function of the 'Program Counter' (PC)?,,INCORRECT,0,0.0
+2026-01-04T01:12:00,Q44,What is 'SQL' (Structured Query Language)?,,INCORRECT,0,0.0
+2026-01-04T01:12:07,Q216,What is 'SQL Injection'?,,INCORRECT,0,0.0
+2026-01-04T01:18:52,Q47,What is the 'prototype' model in SDLC?,,INCORRECT,0,0.0
+2026-01-04T01:19:48,Q44,What is 'SQL' (Structured Query Language)?,eskiver is a standard language for storing manipulating and retrieving data in database,GOOD,10,0.875
+2026-01-04T01:20:22,Q94,What does the and logical operator do?,it returns true on the if both operance or conditions are true,PARTIAL,7,0.7142857142857143
+2026-01-04T01:21:13,Q24,What is 'Guided Media'?,guided media uses physical batch auto transmit signals such as twisted bill physical cable fiber optics,GOOD,10,0.8
+2026-01-04T01:22:07,Q81,What is 'Internal CSS'?,it creates an audio list typically displayed with numbers or letters,INCORRECT,0,0.0
+2026-01-04T01:22:55,Q4,What is the 'Von Neumann Architecture'?,information is processed data that conveys a specific meaning and is useful for decision making,INCORRECT,0,0.0
+2026-01-04T01:24:10,Q248,What is a 'Half Adder'?,a combination logic circuit that at two single bit numbers and produce some and a carry,GOOD,10,0.8181818181818182
+2026-01-04T02:25:19,Q250,What is a 'Flip-Flop'?,,INCORRECT,0,0.0
+2026-01-04T11:07:07,Q142,What is a 'Candidate Key'?,the column or set of columns in the table that can uniquely identify and database with the thought referring to any other data,GOOD,10,0.8571428571428571
+2026-01-04T11:07:58,Q132,What is 'Half-Duplex' transmission?,a communication they are data can flow in both directions but not similar to the terrain,PARTIAL,7,0.6153846153846154
+2026-01-04T11:09:54,Q151,What is 'Acceptance Testing'?,formal testing with respect to use and needs requirements and business processes conducted to determine whether or not the systems at a spice the acceptance criteria,GOOD,10,0.9375
+2026-01-04T11:14:53,Q240,What is 'Type Casting'?,,INCORRECT,0,0.0
