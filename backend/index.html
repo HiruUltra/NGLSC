@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MCQ + ER/Flowchart Quiz UI</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: Arial, sans-serif; margin: 0; background:#f6f7fb; color:#111; }
+    header { background:#253858; color:#fff; padding:16px 18px; }
+    header h1 { margin:0; font-size:18px; }
+    header p { margin:6px 0 0; opacity:.85; font-size:13px; }
+    .wrap { max-width: 1100px; margin: 18px auto; padding: 0 14px 40px; }
+    .card { background:#fff; border-radius:12px; box-shadow: 0 4px 18px rgba(0,0,0,.08); padding:14px; margin-bottom:14px; }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .row > * { flex: 1; min-width: 200px; }
+    label { font-size: 13px; color:#333; display:block; margin-bottom:6px; }
+    input[type="number"] {
+      width:100%; padding:10px 10px; border:1px solid #ddd; border-radius:10px; outline:none;
+    }
+    input[type="file"] { width:100%; }
+    button {
+      background:#1b5cff; color:#fff; border:none; padding:10px 12px;
+      border-radius:10px; cursor:pointer; font-weight:600;
+    }
+    button.secondary { background:#e9eefc; color:#1b5cff; }
+    button:disabled { opacity:.55; cursor:not-allowed; }
+    .tabs { display:flex; gap:10px; margin: 10px 0 14px; }
+    .tab { padding:10px 12px; border-radius:10px; background:#e9eefc; color:#1b5cff; cursor:pointer; font-weight:700; }
+    .tab.active { background:#1b5cff; color:#fff; }
+    .muted { font-size:13px; color:#555; }
+    .q { border:1px solid #eee; border-radius:12px; padding:12px; margin:10px 0; background:#fff; }
+    .q h3 { margin: 0 0 8px; font-size:15px; }
+    .options { display:grid; gap:8px; margin-top:8px; }
+    .opt { border:1px solid #e6e6e6; border-radius:10px; padding:10px; display:flex; gap:10px; align-items:flex-start; }
+    .opt input { margin-top:3px; }
+    .qActionsRow { display:flex; gap:10px; align-items:center; margin-top:10px; flex-wrap:wrap; }
+    .qActionsRow .left { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+    .pill.ok { background:#e8fff1; color:#0b7a33; }
+    .pill.bad { background:#ffecec; color:#b00020; }
+    .pill.info { background:#eef3ff; color:#1b5cff; }
+    .resultBox { border-top:1px dashed #ddd; padding-top:10px; margin-top:10px; }
+    .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    @media (max-width: 780px){ .grid2 { grid-template-columns: 1fr; } }
+    .preview {
+      width:100%; max-height:260px; object-fit:contain; background:#fafafa;
+      border:1px solid #eee; border-radius:12px; padding:8px;
+    }
+    .toast {
+      position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+      background: #111; color: #fff; padding: 10px 12px; border-radius: 10px;
+      font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s ease;
+      max-width: 92vw;
+    }
+    .toast.show { opacity: 0.95; }
+
+    /* lock styles */
+    .locked { opacity: 0.92; }
+    .locked .opt { background:#fafafa; }
+    .opt.correct { border-color:#0b7a33; background:#e8fff1; }
+    .opt.wrongSel { border-color:#b00020; background:#ffecec; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>MCQ + ER/Flowchart Quiz UI</h1>
+
+</header>
+
+<div class="wrap">
+  <div class="tabs">
+    <div class="tab active" id="tabMcq">MCQ Quiz</div>
+    <div class="tab" id="tabEr">ER / Flowchart</div>
+  </div>
+
+  <!-- MCQ -->
+  <section id="mcqSection">
+    <div class="card">
+      <div class="row">
+        <div>
+          <label>Number of questions</label>
+          <input id="mcqN" type="number" min="1" max="100" value="10" />
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button id="loadQuizBtn">Load Quiz</button>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button class="secondary" id="clearQuizBtn">Clear</button>
+        </div>
+      </div>
+      <div class="muted">Each question can be checked individually. After check, that question is locked (no edits).</div>
+    </div>
+
+    <div class="card" id="mcqActions" style="display:none;">
+      <div class="row">
+        <div>
+          <button id="submitQuizBtn">Submit All (optional)</button>
+        </div>
+        <div>
+          <button class="secondary" id="toggleResultsBtn" disabled>Toggle Results</button>
+        </div>
+      </div>
+      <div id="mcqScoreLine" class="muted" style="margin-top:10px;"></div>
+    </div>
+
+    <div id="mcqList"></div>
+  </section>
+
+  <!-- ER -->
+  <section id="erSection" style="display:none;">
+    <div class="card">
+      <div class="row">
+        <div>
+          <label>&nbsp;</label>
+          <button id="getErQuestionBtn">Get Random ER/Flow Question</button>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button class="secondary" id="clearErBtn">Clear</button>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <div class="muted">Question ID:</div>
+        <div style="margin-top:6px;">
+          <span class="pill info" id="erQidPill">—</span>
+        </div>
+        <div class="muted" style="margin-top:10px;">Question Text:</div>
+        <div id="erQText" style="margin-top:6px;">—</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="grid2">
+        <div>
+          <label>Upload Diagram Image</label>
+          <input id="erImage" type="file" accept="image/*" />
+          <div class="muted" style="margin-top:6px;">Supported: jpg, png, etc.</div>
+
+          <div style="margin-top:10px;">
+            <button id="erSubmitBtn" disabled>Submit Diagram</button>
+          </div>
+
+          <div id="erResult" style="margin-top:12px;"></div>
+        </div>
+
+        <div>
+          <label>Preview</label>
+          <img id="erPreview" class="preview" alt="preview" />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // =========================
+  // CONFIG
+  // =========================
+  const API_BASE = "http://127.0.0.1:5000";
+  const USER_ID = null; // optional string
+
+  // =========================
+  // Helpers
+  // =========================
+  const $ = (id) => document.getElementById(id);
+
+  function apiUrl(path) {
+    const base = API_BASE.replace(/\/+$/, "");
+    return base + path;
+  }
+
+  function toast(msg) {
+    const t = $("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    setTimeout(() => t.classList.remove("show"), 2200);
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function cleanQuestionText(q) {
+    let s = String(q || "").trim();
+    for (let i = 0; i < 3; i++) {
+      const next = s.replace(/^\s*\(?\d+\)?\s*([.)-]|:)\s*/i, "");
+      if (next === s) break;
+      s = next.trim();
+    }
+    return s.replace(/\s+/g, " ").trim();
+  }
+
+  // =========================
+  // Tabs
+  // =========================
+  function showTab(which) {
+    const mcq = which === "mcq";
+    $("mcqSection").style.display = mcq ? "" : "none";
+    $("erSection").style.display = mcq ? "none" : "";
+    $("tabMcq").classList.toggle("active", mcq);
+    $("tabEr").classList.toggle("active", !mcq);
+  }
+
+  $("tabMcq").addEventListener("click", () => showTab("mcq"));
+  $("tabEr").addEventListener("click", () => showTab("er"));
+
+  // =========================
+  // MCQ (Per-question check + lock) - NO UNLOCK
+  // =========================
+  let mcqQuestions = [];
+  let mcqResults = null;        // for "submit all"
+  let showResultsPanel = true;
+
+  // per-question state: qid -> { locked: bool, result: {is_correct, selected, correct_answer} }
+  const perQ = new Map();
+
+  function getSelected(qid) {
+    const radios = document.getElementsByName("q_" + qid);
+    for (const r of radios) if (r.checked) return r.value;
+    return "";
+  }
+
+  function setRadiosDisabled(qid, disabled) {
+    const radios = document.getElementsByName("q_" + qid);
+    for (const r of radios) r.disabled = disabled;
+  }
+
+  function markOptions(qid, correctAnswer, selected) {
+    const container = document.querySelector(`.q[data-qid="${qid}"]`);
+    if (!container) return;
+    const optionLabels = container.querySelectorAll(".opt");
+
+    optionLabels.forEach(lbl => {
+      lbl.classList.remove("correct", "wrongSel");
+      const input = lbl.querySelector("input");
+      if (!input) return;
+      const val = input.value;
+
+      if (val === correctAnswer) lbl.classList.add("correct");
+      if (val === selected && selected !== correctAnswer) lbl.classList.add("wrongSel");
+    });
+  }
+
+  function renderMcq() {
+    const root = $("mcqList");
+    root.innerHTML = "";
+
+    if (!mcqQuestions.length) {
+      $("mcqActions").style.display = "none";
+      return;
+    }
+
+    $("mcqActions").style.display = "";
+    $("toggleResultsBtn").disabled = !mcqResults;
+
+    mcqQuestions.forEach((q, idx) => {
+      const qid = q.id;
+
+      const div = document.createElement("div");
+      div.className = "q";
+      div.dataset.qid = qid;
+
+      const cleanQ = cleanQuestionText(q.question);
+
+      const title = document.createElement("h3");
+      title.innerHTML = `${idx + 1}. ${escapeHtml(cleanQ)}`;
+      div.appendChild(title);
+
+      const opts = document.createElement("div");
+      opts.className = "options";
+
+      q.options.forEach((opt) => {
+        const optWrap = document.createElement("label");
+        optWrap.className = "opt";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "q_" + qid;
+        radio.value = opt;
+
+        const st = perQ.get(String(qid));
+        if (st?.result?.selected && st.result.selected === opt) radio.checked = true;
+
+        const span = document.createElement("div");
+        span.innerHTML = escapeHtml(opt);
+
+        optWrap.appendChild(radio);
+        optWrap.appendChild(span);
+        opts.appendChild(optWrap);
+      });
+
+      div.appendChild(opts);
+
+      // per-question controls
+      const actions = document.createElement("div");
+      actions.className = "qActionsRow";
+
+      const left = document.createElement("div");
+      left.className = "left";
+
+      const checkBtn = document.createElement("button");
+      checkBtn.textContent = "Check Answer";
+      checkBtn.className = "secondary";
+
+      const pill = document.createElement("span");
+      pill.className = "pill info";
+      pill.textContent = "Not checked";
+
+      left.appendChild(checkBtn);
+      left.appendChild(pill);
+
+      actions.appendChild(left);
+      div.appendChild(actions);
+
+      // result box
+      const rb = document.createElement("div");
+      rb.className = "resultBox";
+      rb.style.display = "none";
+      div.appendChild(rb);
+
+      // Apply locked state if already checked
+      const state = perQ.get(String(qid));
+      if (state?.locked) {
+        div.classList.add("locked");
+        setTimeout(() => {
+          setRadiosDisabled(qid, true);
+          checkBtn.disabled = true;
+          pill.className = "pill " + (state.result.is_correct ? "ok" : "bad");
+          pill.textContent = state.result.is_correct ? "Correct" : "Wrong";
+          rb.style.display = showResultsPanel ? "" : "none";
+          rb.innerHTML = `
+            <div class="muted">Selected:</div>
+            <div>${escapeHtml(state.result.selected || "—")}</div>
+            <div class="muted" style="margin-top:6px;">Correct Answer:</div>
+            <div><b>${escapeHtml(state.result.correct_answer || "—")}</b></div>
+          `;
+          markOptions(qid, state.result.correct_answer, state.result.selected);
+        }, 0);
+      }
+
+      // Check handler
+      checkBtn.addEventListener("click", async () => {
+        // if already locked (double safety)
+        if (perQ.get(String(qid))?.locked) return;
+
+        const selected = getSelected(qid);
+        if (!selected) return toast("Select an option first");
+
+        try {
+          toast("Checking...");
+          const payload = { answers: [{ id: qid, selected }], user_id: USER_ID };
+          const res = await fetch(apiUrl("/submit"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (!res.ok) {
+            toast("Check failed");
+            console.log(data);
+            return;
+          }
+
+          const r = (data.results || [])[0];
+          if (!r) return toast("No result");
+
+          perQ.set(String(qid), {
+            locked: true,
+            result: {
+              is_correct: !!r.is_correct,
+              selected: r.selected || "",
+              correct_answer: r.correct_answer || ""
+            }
+          });
+
+          // lock UI
+          setRadiosDisabled(qid, true);
+          checkBtn.disabled = true;
+          div.classList.add("locked");
+
+          pill.className = "pill " + (r.is_correct ? "ok" : "bad");
+          pill.textContent = r.is_correct ? "Correct" : "Wrong";
+
+          rb.style.display = showResultsPanel ? "" : "none";
+          rb.innerHTML = `
+            <div class="muted">Selected:</div>
+            <div>${escapeHtml(r.selected || "—")}</div>
+            <div class="muted" style="margin-top:6px;">Correct Answer:</div>
+            <div><b>${escapeHtml(r.correct_answer || "—")}</b></div>
+          `;
+
+          markOptions(qid, r.correct_answer, r.selected);
+          toast(r.is_correct ? "Correct ✅" : "Wrong ❌");
+        } catch (e) {
+          toast("Check error");
+          console.error(e);
+        }
+      });
+
+      root.appendChild(div);
+    });
+  }
+
+  function collectMcqAnswersAll() {
+    return mcqQuestions.map(q => ({ id: q.id, selected: getSelected(q.id) }));
+  }
+
+  $("loadQuizBtn").addEventListener("click", async () => {
+    try {
+      const n = Math.max(1, parseInt($("mcqN").value || "10", 10));
+      mcqResults = null;
+      showResultsPanel = true;
+      perQ.clear();
+
+      toast("Loading quiz...");
+      const res = await fetch(apiUrl("/quiz?n=" + encodeURIComponent(n)));
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast("Quiz load failed");
+        console.log(data);
+        return;
+      }
+
+      mcqQuestions = data.questions || [];
+      $("mcqScoreLine").textContent = "";
+      toast("Loaded " + mcqQuestions.length + " questions");
+      renderMcq();
+    } catch (e) {
+      toast("Load error");
+      console.error(e);
+    }
+  });
+
+  // optional "submit all"
+  $("submitQuizBtn").addEventListener("click", async () => {
+    try {
+      const answers = collectMcqAnswersAll();
+      if (!answers.length) return toast("No questions loaded");
+
+      toast("Submitting...");
+      const payload = { answers, user_id: USER_ID };
+
+      const res = await fetch(apiUrl("/submit"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        toast("Submit failed");
+        console.log(data);
+        return;
+      }
+
+      mcqResults = data;
+      $("toggleResultsBtn").disabled = false;
+
+      $("mcqScoreLine").innerHTML =
+        `<b>Score:</b> ${data.score} / ${data.total} &nbsp; ` +
+        `<span class="muted">(Submitted: ${new Date().toLocaleString()})</span>`;
+
+      toast("Submitted ✅");
+    } catch (e) {
+      toast("Submit error");
+      console.error(e);
+    }
+  });
+
+  $("toggleResultsBtn").addEventListener("click", () => {
+    showResultsPanel = !showResultsPanel;
+
+    document.querySelectorAll(".q").forEach(qEl => {
+      const qid = qEl.dataset.qid;
+      const st = perQ.get(String(qid));
+      const rb = qEl.querySelector(".resultBox");
+      if (!rb) return;
+      if (st?.locked) rb.style.display = showResultsPanel ? "" : "none";
+    });
+  });
+
+  $("clearQuizBtn").addEventListener("click", () => {
+    mcqQuestions = [];
+    mcqResults = null;
+    perQ.clear();
+    $("mcqScoreLine").textContent = "";
+    toast("Cleared");
+    renderMcq();
+  });
+
+  // =========================
+  // ER / Flowchart (unchanged)
+  // =========================
+  let currentErQid = "";
+
+  function setErQuestion(qid, text) {
+    currentErQid = qid || "";
+    $("erQidPill").textContent = currentErQid || "—";
+    $("erQText").textContent = text || "—";
+    $("erResult").innerHTML = "";
+    $("erSubmitBtn").disabled = !(currentErQid && $("erImage").files && $("erImage").files[0]);
+  }
+
+  $("getErQuestionBtn").addEventListener("click", async () => {
+    try {
+      toast("Getting question...");
+      const res = await fetch(apiUrl("/er/question"));
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast("Question error");
+        console.log(data);
+        return;
+      }
+
+      setErQuestion(data.question_id, data.question_text);
+      toast("Question loaded");
+    } catch (e) {
+      toast("Question error");
+      console.error(e);
+    }
+  });
+
+  $("erImage").addEventListener("change", () => {
+    const f = $("erImage").files[0];
+    if (f) $("erPreview").src = URL.createObjectURL(f);
+    else $("erPreview").removeAttribute("src");
+    $("erSubmitBtn").disabled = !(currentErQid && f);
+  });
+
+  $("erSubmitBtn").addEventListener("click", async () => {
+    try {
+      const file = $("erImage").files[0];
+      if (!currentErQid) return toast("Get a question first");
+      if (!file) return toast("Select an image first");
+
+      toast("Submitting diagram...");
+      const fd = new FormData();
+      fd.append("question_id", currentErQid);
+      fd.append("image", file);
+
+      const res = await fetch(apiUrl("/er/submit"), { method: "POST", body: fd });
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast("Submit failed");
+        console.log(data);
+        return;
+      }
+
+      const ok = !!data.is_correct;
+      const pill = ok
+        ? `<span class="pill ok">Correct</span>`
+        : `<span class="pill bad">Wrong</span>`;
+
+      $("erResult").innerHTML = `
+        <div>${pill}</div>
+        <div class="muted" style="margin-top:8px;">Predicted Class:</div>
+        <div><b>${escapeHtml(data.predicted_class || "—")}</b></div>
+        <div class="muted" style="margin-top:8px;">Confidence:</div>
+        <div><b>${(data.confidence ?? 0).toFixed(4)}</b></div>
+      `;
+
+      toast("Done ✅");
+    } catch (e) {
+      toast("Submit error");
+      console.error(e);
+    }
+  });
+
+  $("clearErBtn").addEventListener("click", () => {
+    setErQuestion("", "");
+    $("erImage").value = "";
+    $("erPreview").removeAttribute("src");
+    toast("Cleared");
+  });
+
+  // init
+  renderMcq();
+  setErQuestion("", "");
+</script>
+</body>
+</html>
