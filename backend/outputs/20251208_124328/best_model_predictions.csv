@@ -1,0 +1,986 @@
+qid,pair_text,label,question,candidate_answer,is_correct_option,pred_label,pred_is_correct
+10,11. Which of the following is correct regarding parity bits? [SEP] The parity bit for a set of bits is selected to ensure the total number of 1-bits in the set is either even or odd.,1,11. Which of the following is correct regarding parity bits?,The parity bit for a set of bits is selected to ensure the total number of 1-bits in the set is either even or odd.,True,1,True
+10,11. Which of the following is correct regarding parity bits? [SEP] The parity bit in a set of bits is adjusted after that set of bits is communicated.,0,11. Which of the following is correct regarding parity bits?,The parity bit in a set of bits is adjusted after that set of bits is communicated.,False,1,True
+10,11. Which of the following is correct regarding parity bits? [SEP] The transmission speed of a communication is increased by parity bits.,0,11. Which of the following is correct regarding parity bits?,The transmission speed of a communication is increased by parity bits.,False,0,False
+10,11. Which of the following is correct regarding parity bits? [SEP] Parity bits are added after a communication to correct errors.,0,11. Which of the following is correct regarding parity bits?,Parity bits are added after a communication to correct errors.,False,1,True
+10,11. Which of the following is correct regarding parity bits? [SEP] Encryption needed in a data transmission is provided by parity bits,0,11. Which of the following is correct regarding parity bits?,Encryption needed in a data transmission is provided by parity bits,False,0,False
+23,"24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table. [SEP] All A, B and C",1,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table.,"All A, B and C",True,0,False
+23,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table. [SEP] A only,0,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table.,A only,False,0,False
+23,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table. [SEP] A and B only,0,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table.,A and B only,False,0,False
+23,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table. [SEP] A and C only,0,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table.,A and C only,False,0,False
+23,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table. [SEP] B and C only,0,24. Which of the following are true?A  A table can have multiple candidate keys. B  A primary key is always a candidate key.C  A candidate key of one table can be used as a foreign key in another table.,B and C only,False,0,False
+25,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho? [SEP] UPDATE USER SET City = 'Maho' WHERE City = 'Mahawa';,1,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho?,UPDATE USER SET City = 'Maho' WHERE City = 'Mahawa';,True,0,False
+25,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho? [SEP] MODIFY USER SET City = 'Maho' WHERE City = 'Mahawa';,0,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho?,MODIFY USER SET City = 'Maho' WHERE City = 'Mahawa';,False,0,False
+25,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho? [SEP] MODIFY USER SET City = 'Mahawa' INTO City = 'Maho';,0,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho?,MODIFY USER SET City = 'Mahawa' INTO City = 'Maho';,False,0,False
+25,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho? [SEP] UPDATE USER SET City = 'Mahawa' INTO City = 'Maho';,0,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho?,UPDATE USER SET City = 'Mahawa' INTO City = 'Maho';,False,0,False
+25,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho? [SEP] UPDATE USER SET City = 'Maho' WHERE City != 'Mahawa';,0,26. Which of the following will change all occurrences of Mahawa in the City attribute of USER in relation to Maho?,UPDATE USER SET City = 'Maho' WHERE City != 'Mahawa';,False,0,False
+29,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS. [SEP] A only,1,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS.,A only,True,0,False
+29,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS. [SEP] A and B only,0,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS.,A and B only,False,0,False
+29,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS. [SEP] A and C only,0,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS.,A and C only,False,0,False
+29,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS. [SEP] B and C only,0,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS.,B and C only,False,0,False
+29,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS. [SEP] All,0,30. Which of the following can be used to change the look of an entire website by changing just one file? A  externalCSS. B  inline CSS. C  internal CSS.,All,False,0,False
+30,31. For what purpose is POST used in an HTML form? [SEP] to send form data to the server,1,31. For what purpose is POST used in an HTML form?,to send form data to the server,True,0,False
+30,31. For what purpose is POST used in an HTML form? [SEP] to display a confirmation message after form submission,0,31. For what purpose is POST used in an HTML form?,to display a confirmation message after form submission,False,0,False
+30,31. For what purpose is POST used in an HTML form? [SEP] to refresh the web page,0,31. For what purpose is POST used in an HTML form?,to refresh the web page,False,0,False
+30,31. For what purpose is POST used in an HTML form? [SEP] to retrieve data from the server,0,31. For what purpose is POST used in an HTML form?,to retrieve data from the server,False,0,False
+39,40. Which of the following is considered as an erroneously received byte in an even parity system? [SEP] 11011001,1,40. Which of the following is considered as an erroneously received byte in an even parity system?,11011001,True,0,False
+39,40. Which of the following is considered as an erroneously received byte in an even parity system? [SEP] 1010101,0,40. Which of the following is considered as an erroneously received byte in an even parity system?,1010101,False,0,False
+39,40. Which of the following is considered as an erroneously received byte in an even parity system? [SEP] 10010011,0,40. Which of the following is considered as an erroneously received byte in an even parity system?,10010011,False,0,False
+39,40. Which of the following is considered as an erroneously received byte in an even parity system? [SEP] 10110010,0,40. Which of the following is considered as an erroneously received byte in an even parity system?,10110010,False,0,False
+39,40. Which of the following is considered as an erroneously received byte in an even parity system? [SEP] 11010111,0,40. Which of the following is considered as an erroneously received byte in an even parity system?,11010111,False,0,False
+44,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information? [SEP] operational feasibility",1,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information?",operational feasibility,True,0,False
+44,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information? [SEP] economic feasibility",0,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information?",economic feasibility,False,0,False
+44,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information? [SEP] legal feasibility",0,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information?",legal feasibility,False,0,False
+44,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information? [SEP] schedule feasibility",0,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information?",schedule feasibility,False,0,False
+44,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information? [SEP] technical feasibility",0,"45. A company considers developing a new software application for its use. The application is expected to re-engineer internal processes, improve collaboration, and enhance productivity. However, during the feasibility analysis, it was identified that the new software may face some resistance from employees who are accustomed to the existing processes. Which component of the feasibility study would have helped to get that information?",technical feasibility,False,1,True
+55,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software. [SEP] C only,1,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software.,C only,True,0,False
+55,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software. [SEP] A only,0,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software.,A only,False,0,False
+55,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software. [SEP] B only,0,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software.,B only,False,0,False
+55,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software. [SEP] A and B only,0,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software.,A and B only,False,0,False
+55,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software. [SEP] B and C only,0,56. Which of the following statements is/are correct? A  Firmware is a computer program that is usually embedded in the volatile memory of a computer. B  A printer driver is an example for an application software. C  Linux is an example for a system software.,B and C only,False,0,False
+59,60. What is the correct binary equivalent of decimal 12.7510? [SEP] 1100.112,1,60. What is the correct binary equivalent of decimal 12.7510?,1100.112,True,0,False
+59,60. What is the correct binary equivalent of decimal 12.7510? [SEP] 1011.012,0,60. What is the correct binary equivalent of decimal 12.7510?,1011.012,False,0,False
+59,60. What is the correct binary equivalent of decimal 12.7510? [SEP] 1011.112,0,60. What is the correct binary equivalent of decimal 12.7510?,1011.112,False,0,False
+59,60. What is the correct binary equivalent of decimal 12.7510? [SEP] 1100.002,0,60. What is the correct binary equivalent of decimal 12.7510?,1100.002,False,0,False
+59,60. What is the correct binary equivalent of decimal 12.7510? [SEP] 1100.012,0,60. What is the correct binary equivalent of decimal 12.7510?,1100.012,False,0,False
+60,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits? [SEP] 11010111,1,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits?,11010111,True,0,False
+60,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits? [SEP] 101001,0,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits?,101001,False,0,False
+60,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits? [SEP] 1010110,0,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits?,1010110,False,0,False
+60,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits? [SEP] 10101001,0,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits?,10101001,False,0,False
+60,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits? [SEP] 11010110,0,61. What is the correct 2s complement binary representation of decimal 4110 using 8-bits?,11010110,False,0,False
+63,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP) [SEP] A and B only,1,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP),A and B only,True,0,False
+63,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP) [SEP] A and C only,0,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP),A and C only,False,0,False
+63,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP) [SEP] B and C only,0,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP),B and C only,False,0,False
+63,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP) [SEP] B and D only,0,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP),B and D only,False,0,False
+63,"64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP) [SEP] All A, B, C and D",0,64. Which of the following are Transport Layer protocols of the TCP/IP stack? A  Transmission Control Protocol (TCP) B  User Datagram Protocol (UDP) C  File Transfer Protocol (FTP) D  Internet Protocol (IP),"All A, B, C and D",False,0,False
+65,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both. [SEP] All A, B and C",1,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both.","All A, B and C",True,0,False
+65,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both. [SEP] A only",0,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both.",A only,False,0,False
+65,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both. [SEP] A and B only",0,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both.",A and B only,False,0,False
+65,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both. [SEP] A and C only",0,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both.",A and C only,False,0,False
+65,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both. [SEP] B and C only",0,"66. Which of the following is/are correct regarding a firewall? A  It can monitor and filter outgoing traffic from an internal network. B  It protects a network from unauthorized accesses. C  It can be a hardware, a software or a combination of both.",B and C only,False,0,False
+66,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively? [SEP] 24, 3,5",1,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively?","24, 3,5",True,0,False
+66,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively? [SEP] 24, 5, 3",0,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively?","24, 5, 3",False,0,False
+66,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively? [SEP] 24, 27, 5",0,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively?","24, 27, 5",False,0,False
+66,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively? [SEP] 27, 3,5",0,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively?","27, 3,5",False,0,False
+66,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively? [SEP] 27, 30, 2",0,"67. An organization with the assigned IP address block 193.1.1.0/24 needs to define eight subnets. Each subnet should provide for more than 25 IP addresses. Which of the following correctly lists the number of bits needed to identify the given network, the total number of bits needed to identify the subnets, and the number of bits needed to assign unique IP addresses for this requirement, respectively?","27, 30, 2",False,0,False
+67,"68. Which of the following statements is correct regarding network topologies? [SEP] In ring topology, each node is directly connected only to two of its neighbors.",1,68. Which of the following statements is correct regarding network topologies?,"In ring topology, each node is directly connected only to two of its neighbors.",True,0,False
+67,"68. Which of the following statements is correct regarding network topologies? [SEP] In bus topology, a central network hub is used to connect all nodes.",0,68. Which of the following statements is correct regarding network topologies?,"In bus topology, a central network hub is used to connect all nodes.",False,0,False
+67,"68. Which of the following statements is correct regarding network topologies? [SEP] In star topology, a linear cable is used to connect all nodes.",0,68. Which of the following statements is correct regarding network topologies?,"In star topology, a linear cable is used to connect all nodes.",False,0,False
+67,"68. Which of the following statements is correct regarding network topologies? [SEP] In ring topology, messages are sent only clockwise.",0,68. Which of the following statements is correct regarding network topologies?,"In ring topology, messages are sent only clockwise.",False,0,False
+67,"68. Which of the following statements is correct regarding network topologies? [SEP] In mesh topology, each node is always connected to one other node only.",0,68. Which of the following statements is correct regarding network topologies?,"In mesh topology, each node is always connected to one other node only.",False,0,False
+70,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement? [SEP] each page of the website must load within 4 seconds,1,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement?,each page of the website must load within 4 seconds,True,0,False
+70,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement? [SEP] the email system should allow users to attach files,0,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement?,the email system should allow users to attach files,False,0,False
+70,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement? [SEP] administrator of the E-commerce website should be able to view a list of customers,0,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement?,administrator of the E-commerce website should be able to view a list of customers,False,0,False
+70,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement? [SEP] a user of the online banking system should be able to view the last transactions,0,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement?,a user of the online banking system should be able to view the last transactions,False,0,False
+70,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement? [SEP] the ATM machine should allow users to print a receipt,0,71. Non-functional requirements specify quality attributes of a system. Which of the following is an example for a non-functional requirement?,the ATM machine should allow users to print a receipt,False,0,False
+72,73. Which of the following is correct regarding the Order relation? [SEP] The relation is in First Normal Form (1NF).,1,73. Which of the following is correct regarding the Order relation?,The relation is in First Normal Form (1NF).,True,0,False
+72,73. Which of the following is correct regarding the Order relation? [SEP] CusId attribute uniquely identifies each tuple in the relation.,0,73. Which of the following is correct regarding the Order relation?,CusId attribute uniquely identifies each tuple in the relation.,False,0,False
+72,73. Which of the following is correct regarding the Order relation? [SEP] The relation is in Second Normal Form (2NF).,0,73. Which of the following is correct regarding the Order relation?,The relation is in Second Normal Form (2NF).,False,0,False
+72,73. Which of the following is correct regarding the Order relation? [SEP] Orders of each customer are handled by a unique salesperson.,0,73. Which of the following is correct regarding the Order relation?,Orders of each customer are handled by a unique salesperson.,False,0,False
+72,73. Which of the following is correct regarding the Order relation? [SEP] The relation consists of a composite primary key.,0,73. Which of the following is correct regarding the Order relation?,The relation consists of a composite primary key.,False,0,False
+76,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency. [SEP] A and C only,1,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency.,A and C only,True,0,False
+76,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency. [SEP] A only,0,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency.,A only,False,0,False
+76,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency. [SEP] B only,0,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency.,B only,False,0,False
+76,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency. [SEP] C only,0,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency.,C only,False,0,False
+76,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency. [SEP] B and C only,0,77. Which of the following statements is/are correct? A  E-Commerce encourages to minimize physical interactions between buyers and sellers.B  The main purpose of sending a One Time Password (OTP) to a credit card holders mobile phone during an online payment is to identify the current location of the card owner. C  Bitcoin is a leading virtual currency.,B and C only,False,0,False
+78,79. Which of the following is a good example for batch processing? [SEP] payroll system,1,79. Which of the following is a good example for batch processing?,payroll system,True,0,False
+78,79. Which of the following is a good example for batch processing? [SEP] an air traffic control system,0,79. Which of the following is a good example for batch processing?,an air traffic control system,False,1,True
+78,79. Which of the following is a good example for batch processing? [SEP] driving system in a driver-less (autonomous) car,0,79. Which of the following is a good example for batch processing?,driving system in a driver-less (autonomous) car,False,0,False
+78,79. Which of the following is a good example for batch processing? [SEP] Intensive Care Unit (ICU) patient monitoring and care system,0,79. Which of the following is a good example for batch processing?,Intensive Care Unit (ICU) patient monitoring and care system,False,0,False
+78,79. Which of the following is a good example for batch processing? [SEP] nuclear plant control system,0,79. Which of the following is a good example for batch processing?,nuclear plant control system,False,0,False
+86,87. Which of the following could be used to digitally represent analog signals? [SEP] pulse code modulation,1,87. Which of the following could be used to digitally represent analog signals?,pulse code modulation,True,0,False
+86,87. Which of the following could be used to digitally represent analog signals? [SEP] synchronization,0,87. Which of the following could be used to digitally represent analog signals?,synchronization,False,0,False
+86,87. Which of the following could be used to digitally represent analog signals? [SEP] attenuation,0,87. Which of the following could be used to digitally represent analog signals?,attenuation,False,0,False
+86,87. Which of the following could be used to digitally represent analog signals? [SEP] decoding,0,87. Which of the following could be used to digitally represent analog signals?,decoding,False,0,False
+86,87. Which of the following could be used to digitally represent analog signals? [SEP] distortion,0,87. Which of the following could be used to digitally represent analog signals?,distortion,False,0,False
+88,"89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP? [SEP] B, D and E only",1,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,"B, D and E only",True,0,False
+88,"89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP? [SEP] A, B and C only",0,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,"A, B and C only",False,0,False
+88,"89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP? [SEP] A, C and E only",0,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,"A, C and E only",False,0,False
+88,"89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP? [SEP] A, D and E only",0,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,"A, D and E only",False,0,False
+88,"89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP? [SEP] B, C and D only",0,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,"B, C and D only",False,0,False
+96,97.Which of the following is incorrect about the Agile Method? [SEP] It cannot be used when the project has a fixed set of requirements.,1,97.Which of the following is incorrect about the Agile Method?,It cannot be used when the project has a fixed set of requirements.,True,1,True
+96,97.Which of the following is incorrect about the Agile Method? [SEP] It recommends a time sliced schedule for task completion.,0,97.Which of the following is incorrect about the Agile Method?,It recommends a time sliced schedule for task completion.,False,0,False
+96,97.Which of the following is incorrect about the Agile Method? [SEP] It delivers gradual builds of the working product in an iterative manner.,0,97.Which of the following is incorrect about the Agile Method?,It delivers gradual builds of the working product in an iterative manner.,False,0,False
+96,"97.Which of the following is incorrect about the Agile Method? [SEP] It facilitates stakeholders (e.g., buyer, user) to review progress and provide feedback at every phase.",0,97.Which of the following is incorrect about the Agile Method?,"It facilitates stakeholders (e.g., buyer, user) to review progress and provide feedback at every phase.",False,0,False
+96,97.Which of the following is incorrect about the Agile Method? [SEP] The product of each build is tested independently.,0,97.Which of the following is incorrect about the Agile Method?,The product of each build is tested independently.,False,0,False
+107,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively? [SEP] Both the response time and the memory management related work increase.",1,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively?",Both the response time and the memory management related work increase.,True,0,False
+107,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively? [SEP] Response time decreases while the memory management related work increases.",0,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively?",Response time decreases while the memory management related work increases.,False,0,False
+107,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively? [SEP] Response time increases while the memory management related work decreases.",0,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively?",Response time increases while the memory management related work decreases.,False,0,False
+107,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively? [SEP] Both the response time and the memory management related work decrease.",0,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively?",Both the response time and the memory management related work decrease.,False,0,False
+107,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively? [SEP] There is no change in either of them",0,"108. When the number of processes started by a user on a single-processor computer increases, what happens to the response time of each process as perceived by the user and the memory management related work of the operating system respectively?",There is no change in either of them,False,0,False
+110,"111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes. [SEP] All A, B and C",1,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes.,"All A, B and C",True,0,False
+110,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes. [SEP] A only,0,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes.,A only,False,0,False
+110,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes. [SEP] A and B only,0,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes.,A and B only,False,0,False
+110,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes. [SEP] A and C only,0,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes.,A and C only,False,0,False
+110,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes. [SEP] B and C only,0,111. Which of the following statements regarding compilers and interpreters are correct? A - A compiler transforms an entire high-level language program into its machine code. B - An interpreter converts each high-level program statement into the relevant machine code during the program run. C - Compiled codes usually run faster than interpreted codes.,B and C only,False,0,False
+120,121.The decimal number equivalent to the 1001112 is [SEP] 39,1,121.The decimal number equivalent to the 1001112 is,39,True,0,False
+120,121.The decimal number equivalent to the 1001112 is [SEP] 40,0,121.The decimal number equivalent to the 1001112 is,40,False,0,False
+120,121.The decimal number equivalent to the 1001112 is [SEP] 38,0,121.The decimal number equivalent to the 1001112 is,38,False,0,False
+120,121.The decimal number equivalent to the 1001112 is [SEP] 37,0,121.The decimal number equivalent to the 1001112 is,37,False,0,False
+120,121.The decimal number equivalent to the 1001112 is [SEP] 36,0,121.The decimal number equivalent to the 1001112 is,36,False,0,False
+136,138. What is the correct statement related to system deployment? [SEP] In parallel deployment old and new systems are used at the same time.,1,138. What is the correct statement related to system deployment?,In parallel deployment old and new systems are used at the same time.,True,0,False
+136,138. What is the correct statement related to system deployment? [SEP] Direct deployment is the most complex and the slowest form of deployment.,0,138. What is the correct statement related to system deployment?,Direct deployment is the most complex and the slowest form of deployment.,False,0,False
+136,"138. What is the correct statement related to system deployment? [SEP] In pilot deployment, all the users have the ability to use the system at the beginning.",0,138. What is the correct statement related to system deployment?,"In pilot deployment, all the users have the ability to use the system at the beginning.",False,0,False
+136,138. What is the correct statement related to system deployment? [SEP] Phased deployment do not allow users to develop skills required for new system gradually.,0,138. What is the correct statement related to system deployment?,Phased deployment do not allow users to develop skills required for new system gradually.,False,0,False
+136,138. What is the correct statement related to system deployment? [SEP] Phased deployment means the entire system is used in one location.,0,138. What is the correct statement related to system deployment?,Phased deployment means the entire system is used in one location.,False,0,False
+137,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch. [SEP] A, B and C only",1,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch.","A, B and C only",True,0,False
+137,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch. [SEP] A, B and D only",0,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch.","A, B and D only",False,0,False
+137,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch. [SEP] A, C and D only",0,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch.","A, C and D only",False,0,False
+137,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch. [SEP] B, C and D only",0,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch.","B, C and D only",False,0,False
+137,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch. [SEP] All A, B, C and D",0,"139. Consider the following statements: Which of the above statements are correct? A - A hub connects only the networked computers but a switch connects multiple devices. B - A switch manages the ports and the VLAN security settings.C - In data transmission, a hub uses bits while a switch uses frames and packets. D - The data transmission speed in a hub is higher than that in a switch.","All A, B, C and D",False,0,False
+139,141. Which of the following statements is correct? [SEP] Programs in some high-level languages are translated into a form called byte-code because such byte-codes execute faster than machine codes obtained by usual compilations.,1,141. Which of the following statements is correct?,Programs in some high-level languages are translated into a form called byte-code because such byte-codes execute faster than machine codes obtained by usual compilations.,True,0,False
+139,141. Which of the following statements is correct? [SEP] A high level language program that is translated into machine code and executed on computer X will not execute on another computer having the same processor as X.,0,141. Which of the following statements is correct?,A high level language program that is translated into machine code and executed on computer X will not execute on another computer having the same processor as X.,False,0,False
+139,141. Which of the following statements is correct? [SEP] A program in a high-level language must be first converted into assembly language code before converting into machine code.,0,141. Which of the following statements is correct?,A program in a high-level language must be first converted into assembly language code before converting into machine code.,False,0,False
+139,141. Which of the following statements is correct? [SEP] Interpreted programs run faster than compiled ones.,0,141. Which of the following statements is correct?,Interpreted programs run faster than compiled ones.,False,0,False
+139,141. Which of the following statements is correct? [SEP] Some modern processors execute programs in high-level languages without translating them into machine code.,0,141. Which of the following statements is correct?,Some modern processors execute programs in high-level languages without translating them into machine code.,False,0,False
+141,143. Which of the following describes the term telecommuting? [SEP] ability of an employee to perform duties conveniently from different geographical locations using modem technology,1,143. Which of the following describes the term telecommuting?,ability of an employee to perform duties conveniently from different geographical locations using modem technology,True,0,False
+141,143. Which of the following describes the term telecommuting? [SEP] having online meetings with people at different geographic locations,0,143. Which of the following describes the term telecommuting?,having online meetings with people at different geographic locations,False,0,False
+141,143. Which of the following describes the term telecommuting? [SEP] using ICT for community services,0,143. Which of the following describes the term telecommuting?,using ICT for community services,False,0,False
+141,143. Which of the following describes the term telecommuting? [SEP] using web-based applications to retrieve information,0,143. Which of the following describes the term telecommuting?,using web-based applications to retrieve information,False,0,False
+141,143. Which of the following describes the term telecommuting? [SEP] performing financial transactions online,0,143. Which of the following describes the term telecommuting?,performing financial transactions online,False,0,False
+158,160.The hexadecimal equivalent of binary 11101110 is: [SEP] EE,1,160.The hexadecimal equivalent of binary 11101110 is:,EE,True,0,False
+158,160.The hexadecimal equivalent of binary 11101110 is: [SEP] EF,0,160.The hexadecimal equivalent of binary 11101110 is:,EF,False,0,False
+158,160.The hexadecimal equivalent of binary 11101110 is: [SEP] ED,0,160.The hexadecimal equivalent of binary 11101110 is:,ED,False,0,False
+158,160.The hexadecimal equivalent of binary 11101110 is: [SEP] DF,0,160.The hexadecimal equivalent of binary 11101110 is:,DF,False,0,False
+158,160.The hexadecimal equivalent of binary 11101110 is: [SEP] DD,0,160.The hexadecimal equivalent of binary 11101110 is:,DD,False,0,False
+165,167.The purpose of cache memory is to: [SEP] Increase speed by storing frequently accessed data,1,167.The purpose of cache memory is to:,Increase speed by storing frequently accessed data,True,0,False
+165,167.The purpose of cache memory is to: [SEP] Store permanent data,0,167.The purpose of cache memory is to:,Store permanent data,False,0,False
+165,167.The purpose of cache memory is to: [SEP] Provide backup,0,167.The purpose of cache memory is to:,Provide backup,False,0,False
+165,167.The purpose of cache memory is to: [SEP] Connect devices,0,167.The purpose of cache memory is to:,Connect devices,False,0,False
+165,167.The purpose of cache memory is to: [SEP] Act as ROM,0,167.The purpose of cache memory is to:,Act as ROM,False,0,False
+168,169.Which storage device uses magnetic technology? [SEP] HDD,1,169.Which storage device uses magnetic technology?,HDD,True,0,False
+168,169.Which storage device uses magnetic technology? [SEP] SSD,0,169.Which storage device uses magnetic technology?,SSD,False,0,False
+168,169.Which storage device uses magnetic technology? [SEP] DVD,0,169.Which storage device uses magnetic technology?,DVD,False,0,False
+168,169.Which storage device uses magnetic technology? [SEP] CD,0,169.Which storage device uses magnetic technology?,CD,False,0,False
+168,169.Which storage device uses magnetic technology? [SEP] Pen drive,0,169.Which storage device uses magnetic technology?,Pen drive,False,0,False
+174,175.ALU stands for: [SEP] Arithmetic Logic Unit,1,175.ALU stands for:,Arithmetic Logic Unit,True,0,False
+174,175.ALU stands for: [SEP] Application Layer Unit,0,175.ALU stands for:,Application Layer Unit,False,0,False
+174,175.ALU stands for: [SEP] Analog Logic Unit,0,175.ALU stands for:,Analog Logic Unit,False,0,False
+174,175.ALU stands for: [SEP] Active Logic Utility,0,175.ALU stands for:,Active Logic Utility,False,0,False
+184,185.Which is NOT malware? [SEP] Firewall,1,185.Which is NOT malware?,Firewall,True,0,False
+184,185.Which is NOT malware? [SEP] Trojan,0,185.Which is NOT malware?,Trojan,False,0,False
+184,185.Which is NOT malware? [SEP] Worm,0,185.Which is NOT malware?,Worm,False,0,False
+184,185.Which is NOT malware? [SEP] Virus,0,185.Which is NOT malware?,Virus,False,0,False
+184,185.Which is NOT malware? [SEP] Ransomware,0,185.Which is NOT malware?,Ransomware,False,0,False
+198,200.A compiler converts: [SEP] High level ? Machine,1,200.A compiler converts:,High level ? Machine,True,0,False
+198,200.A compiler converts: [SEP] Machine ? Assembly,0,200.A compiler converts:,Machine ? Assembly,False,0,False
+198,200.A compiler converts: [SEP] CPU ? Memory,0,200.A compiler converts:,CPU ? Memory,False,0,False
+198,200.A compiler converts: [SEP] HTML ? CSS,0,200.A compiler converts:,HTML ? CSS,False,0,False
+198,200.A compiler converts: [SEP] Machine ? High level,0,200.A compiler converts:,Machine ? High level,False,0,False
+199,201.Which is NOT a loop? [SEP] switch,1,201.Which is NOT a loop?,switch,True,0,False
+199,201.Which is NOT a loop? [SEP] for,0,201.Which is NOT a loop?,for,False,0,False
+199,201.Which is NOT a loop? [SEP] while,0,201.Which is NOT a loop?,while,False,0,False
+199,201.Which is NOT a loop? [SEP] do-while,0,201.Which is NOT a loop?,do-while,False,0,False
+199,201.Which is NOT a loop? [SEP] nested loop,0,201.Which is NOT a loop?,nested loop,False,0,False
+209,211.Which is an example of system software? [SEP] Linux,1,211.Which is an example of system software?,Linux,True,0,False
+209,211.Which is an example of system software? [SEP] Browser,0,211.Which is an example of system software?,Browser,False,0,False
+209,211.Which is an example of system software? [SEP] MS Word,0,211.Which is an example of system software?,MS Word,False,0,False
+209,211.Which is an example of system software? [SEP] Photoshop,0,211.Which is an example of system software?,Photoshop,False,0,False
+209,211.Which is an example of system software? [SEP] VLC,0,211.Which is an example of system software?,VLC,False,0,False
+210,212.Which number system uses digits 07? [SEP] Octal,1,212.Which number system uses digits 07?,Octal,True,0,False
+210,212.Which number system uses digits 07? [SEP] Binary,0,212.Which number system uses digits 07?,Binary,False,0,False
+210,212.Which number system uses digits 07? [SEP] Hexadecimal,0,212.Which number system uses digits 07?,Hexadecimal,False,0,False
+210,212.Which number system uses digits 07? [SEP] Decimal,0,212.Which number system uses digits 07?,Decimal,False,0,False
+210,212.Which number system uses digits 07? [SEP] Base-12,0,212.Which number system uses digits 07?,Base-12,False,0,False
+213,215.Which is NOT a data type in SQL? [SEP] IMAGE,1,215.Which is NOT a data type in SQL?,IMAGE,True,0,False
+213,215.Which is NOT a data type in SQL? [SEP] VARCHAR,0,215.Which is NOT a data type in SQL?,VARCHAR,False,0,False
+213,215.Which is NOT a data type in SQL? [SEP] DATE,0,215.Which is NOT a data type in SQL?,DATE,False,0,False
+213,215.Which is NOT a data type in SQL? [SEP] FLOAT,0,215.Which is NOT a data type in SQL?,FLOAT,False,0,False
+213,215.Which is NOT a data type in SQL? [SEP] INT,0,215.Which is NOT a data type in SQL?,INT,False,0,False
+215,217.Which is used to protect passwords online? [SEP] Hashing,1,217.Which is used to protect passwords online?,Hashing,True,0,False
+215,217.Which is used to protect passwords online? [SEP] Sorting,0,217.Which is used to protect passwords online?,Sorting,False,0,False
+215,217.Which is used to protect passwords online? [SEP] Formatting,0,217.Which is used to protect passwords online?,Formatting,False,0,False
+215,217.Which is used to protect passwords online? [SEP] Parsing,0,217.Which is used to protect passwords online?,Parsing,False,0,False
+215,217.Which is used to protect passwords online? [SEP] Backing up,0,217.Which is used to protect passwords online?,Backing up,False,0,False
+218,220.Which is NOT a characteristic of OOP? [SEP] Compilation,1,220.Which is NOT a characteristic of OOP?,Compilation,True,0,False
+218,220.Which is NOT a characteristic of OOP? [SEP] Inheritance,0,220.Which is NOT a characteristic of OOP?,Inheritance,False,0,False
+218,220.Which is NOT a characteristic of OOP? [SEP] Encapsulation,0,220.Which is NOT a characteristic of OOP?,Encapsulation,False,0,False
+218,220.Which is NOT a characteristic of OOP? [SEP] Polymorphism,0,220.Which is NOT a characteristic of OOP?,Polymorphism,False,0,False
+218,220.Which is NOT a characteristic of OOP? [SEP] Abstraction,0,220.Which is NOT a characteristic of OOP?,Abstraction,False,0,False
+221,223.Which is NOT a cyberattack? [SEP] Encryption,1,223.Which is NOT a cyberattack?,Encryption,True,0,False
+221,223.Which is NOT a cyberattack? [SEP] Phishing,0,223.Which is NOT a cyberattack?,Phishing,False,0,False
+221,223.Which is NOT a cyberattack? [SEP] Sniffing,0,223.Which is NOT a cyberattack?,Sniffing,False,0,False
+221,223.Which is NOT a cyberattack? [SEP] DDoS,0,223.Which is NOT a cyberattack?,DDoS,False,0,False
+221,223.Which is NOT a cyberattack? [SEP] SQL injection,0,223.Which is NOT a cyberattack?,SQL injection,False,0,False
+231,233.A ring topology has: [SEP] Circular path,1,233.A ring topology has:,Circular path,True,0,False
+231,233.A ring topology has: [SEP] Hub,0,233.A ring topology has:,Hub,False,0,False
+231,233.A ring topology has: [SEP] Switch,0,233.A ring topology has:,Switch,False,0,False
+231,233.A ring topology has: [SEP] Mesh links,0,233.A ring topology has:,Mesh links,False,0,False
+231,233.A ring topology has: [SEP] Tree links,0,233.A ring topology has:,Tree links,False,0,False
+235,237.Who invented WWW? [SEP] Tim Berners-Lee,1,237.Who invented WWW?,Tim Berners-Lee,True,0,False
+235,237.Who invented WWW? [SEP] Bill Gates,0,237.Who invented WWW?,Bill Gates,False,0,False
+235,237.Who invented WWW? [SEP] Alan Turing,0,237.Who invented WWW?,Alan Turing,False,0,False
+235,237.Who invented WWW? [SEP] Linus Torvalds,0,237.Who invented WWW?,Linus Torvalds,False,0,False
+235,237.Who invented WWW? [SEP] Babbage,0,237.Who invented WWW?,Babbage,False,0,False
+237,239.IPv6 uses: [SEP] 128 bits,1,239.IPv6 uses:,128 bits,True,0,False
+237,239.IPv6 uses: [SEP] 32 bits,0,239.IPv6 uses:,32 bits,False,0,False
+237,239.IPv6 uses: [SEP] 256 bits,0,239.IPv6 uses:,256 bits,False,0,False
+237,239.IPv6 uses: [SEP] 512 bits,0,239.IPv6 uses:,512 bits,False,0,False
+247,249.GUI element: [SEP] Icon,1,249.GUI element:,Icon,True,0,False
+247,249.GUI element: [SEP] Command line,0,249.GUI element:,Command line,False,0,False
+247,249.GUI element: [SEP] Opcode,0,249.GUI element:,Opcode,False,0,False
+247,249.GUI element: [SEP] Binary,0,249.GUI element:,Binary,False,0,False
+247,249.GUI element: [SEP] ASCII,0,249.GUI element:,ASCII,False,0,False
+249,251.Which uses tags? [SEP] HTML,1,251.Which uses tags?,HTML,True,0,False
+249,251.Which uses tags? [SEP] SQL,0,251.Which uses tags?,SQL,False,0,False
+249,251.Which uses tags? [SEP] CSS,0,251.Which uses tags?,CSS,False,0,False
+249,251.Which uses tags? [SEP] Python,0,251.Which uses tags?,Python,False,0,False
+249,251.Which uses tags? [SEP] C,0,251.Which uses tags?,C,False,0,False
+254,257.Which is NOT an OS? [SEP] Java,1,257.Which is NOT an OS?,Java,True,0,False
+254,257.Which is NOT an OS? [SEP] Windows,0,257.Which is NOT an OS?,Windows,False,0,False
+254,257.Which is NOT an OS? [SEP] Linux,0,257.Which is NOT an OS?,Linux,False,0,False
+254,257.Which is NOT an OS? [SEP] Android,0,257.Which is NOT an OS?,Android,False,0,False
+254,257.Which is NOT an OS? [SEP] MacOS,0,257.Which is NOT an OS?,MacOS,False,0,False
+259,262.HTML stands for: [SEP] Hyper Text Markup Language,1,262.HTML stands for:,Hyper Text Markup Language,True,0,False
+259,262.HTML stands for: [SEP] High Transfer Markup Language,0,262.HTML stands for:,High Transfer Markup Language,False,0,False
+259,262.HTML stands for: [SEP] Hyperlink Text Machine Layout,0,262.HTML stands for:,Hyperlink Text Machine Layout,False,0,False
+259,262.HTML stands for: [SEP] Hyper Transfer Main Language,0,262.HTML stands for:,Hyper Transfer Main Language,False,0,False
+259,262.HTML stands for: [SEP] Home Text Markup List,0,262.HTML stands for:,Home Text Markup List,False,0,False
+261,264.The device that breaks a network into segments: [SEP] Bridge,1,264.The device that breaks a network into segments:,Bridge,True,0,False
+261,264.The device that breaks a network into segments: [SEP] Switch,0,264.The device that breaks a network into segments:,Switch,False,0,False
+261,264.The device that breaks a network into segments: [SEP] Hub,0,264.The device that breaks a network into segments:,Hub,False,0,False
+261,264.The device that breaks a network into segments: [SEP] Router,0,264.The device that breaks a network into segments:,Router,False,0,False
+261,264.The device that breaks a network into segments: [SEP] Modem,0,264.The device that breaks a network into segments:,Modem,False,0,False
+265,268.SQL command to add data: [SEP] INSERT,1,268.SQL command to add data:,INSERT,True,0,False
+265,268.SQL command to add data: [SEP] UPDATE,0,268.SQL command to add data:,UPDATE,False,0,False
+265,268.SQL command to add data: [SEP] ADD,0,268.SQL command to add data:,ADD,False,0,False
+265,268.SQL command to add data: [SEP] PUSH,0,268.SQL command to add data:,PUSH,False,0,False
+265,268.SQL command to add data: [SEP] MODIFY,0,268.SQL command to add data:,MODIFY,False,0,False
+266,269.Which network device filters traffic by MAC? [SEP] Switch,1,269.Which network device filters traffic by MAC?,Switch,True,0,False
+266,269.Which network device filters traffic by MAC? [SEP] Router,0,269.Which network device filters traffic by MAC?,Router,False,0,False
+266,269.Which network device filters traffic by MAC? [SEP] Hub,0,269.Which network device filters traffic by MAC?,Hub,False,0,False
+266,269.Which network device filters traffic by MAC? [SEP] Repeater,0,269.Which network device filters traffic by MAC?,Repeater,False,0,False
+266,269.Which network device filters traffic by MAC? [SEP] Modem,0,269.Which network device filters traffic by MAC?,Modem,False,0,False
+275,278.What type of addressing mode uses a constant value within the instruction? [SEP] Immediate,1,278.What type of addressing mode uses a constant value within the instruction?,Immediate,True,1,True
+275,278.What type of addressing mode uses a constant value within the instruction? [SEP] Direct,0,278.What type of addressing mode uses a constant value within the instruction?,Direct,False,0,False
+275,278.What type of addressing mode uses a constant value within the instruction? [SEP] Indirect,0,278.What type of addressing mode uses a constant value within the instruction?,Indirect,False,0,False
+275,278.What type of addressing mode uses a constant value within the instruction? [SEP] Indexed,0,278.What type of addressing mode uses a constant value within the instruction?,Indexed,False,0,False
+275,278.What type of addressing mode uses a constant value within the instruction? [SEP] Relative,0,278.What type of addressing mode uses a constant value within the instruction?,Relative,False,0,False
+281,284.Cache memory improves performance by: [SEP] Storing frequently used data,1,284.Cache memory improves performance by:,Storing frequently used data,True,1,True
+281,284.Cache memory improves performance by: [SEP] Storing all programs,0,284.Cache memory improves performance by:,Storing all programs,False,0,False
+281,284.Cache memory improves performance by: [SEP] Increasing RAM size,0,284.Cache memory improves performance by:,Increasing RAM size,False,0,False
+281,284.Cache memory improves performance by: [SEP] Reducing disk usage,0,284.Cache memory improves performance by:,Reducing disk usage,False,0,False
+281,284.Cache memory improves performance by: [SEP] Reducing CPU clock,0,284.Cache memory improves performance by:,Reducing CPU clock,False,0,False
+286,289.(101110.01)? = ? in decimal [SEP] 46.25,1,289.(101110.01)? = ? in decimal,46.25,True,0,False
+286,289.(101110.01)? = ? in decimal [SEP] 46.5,0,289.(101110.01)? = ? in decimal,46.5,False,0,False
+286,289.(101110.01)? = ? in decimal [SEP] 44.25,0,289.(101110.01)? = ? in decimal,44.25,False,0,False
+286,289.(101110.01)? = ? in decimal [SEP] 45.25,0,289.(101110.01)? = ? in decimal,45.25,False,0,False
+286,289.(101110.01)? = ? in decimal [SEP] 45.5,0,289.(101110.01)? = ? in decimal,45.5,False,0,False
+289,292.Gray code is mainly used to: [SEP] Reduce transition error,1,292.Gray code is mainly used to:,Reduce transition error,True,0,False
+289,292.Gray code is mainly used to: [SEP] Store characters,0,292.Gray code is mainly used to:,Store characters,False,0,False
+289,292.Gray code is mainly used to: [SEP] Encryption,0,292.Gray code is mainly used to:,Encryption,False,0,False
+289,292.Gray code is mainly used to: [SEP] Floating-point operations,0,292.Gray code is mainly used to:,Floating-point operations,False,0,False
+289,292.Gray code is mainly used to: [SEP] Reduce memory size,0,292.Gray code is mainly used to:,Reduce memory size,False,0,False
+290,293.How many bits are needed to represent 256 values? [SEP] 8,1,293.How many bits are needed to represent 256 values?,8,True,0,False
+290,293.How many bits are needed to represent 256 values? [SEP] 7,0,293.How many bits are needed to represent 256 values?,7,False,0,False
+290,293.How many bits are needed to represent 256 values? [SEP] 9,0,293.How many bits are needed to represent 256 values?,9,False,0,False
+290,293.How many bits are needed to represent 256 values? [SEP] 10,0,293.How many bits are needed to represent 256 values?,10,False,0,False
+290,293.How many bits are needed to represent 256 values? [SEP] 4,0,293.How many bits are needed to represent 256 values?,4,False,0,False
+292,295.Which Boolean identity states A + 1 = 1? [SEP] Domination,1,295.Which Boolean identity states A + 1 = 1?,Domination,True,0,False
+292,295.Which Boolean identity states A + 1 = 1? [SEP] Idempotent,0,295.Which Boolean identity states A + 1 = 1?,Idempotent,False,1,True
+292,295.Which Boolean identity states A + 1 = 1? [SEP] Identity,0,295.Which Boolean identity states A + 1 = 1?,Identity,False,0,False
+292,295.Which Boolean identity states A + 1 = 1? [SEP] Absorption,0,295.Which Boolean identity states A + 1 = 1?,Absorption,False,0,False
+292,295.Which Boolean identity states A + 1 = 1? [SEP] Involution,0,295.Which Boolean identity states A + 1 = 1?,Involution,False,0,False
+294,297.Virtual memory is primarily implemented through: [SEP] Paging,1,297.Virtual memory is primarily implemented through:,Paging,True,0,False
+294,297.Virtual memory is primarily implemented through: [SEP] Fragmentation,0,297.Virtual memory is primarily implemented through:,Fragmentation,False,0,False
+294,297.Virtual memory is primarily implemented through: [SEP] Spooling,0,297.Virtual memory is primarily implemented through:,Spooling,False,0,False
+294,297.Virtual memory is primarily implemented through: [SEP] Caching,0,297.Virtual memory is primarily implemented through:,Caching,False,0,False
+294,297.Virtual memory is primarily implemented through: [SEP] Deadlock prevention,0,297.Virtual memory is primarily implemented through:,Deadlock prevention,False,0,False
+298,"301.In round-robin scheduling, performance mainly depends on: [SEP] Time quantum",1,"301.In round-robin scheduling, performance mainly depends on:",Time quantum,True,1,True
+298,"301.In round-robin scheduling, performance mainly depends on: [SEP] Number of jobs",0,"301.In round-robin scheduling, performance mainly depends on:",Number of jobs,False,0,False
+298,"301.In round-robin scheduling, performance mainly depends on: [SEP] Context switch",0,"301.In round-robin scheduling, performance mainly depends on:",Context switch,False,0,False
+298,"301.In round-robin scheduling, performance mainly depends on: [SEP] Thread count",0,"301.In round-robin scheduling, performance mainly depends on:",Thread count,False,0,False
+305,308.TCP operates at which layer? [SEP] Transport,1,308.TCP operates at which layer?,Transport,True,0,False
+305,308.TCP operates at which layer? [SEP] Physical,0,308.TCP operates at which layer?,Physical,False,0,False
+305,308.TCP operates at which layer? [SEP] Network,0,308.TCP operates at which layer?,Network,False,0,False
+305,308.TCP operates at which layer? [SEP] Application,0,308.TCP operates at which layer?,Application,False,0,False
+306,309.Private IP range includes: [SEP] 192.168.0.0/16,1,309.Private IP range includes:,192.168.0.0/16,True,0,False
+306,309.Private IP range includes: [SEP] 8.8.8.8,0,309.Private IP range includes:,8.8.8.8,False,0,False
+306,309.Private IP range includes: [SEP] 1.1.1.1,0,309.Private IP range includes:,1.1.1.1,False,0,False
+306,309.Private IP range includes: [SEP] 140.32.0.0,0,309.Private IP range includes:,140.32.0.0,False,0,False
+306,309.Private IP range includes: [SEP] 210.45.0.0,0,309.Private IP range includes:,210.45.0.0,False,0,False
+307,310.A switch builds: [SEP] MAC table,1,310.A switch builds:,MAC table,True,0,False
+307,310.A switch builds: [SEP] IP table,0,310.A switch builds:,IP table,False,0,False
+307,310.A switch builds: [SEP] Routing table,0,310.A switch builds:,Routing table,False,0,False
+307,310.A switch builds: [SEP] Port table,0,310.A switch builds:,Port table,False,0,False
+307,310.A switch builds: [SEP] DNS table,0,310.A switch builds:,DNS table,False,0,False
+310,313.HTTP is: [SEP] Stateless,1,313.HTTP is:,Stateless,True,0,False
+310,313.HTTP is: [SEP] Session-based,0,313.HTTP is:,Session-based,False,0,False
+310,313.HTTP is: [SEP] Connectionless,0,313.HTTP is:,Connectionless,False,0,False
+310,313.HTTP is: [SEP] Encrypted,0,313.HTTP is:,Encrypted,False,0,False
+310,313.HTTP is: [SEP] Stateful,0,313.HTTP is:,Stateful,False,0,False
+312,315.UDP is suitable for: [SEP] Voice calls,1,315.UDP is suitable for:,Voice calls,True,0,False
+312,315.UDP is suitable for: [SEP] Banking,0,315.UDP is suitable for:,Banking,False,0,False
+312,315.UDP is suitable for: [SEP] Database sync,0,315.UDP is suitable for:,Database sync,False,0,False
+312,315.UDP is suitable for: [SEP] Email,0,315.UDP is suitable for:,Email,False,0,False
+318,321.Which is a DDL command? [SEP] CREATE,1,321.Which is a DDL command?,CREATE,True,0,False
+318,321.Which is a DDL command? [SEP] UPDATE,0,321.Which is a DDL command?,UPDATE,False,0,False
+318,321.Which is a DDL command? [SEP] INSERT,0,321.Which is a DDL command?,INSERT,False,0,False
+318,321.Which is a DDL command? [SEP] DELETE,0,321.Which is a DDL command?,DELETE,False,0,False
+318,321.Which is a DDL command? [SEP] SELECT,0,321.Which is a DDL command?,SELECT,False,0,False
+321,324.Which HTTP method is idempotent? [SEP] PUT,1,324.Which HTTP method is idempotent?,PUT,True,0,False
+321,324.Which HTTP method is idempotent? [SEP] POST,0,324.Which HTTP method is idempotent?,POST,False,0,False
+321,324.Which HTTP method is idempotent? [SEP] PATCH,0,324.Which HTTP method is idempotent?,PATCH,False,0,False
+321,324.Which HTTP method is idempotent? [SEP] CONNECT,0,324.Which HTTP method is idempotent?,CONNECT,False,0,False
+321,324.Which HTTP method is idempotent? [SEP] TRACE,0,324.Which HTTP method is idempotent?,TRACE,False,0,False
+323,326.Hashing is used for: [SEP] One-way transformation,1,326.Hashing is used for:,One-way transformation,True,0,False
+323,326.Hashing is used for: [SEP] Reversing data,0,326.Hashing is used for:,Reversing data,False,0,False
+323,326.Hashing is used for: [SEP] Compression,0,326.Hashing is used for:,Compression,False,0,False
+323,326.Hashing is used for: [SEP] Encryption,0,326.Hashing is used for:,Encryption,False,0,False
+323,326.Hashing is used for: [SEP] Parity checking,0,326.Hashing is used for:,Parity checking,False,1,True
+331,334.SSL/TLS operates at: [SEP] Transport,1,334.SSL/TLS operates at:,Transport,True,0,False
+331,334.SSL/TLS operates at: [SEP] Physical,0,334.SSL/TLS operates at:,Physical,False,0,False
+331,334.SSL/TLS operates at: [SEP] Data link,0,334.SSL/TLS operates at:,Data link,False,0,False
+331,334.SSL/TLS operates at: [SEP] Application,0,334.SSL/TLS operates at:,Application,False,0,False
+331,334.SSL/TLS operates at: [SEP] Network,0,334.SSL/TLS operates at:,Network,False,0,False
+334,337.Which binary number represents the 2s complement of 01101001? [SEP] 10011000,1,337.Which binary number represents the 2s complement of 01101001?,10011000,True,0,False
+334,337.Which binary number represents the 2s complement of 01101001? [SEP] 10010111,0,337.Which binary number represents the 2s complement of 01101001?,10010111,False,0,False
+334,337.Which binary number represents the 2s complement of 01101001? [SEP] 1101010,0,337.Which binary number represents the 2s complement of 01101001?,1101010,False,0,False
+334,337.Which binary number represents the 2s complement of 01101001? [SEP] 11101000,0,337.Which binary number represents the 2s complement of 01101001?,11101000,False,0,False
+334,337.Which binary number represents the 2s complement of 01101001? [SEP] 10010110,0,337.Which binary number represents the 2s complement of 01101001?,10010110,False,0,False
+346,349.Which data type is NOT primitive in Java? [SEP] string,1,349.Which data type is NOT primitive in Java?,string,True,0,False
+346,349.Which data type is NOT primitive in Java? [SEP] int,0,349.Which data type is NOT primitive in Java?,int,False,0,False
+346,349.Which data type is NOT primitive in Java? [SEP] float,0,349.Which data type is NOT primitive in Java?,float,False,0,False
+346,349.Which data type is NOT primitive in Java? [SEP] boolean,0,349.Which data type is NOT primitive in Java?,boolean,False,0,False
+352,355.Which network topology has the highest redundancy? [SEP] Mesh,1,355.Which network topology has the highest redundancy?,Mesh,True,0,False
+352,355.Which network topology has the highest redundancy? [SEP] Bus,0,355.Which network topology has the highest redundancy?,Bus,False,0,False
+352,355.Which network topology has the highest redundancy? [SEP] Star,0,355.Which network topology has the highest redundancy?,Star,False,0,False
+352,355.Which network topology has the highest redundancy? [SEP] Tree,0,355.Which network topology has the highest redundancy?,Tree,False,0,False
+352,355.Which network topology has the highest redundancy? [SEP] Ring,0,355.Which network topology has the highest redundancy?,Ring,False,0,False
+355,358.Which is a relational algebra operation? [SEP] Projection,1,358.Which is a relational algebra operation?,Projection,True,0,False
+355,358.Which is a relational algebra operation? [SEP] Encryption,0,358.Which is a relational algebra operation?,Encryption,False,0,False
+355,358.Which is a relational algebra operation? [SEP] Sorting,0,358.Which is a relational algebra operation?,Sorting,False,0,False
+355,358.Which is a relational algebra operation? [SEP] Updating,0,358.Which is a relational algebra operation?,Updating,False,0,False
+355,358.Which is a relational algebra operation? [SEP] Compiling,0,358.Which is a relational algebra operation?,Compiling,False,0,False
+357,360.Which device converts digital to analog signals? [SEP] Modem,1,360.Which device converts digital to analog signals?,Modem,True,0,False
+357,360.Which device converts digital to analog signals? [SEP] Hub,0,360.Which device converts digital to analog signals?,Hub,False,0,False
+357,360.Which device converts digital to analog signals? [SEP] Router,0,360.Which device converts digital to analog signals?,Router,False,0,False
+357,360.Which device converts digital to analog signals? [SEP] Repeater,0,360.Which device converts digital to analog signals?,Repeater,False,0,False
+359,363.Which OS scheduling algorithm may cause starvation? [SEP] SJF,1,363.Which OS scheduling algorithm may cause starvation?,SJF,True,0,False
+359,363.Which OS scheduling algorithm may cause starvation? [SEP] FIFO,0,363.Which OS scheduling algorithm may cause starvation?,FIFO,False,0,False
+359,363.Which OS scheduling algorithm may cause starvation? [SEP] Round Robin,0,363.Which OS scheduling algorithm may cause starvation?,Round Robin,False,0,False
+359,363.Which OS scheduling algorithm may cause starvation? [SEP] FCFS,0,363.Which OS scheduling algorithm may cause starvation?,FCFS,False,0,False
+359,363.Which OS scheduling algorithm may cause starvation? [SEP] Lottery scheduling,0,363.Which OS scheduling algorithm may cause starvation?,Lottery scheduling,False,0,False
+361,365.Which addressing mode uses the instruction operand as the actual data? [SEP] Immediate,1,365.Which addressing mode uses the instruction operand as the actual data?,Immediate,True,1,True
+361,365.Which addressing mode uses the instruction operand as the actual data? [SEP] Direct,0,365.Which addressing mode uses the instruction operand as the actual data?,Direct,False,0,False
+361,365.Which addressing mode uses the instruction operand as the actual data? [SEP] Indirect,0,365.Which addressing mode uses the instruction operand as the actual data?,Indirect,False,0,False
+361,365.Which addressing mode uses the instruction operand as the actual data? [SEP] Register,0,365.Which addressing mode uses the instruction operand as the actual data?,Register,False,0,False
+361,365.Which addressing mode uses the instruction operand as the actual data? [SEP] Indexed,0,365.Which addressing mode uses the instruction operand as the actual data?,Indexed,False,0,False
+362,366.Which is an example of non-volatile memory? [SEP] ROM,1,366.Which is an example of non-volatile memory?,ROM,True,0,False
+362,366.Which is an example of non-volatile memory? [SEP] RAM,0,366.Which is an example of non-volatile memory?,RAM,False,1,True
+362,366.Which is an example of non-volatile memory? [SEP] Cache,0,366.Which is an example of non-volatile memory?,Cache,False,0,False
+362,366.Which is an example of non-volatile memory? [SEP] Registers,0,366.Which is an example of non-volatile memory?,Registers,False,0,False
+362,366.Which is an example of non-volatile memory? [SEP] L1 Cache,0,366.Which is an example of non-volatile memory?,L1 Cache,False,0,False
+363,367.Which layer provides encryption in the OSI model? [SEP] Presentation,1,367.Which layer provides encryption in the OSI model?,Presentation,True,1,True
+363,367.Which layer provides encryption in the OSI model? [SEP] Physical,0,367.Which layer provides encryption in the OSI model?,Physical,False,0,False
+363,367.Which layer provides encryption in the OSI model? [SEP] Data Link,0,367.Which layer provides encryption in the OSI model?,Data Link,False,0,False
+363,367.Which layer provides encryption in the OSI model? [SEP] Network,0,367.Which layer provides encryption in the OSI model?,Network,False,0,False
+363,367.Which layer provides encryption in the OSI model? [SEP] Application,0,367.Which layer provides encryption in the OSI model?,Application,False,0,False
+365,369.Which of the following best describes a stored-program concept? [SEP] Instructions and data are stored in the same memory,1,369.Which of the following best describes a stored-program concept?,Instructions and data are stored in the same memory,True,0,False
+365,369.Which of the following best describes a stored-program concept? [SEP] Programs reside permanently in CPU registers,0,369.Which of the following best describes a stored-program concept?,Programs reside permanently in CPU registers,False,0,False
+365,369.Which of the following best describes a stored-program concept? [SEP] Instructions are stored only on secondary storage,0,369.Which of the following best describes a stored-program concept?,Instructions are stored only on secondary storage,False,0,False
+365,369.Which of the following best describes a stored-program concept? [SEP] Memory can hold only program instructions,0,369.Which of the following best describes a stored-program concept?,Memory can hold only program instructions,False,0,False
+370,374.Which of the following sorting algorithms has the best average-case complexity? [SEP] Merge Sort,1,374.Which of the following sorting algorithms has the best average-case complexity?,Merge Sort,True,0,False
+370,374.Which of the following sorting algorithms has the best average-case complexity? [SEP] Bubble Sort,0,374.Which of the following sorting algorithms has the best average-case complexity?,Bubble Sort,False,0,False
+370,374.Which of the following sorting algorithms has the best average-case complexity? [SEP] Selection Sort,0,374.Which of the following sorting algorithms has the best average-case complexity?,Selection Sort,False,0,False
+370,374.Which of the following sorting algorithms has the best average-case complexity? [SEP] Shell Sort,0,374.Which of the following sorting algorithms has the best average-case complexity?,Shell Sort,False,0,False
+371,375.Which system development model allows repeating phases to refine requirements? [SEP] Spiral,1,375.Which system development model allows repeating phases to refine requirements?,Spiral,True,0,False
+371,375.Which system development model allows repeating phases to refine requirements? [SEP] Waterfall,0,375.Which system development model allows repeating phases to refine requirements?,Waterfall,False,0,False
+371,375.Which system development model allows repeating phases to refine requirements? [SEP] V-Model,0,375.Which system development model allows repeating phases to refine requirements?,V-Model,False,0,False
+371,375.Which system development model allows repeating phases to refine requirements? [SEP] Prototype without iterations,0,375.Which system development model allows repeating phases to refine requirements?,Prototype without iterations,False,0,False
+371,375.Which system development model allows repeating phases to refine requirements? [SEP] RAD without user feedback,0,375.Which system development model allows repeating phases to refine requirements?,RAD without user feedback,False,0,False
+377,381.Which data structure works on FIFO? [SEP] Queue,1,381.Which data structure works on FIFO?,Queue,True,0,False
+377,381.Which data structure works on FIFO? [SEP] Stack,0,381.Which data structure works on FIFO?,Stack,False,0,False
+377,381.Which data structure works on FIFO? [SEP] Tree,0,381.Which data structure works on FIFO?,Tree,False,0,False
+377,381.Which data structure works on FIFO? [SEP] Heap,0,381.Which data structure works on FIFO?,Heap,False,0,False
+377,381.Which data structure works on FIFO? [SEP] Graph,0,381.Which data structure works on FIFO?,Graph,False,0,False
+394,398.Which device operates at OSI Layer 3? [SEP] Router,1,398.Which device operates at OSI Layer 3?,Router,True,0,False
+394,398.Which device operates at OSI Layer 3? [SEP] Hub,0,398.Which device operates at OSI Layer 3?,Hub,False,0,False
+394,398.Which device operates at OSI Layer 3? [SEP] Switch,0,398.Which device operates at OSI Layer 3?,Switch,False,0,False
+394,398.Which device operates at OSI Layer 3? [SEP] Repeater,0,398.Which device operates at OSI Layer 3?,Repeater,False,0,False
+394,398.Which device operates at OSI Layer 3? [SEP] Bridge,0,398.Which device operates at OSI Layer 3?,Bridge,False,0,False
+404,408.Thrashing occurs when: [SEP] System spends more time paging than executing,1,408.Thrashing occurs when:,System spends more time paging than executing,True,0,False
+404,408.Thrashing occurs when: [SEP] CPU overheats,0,408.Thrashing occurs when:,CPU overheats,False,0,False
+404,408.Thrashing occurs when: [SEP] Too many interrupts occur,0,408.Thrashing occurs when:,Too many interrupts occur,False,0,False
+404,408.Thrashing occurs when: [SEP] Hard disk becomes full,0,408.Thrashing occurs when:,Hard disk becomes full,False,0,False
+404,408.Thrashing occurs when: [SEP] Deadlock occurs,0,408.Thrashing occurs when:,Deadlock occurs,False,0,False
+420,"424.In software engineering, which model stresses user feedback at every stage? [SEP] Prototyping model",1,"424.In software engineering, which model stresses user feedback at every stage?",Prototyping model,True,0,False
+420,"424.In software engineering, which model stresses user feedback at every stage? [SEP] Waterfall model",0,"424.In software engineering, which model stresses user feedback at every stage?",Waterfall model,False,0,False
+420,"424.In software engineering, which model stresses user feedback at every stage? [SEP] Spiral model",0,"424.In software engineering, which model stresses user feedback at every stage?",Spiral model,False,0,False
+420,"424.In software engineering, which model stresses user feedback at every stage? [SEP] V-model",0,"424.In software engineering, which model stresses user feedback at every stage?",V-model,False,0,False
+420,"424.In software engineering, which model stresses user feedback at every stage? [SEP] Big bang model",0,"424.In software engineering, which model stresses user feedback at every stage?",Big bang model,False,0,False
+425,429.The main purpose of an operating systems kernel is: [SEP] Manage system calls,1,429.The main purpose of an operating systems kernel is:,Manage system calls,True,0,False
+425,429.The main purpose of an operating systems kernel is: [SEP] Provide device drivers,0,429.The main purpose of an operating systems kernel is:,Provide device drivers,False,0,False
+425,429.The main purpose of an operating systems kernel is: [SEP] Handle user authentication,0,429.The main purpose of an operating systems kernel is:,Handle user authentication,False,1,True
+425,429.The main purpose of an operating systems kernel is: [SEP] Perform application-level compilation,0,429.The main purpose of an operating systems kernel is:,Perform application-level compilation,False,1,True
+425,429.The main purpose of an operating systems kernel is: [SEP] Control web-based services,0,429.The main purpose of an operating systems kernel is:,Control web-based services,False,1,True
+429,433.Which is a characteristic of primary memory? [SEP] Directly accessible by CPU,1,433.Which is a characteristic of primary memory?,Directly accessible by CPU,True,0,False
+429,433.Which is a characteristic of primary memory? [SEP] Non-volatile,0,433.Which is a characteristic of primary memory?,Non-volatile,False,0,False
+429,433.Which is a characteristic of primary memory? [SEP] Slower than secondary memory,0,433.Which is a characteristic of primary memory?,Slower than secondary memory,False,0,False
+429,433.Which is a characteristic of primary memory? [SEP] Cannot be upgraded,0,433.Which is a characteristic of primary memory?,Cannot be upgraded,False,0,False
+429,433.Which is a characteristic of primary memory? [SEP] Magnetic-based storage,0,433.Which is a characteristic of primary memory?,Magnetic-based storage,False,0,False
+430,434.Which component is responsible for translation in a compiler? [SEP] Code generator,1,434.Which component is responsible for translation in a compiler?,Code generator,True,0,False
+430,434.Which component is responsible for translation in a compiler? [SEP] Semantic analyzer,0,434.Which component is responsible for translation in a compiler?,Semantic analyzer,False,0,False
+430,434.Which component is responsible for translation in a compiler? [SEP] Lexical analyzer,0,434.Which component is responsible for translation in a compiler?,Lexical analyzer,False,0,False
+430,434.Which component is responsible for translation in a compiler? [SEP] Optimizer,0,434.Which component is responsible for translation in a compiler?,Optimizer,False,0,False
+430,434.Which component is responsible for translation in a compiler? [SEP] Loader,0,434.Which component is responsible for translation in a compiler?,Loader,False,0,False
+436,"440.In object-oriented programming, encapsulation refers to: [SEP] Binding data and methods together",1,"440.In object-oriented programming, encapsulation refers to:",Binding data and methods together,True,0,False
+436,"440.In object-oriented programming, encapsulation refers to: [SEP] Inheriting properties from another class",0,"440.In object-oriented programming, encapsulation refers to:",Inheriting properties from another class,False,0,False
+436,"440.In object-oriented programming, encapsulation refers to: [SEP] Using multiple classes with same name",0,"440.In object-oriented programming, encapsulation refers to:",Using multiple classes with same name,False,0,False
+436,"440.In object-oriented programming, encapsulation refers to: [SEP] Converting objects into byte streams",0,"440.In object-oriented programming, encapsulation refers to:",Converting objects into byte streams,False,0,False
+436,"440.In object-oriented programming, encapsulation refers to: [SEP] Creating abstract functions",0,"440.In object-oriented programming, encapsulation refers to:",Creating abstract functions,False,0,False
+445,449.A stack overflow occurs when: [SEP] Recursion exceeds memory limit,1,449.A stack overflow occurs when:,Recursion exceeds memory limit,True,0,False
+445,449.A stack overflow occurs when: [SEP] Queue becomes full,0,449.A stack overflow occurs when:,Queue becomes full,False,0,False
+445,449.A stack overflow occurs when: [SEP] Hash table collision occurs,0,449.A stack overflow occurs when:,Hash table collision occurs,False,0,False
+445,449.A stack overflow occurs when: [SEP] CPU cache is corrupted,0,449.A stack overflow occurs when:,CPU cache is corrupted,False,0,False
+445,449.A stack overflow occurs when: [SEP] RAM fails,0,449.A stack overflow occurs when:,RAM fails,False,1,True
+449,453.The MAC address length is: [SEP] 48 bits,1,453.The MAC address length is:,48 bits,True,0,False
+449,453.The MAC address length is: [SEP] 32 bits,0,453.The MAC address length is:,32 bits,False,0,False
+449,453.The MAC address length is: [SEP] 64 bits,0,453.The MAC address length is:,64 bits,False,0,False
+449,453.The MAC address length is: [SEP] 128 bits,0,453.The MAC address length is:,128 bits,False,0,False
+449,453.The MAC address length is: [SEP] 20 bits,0,453.The MAC address length is:,20 bits,False,0,False
+450,"454.In RAID 5, parity is: [SEP] Distributed across all disks",1,"454.In RAID 5, parity is:",Distributed across all disks,True,0,False
+450,"454.In RAID 5, parity is: [SEP] Not used",0,"454.In RAID 5, parity is:",Not used,False,0,False
+450,"454.In RAID 5, parity is: [SEP] Stored on a dedicated disk",0,"454.In RAID 5, parity is:",Stored on a dedicated disk,False,0,False
+450,"454.In RAID 5, parity is: [SEP] Stored on the OS drive",0,"454.In RAID 5, parity is:",Stored on the OS drive,False,0,False
+450,"454.In RAID 5, parity is: [SEP] Written on SSD only",0,"454.In RAID 5, parity is:",Written on SSD only,False,0,False
+451,"455.Which of the following is TRUE about the OSI Session Layer? [SEP] It establishes, manages, and terminates communication sessions",1,455.Which of the following is TRUE about the OSI Session Layer?,"It establishes, manages, and terminates communication sessions",True,0,False
+451,455.Which of the following is TRUE about the OSI Session Layer? [SEP] It handles packet routing between networks,0,455.Which of the following is TRUE about the OSI Session Layer?,It handles packet routing between networks,False,0,False
+451,455.Which of the following is TRUE about the OSI Session Layer? [SEP] It encrypts and decrypts application data,0,455.Which of the following is TRUE about the OSI Session Layer?,It encrypts and decrypts application data,False,0,False
+451,455.Which of the following is TRUE about the OSI Session Layer? [SEP] It converts data into electrical signals,0,455.Which of the following is TRUE about the OSI Session Layer?,It converts data into electrical signals,False,0,False
+451,455.Which of the following is TRUE about the OSI Session Layer? [SEP] It determines the best physical path for data,0,455.Which of the following is TRUE about the OSI Session Layer?,It determines the best physical path for data,False,0,False
+453,457.What is the purpose of the ARP protocol? [SEP] Resolve IP addresses to MAC addresses,1,457.What is the purpose of the ARP protocol?,Resolve IP addresses to MAC addresses,True,0,False
+453,457.What is the purpose of the ARP protocol? [SEP] Translate domain names into MAC addresses,0,457.What is the purpose of the ARP protocol?,Translate domain names into MAC addresses,False,0,False
+453,457.What is the purpose of the ARP protocol? [SEP] Resolve port numbers to IP addresses,0,457.What is the purpose of the ARP protocol?,Resolve port numbers to IP addresses,False,0,False
+453,457.What is the purpose of the ARP protocol? [SEP] Resolve MAC addresses to IP addresses,0,457.What is the purpose of the ARP protocol?,Resolve MAC addresses to IP addresses,False,0,False
+453,457.What is the purpose of the ARP protocol? [SEP] Translate URLs into IP addresses,0,457.What is the purpose of the ARP protocol?,Translate URLs into IP addresses,False,0,False
+462,466.Which of the following is NOT a JavaScript data type? [SEP] Character,1,466.Which of the following is NOT a JavaScript data type?,Character,True,0,False
+462,466.Which of the following is NOT a JavaScript data type? [SEP] Number,0,466.Which of the following is NOT a JavaScript data type?,Number,False,0,False
+462,466.Which of the following is NOT a JavaScript data type? [SEP] Boolean,0,466.Which of the following is NOT a JavaScript data type?,Boolean,False,0,False
+462,466.Which of the following is NOT a JavaScript data type? [SEP] Object,0,466.Which of the following is NOT a JavaScript data type?,Object,False,0,False
+462,466.Which of the following is NOT a JavaScript data type? [SEP] Undefined,0,466.Which of the following is NOT a JavaScript data type?,Undefined,False,0,False
+477,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called: [SEP] Structural hazard",1,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called:",Structural hazard,True,0,False
+477,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called: [SEP] Interrupt hazard",0,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called:",Interrupt hazard,False,0,False
+477,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called: [SEP] Data hazard",0,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called:",Data hazard,False,0,False
+477,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called: [SEP] Control hazard",0,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called:",Control hazard,False,0,False
+477,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called: [SEP] Loop hazard",0,"481.In a pipelined processor, the hazard that occurs when two instructions require the same memory location at the same time is called:",Loop hazard,False,0,False
+478,482.Which memory management technique splits the address space into fixed-size blocks? [SEP] Paging,1,482.Which memory management technique splits the address space into fixed-size blocks?,Paging,True,0,False
+478,482.Which memory management technique splits the address space into fixed-size blocks? [SEP] Segmentation,0,482.Which memory management technique splits the address space into fixed-size blocks?,Segmentation,False,0,False
+478,482.Which memory management technique splits the address space into fixed-size blocks? [SEP] Virtual partitioning,0,482.Which memory management technique splits the address space into fixed-size blocks?,Virtual partitioning,False,0,False
+478,482.Which memory management technique splits the address space into fixed-size blocks? [SEP] Swapping,0,482.Which memory management technique splits the address space into fixed-size blocks?,Swapping,False,0,False
+478,482.Which memory management technique splits the address space into fixed-size blocks? [SEP] Dynamic relocation,0,482.Which memory management technique splits the address space into fixed-size blocks?,Dynamic relocation,False,0,False
+482,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as: [SEP] Hypervisor",1,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as:",Hypervisor,True,1,True
+482,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as: [SEP] Loader",0,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as:",Loader,False,1,True
+482,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as: [SEP] Emulator",0,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as:",Emulator,False,1,True
+482,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as: [SEP] Compiler",0,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as:",Compiler,False,1,True
+482,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as: [SEP] Supervisor",0,"486.In virtualization, the software that emulates hardware to allow multiple OSs to run simultaneously is known as:",Supervisor,False,1,True
+485,489.Which of the following best describes the role of the Control Unit in a microprocessor? [SEP] Converts machine instructions into micro-operations,1,489.Which of the following best describes the role of the Control Unit in a microprocessor?,Converts machine instructions into micro-operations,True,0,False
+485,489.Which of the following best describes the role of the Control Unit in a microprocessor? [SEP] Performs integer arithmetic operations,0,489.Which of the following best describes the role of the Control Unit in a microprocessor?,Performs integer arithmetic operations,False,0,False
+485,489.Which of the following best describes the role of the Control Unit in a microprocessor? [SEP] Stores frequently executed instructions,0,489.Which of the following best describes the role of the Control Unit in a microprocessor?,Stores frequently executed instructions,False,1,True
+485,489.Which of the following best describes the role of the Control Unit in a microprocessor? [SEP] Executes floating-point operations,0,489.Which of the following best describes the role of the Control Unit in a microprocessor?,Executes floating-point operations,False,0,False
+485,489.Which of the following best describes the role of the Control Unit in a microprocessor? [SEP] Provides a buffer between CPU and I/O devices,0,489.Which of the following best describes the role of the Control Unit in a microprocessor?,Provides a buffer between CPU and I/O devices,False,0,False
+486,490.The performance of a multi-core processor improves mainly because [SEP] instructions can be executed in true parallelism,1,490.The performance of a multi-core processor improves mainly because,instructions can be executed in true parallelism,True,0,False
+486,490.The performance of a multi-core processor improves mainly because [SEP] each core has a separate BIOS,0,490.The performance of a multi-core processor improves mainly because,each core has a separate BIOS,False,0,False
+486,490.The performance of a multi-core processor improves mainly because [SEP] each core increases cache capacity exponentially,0,490.The performance of a multi-core processor improves mainly because,each core increases cache capacity exponentially,False,0,False
+486,490.The performance of a multi-core processor improves mainly because [SEP] virtual memory is eliminated,0,490.The performance of a multi-core processor improves mainly because,virtual memory is eliminated,False,0,False
+486,490.The performance of a multi-core processor improves mainly because [SEP] system clock frequency doubles automatically,0,490.The performance of a multi-core processor improves mainly because,system clock frequency doubles automatically,False,0,False
+501,505.Which generation used transistors? [SEP] 2nd,1,505.Which generation used transistors?,2nd,True,0,False
+501,505.Which generation used transistors? [SEP] 1st,0,505.Which generation used transistors?,1st,False,0,False
+501,505.Which generation used transistors? [SEP] 3rd,0,505.Which generation used transistors?,3rd,False,0,False
+501,505.Which generation used transistors? [SEP] 4th,0,505.Which generation used transistors?,4th,False,0,False
+501,505.Which generation used transistors? [SEP] 7th,0,505.Which generation used transistors?,7th,False,0,False
+514,518.Which tag embeds audio? [SEP] <audio>,1,518.Which tag embeds audio?,<audio>,True,0,False
+514,518.Which tag embeds audio? [SEP] <sound>,0,518.Which tag embeds audio?,<sound>,False,0,False
+514,518.Which tag embeds audio? [SEP] <music>,0,518.Which tag embeds audio?,<music>,False,0,False
+514,518.Which tag embeds audio? [SEP] <mp3>,0,518.Which tag embeds audio?,<mp3>,False,0,False
+514,518.Which tag embeds audio? [SEP] <media>,0,518.Which tag embeds audio?,<media>,False,0,False
+518,522.SMTP is used for: [SEP] Email transfer,1,522.SMTP is used for:,Email transfer,True,0,False
+518,522.SMTP is used for: [SEP] File upload,0,522.SMTP is used for:,File upload,False,1,True
+518,522.SMTP is used for: [SEP] Streaming,0,522.SMTP is used for:,Streaming,False,0,False
+518,522.SMTP is used for: [SEP] Encryption,0,522.SMTP is used for:,Encryption,False,0,False
+518,522.SMTP is used for: [SEP] Web browsing,0,522.SMTP is used for:,Web browsing,False,0,False
+519,523.Which is NOT an e-business disadvantage? [SEP] High accessibility,1,523.Which is NOT an e-business disadvantage?,High accessibility,True,0,False
+519,523.Which is NOT an e-business disadvantage? [SEP] Security issues,0,523.Which is NOT an e-business disadvantage?,Security issues,False,0,False
+519,523.Which is NOT an e-business disadvantage? [SEP] Quality concerns,0,523.Which is NOT an e-business disadvantage?,Quality concerns,False,0,False
+519,523.Which is NOT an e-business disadvantage? [SEP] Slow delivery,0,523.Which is NOT an e-business disadvantage?,Slow delivery,False,0,False
+519,523.Which is NOT an e-business disadvantage? [SEP] Trust issues,0,523.Which is NOT an e-business disadvantage?,Trust issues,False,0,False
+523,527.Which is required for hosting a website? [SEP] Web server,1,527.Which is required for hosting a website?,Web server,True,0,False
+523,527.Which is required for hosting a website? [SEP] Router,0,527.Which is required for hosting a website?,Router,False,0,False
+523,527.Which is required for hosting a website? [SEP] Search engine,0,527.Which is required for hosting a website?,Search engine,False,0,False
+523,527.Which is required for hosting a website? [SEP] Spreadsheet,0,527.Which is required for hosting a website?,Spreadsheet,False,1,True
+523,527.Which is required for hosting a website? [SEP] Compiler,0,527.Which is required for hosting a website?,Compiler,False,0,False
+525,529.Which protocol logs in to a remote computer? [SEP] telnet,1,529.Which protocol logs in to a remote computer?,telnet,True,0,False
+525,529.Which protocol logs in to a remote computer? [SEP] ping,0,529.Which protocol logs in to a remote computer?,ping,False,0,False
+525,529.Which protocol logs in to a remote computer? [SEP] ftp,0,529.Which protocol logs in to a remote computer?,ftp,False,0,False
+525,529.Which protocol logs in to a remote computer? [SEP] tracert,0,529.Which protocol logs in to a remote computer?,tracert,False,0,False
+525,529.Which protocol logs in to a remote computer? [SEP] ipconfig,0,529.Which protocol logs in to a remote computer?,ipconfig,False,0,False
+526,530.The main purpose of a DFD is to show: [SEP] Data movement,1,530.The main purpose of a DFD is to show:,Data movement,True,0,False
+526,530.The main purpose of a DFD is to show: [SEP] Tables,0,530.The main purpose of a DFD is to show:,Tables,False,0,False
+526,530.The main purpose of a DFD is to show: [SEP] ER relationships,0,530.The main purpose of a DFD is to show:,ER relationships,False,0,False
+526,530.The main purpose of a DFD is to show: [SEP] Hardware,0,530.The main purpose of a DFD is to show:,Hardware,False,0,False
+526,530.The main purpose of a DFD is to show: [SEP] Code,0,530.The main purpose of a DFD is to show:,Code,False,0,False
+531,"535.In Python, the output of len(""ICT"") is: [SEP] 3",1,"535.In Python, the output of len(""ICT"") is:",3,True,0,False
+531,"535.In Python, the output of len(""ICT"") is: [SEP] 2",0,"535.In Python, the output of len(""ICT"") is:",2,False,0,False
+531,"535.In Python, the output of len(""ICT"") is: [SEP] 4",0,"535.In Python, the output of len(""ICT"") is:",4,False,0,False
+531,"535.In Python, the output of len(""ICT"") is: [SEP] 5",0,"535.In Python, the output of len(""ICT"") is:",5,False,0,False
+531,"535.In Python, the output of len(""ICT"") is: [SEP] Error",0,"535.In Python, the output of len(""ICT"") is:",Error,False,0,False
+532,536.The OSI layer that ensures end-to-end delivery is: [SEP] Transport,1,536.The OSI layer that ensures end-to-end delivery is:,Transport,True,0,False
+532,536.The OSI layer that ensures end-to-end delivery is: [SEP] Physical,0,536.The OSI layer that ensures end-to-end delivery is:,Physical,False,0,False
+532,536.The OSI layer that ensures end-to-end delivery is: [SEP] Data link,0,536.The OSI layer that ensures end-to-end delivery is:,Data link,False,0,False
+532,536.The OSI layer that ensures end-to-end delivery is: [SEP] Network,0,536.The OSI layer that ensures end-to-end delivery is:,Network,False,0,False
+532,536.The OSI layer that ensures end-to-end delivery is: [SEP] Application,0,536.The OSI layer that ensures end-to-end delivery is:,Application,False,0,False
+545,549.A modem converts: [SEP] Analog ? Digital,1,549.A modem converts:,Analog ? Digital,True,0,False
+545,549.A modem converts: [SEP] AC ? DC,0,549.A modem converts:,AC ? DC,False,0,False
+545,549.A modem converts: [SEP] Binary ? Hex,0,549.A modem converts:,Binary ? Hex,False,0,False
+545,549.A modem converts: [SEP] ext ? Audio,0,549.A modem converts:,ext ? Audio,False,0,False
+545,549.A modem converts: [SEP] Wi-Fi ? Bluetooth,0,549.A modem converts:,Wi-Fi ? Bluetooth,False,0,False
+549,553.Which of the following is a LAN technology? [SEP] Ethernet,1,553.Which of the following is a LAN technology?,Ethernet,True,0,False
+549,553.Which of the following is a LAN technology? [SEP] GSM,0,553.Which of the following is a LAN technology?,GSM,False,0,False
+549,553.Which of the following is a LAN technology? [SEP] CDMA,0,553.Which of the following is a LAN technology?,CDMA,False,0,False
+549,553.Which of the following is a LAN technology? [SEP] Bluetooth,0,553.Which of the following is a LAN technology?,Bluetooth,False,0,False
+549,553.Which of the following is a LAN technology? [SEP] Satellite,0,553.Which of the following is a LAN technology?,Satellite,False,0,False
+551,555.CAPTCHA is used for: [SEP] Preventing bots,1,555.CAPTCHA is used for:,Preventing bots,True,0,False
+551,555.CAPTCHA is used for: [SEP] Making forms,0,555.CAPTCHA is used for:,Making forms,False,0,False
+551,555.CAPTCHA is used for: [SEP] Speeding websites,0,555.CAPTCHA is used for:,Speeding websites,False,0,False
+551,555.CAPTCHA is used for: [SEP] Data mining,0,555.CAPTCHA is used for:,Data mining,False,0,False
+551,555.CAPTCHA is used for: [SEP] Encryption,0,555.CAPTCHA is used for:,Encryption,False,0,False
+552,556.Which command shows network configuration? [SEP] ipconfig,1,556.Which command shows network configuration?,ipconfig,True,0,False
+552,556.Which command shows network configuration? [SEP] ping,0,556.Which command shows network configuration?,ping,False,0,False
+552,556.Which command shows network configuration? [SEP] tracert,0,556.Which command shows network configuration?,tracert,False,0,False
+552,556.Which command shows network configuration? [SEP] mkdir,0,556.Which command shows network configuration?,mkdir,False,0,False
+552,556.Which command shows network configuration? [SEP] ftp,0,556.Which command shows network configuration?,ftp,False,0,False
+554,558.A protocol is: [SEP] A set of communication rules,1,558.A protocol is:,A set of communication rules,True,0,False
+554,558.A protocol is: [SEP] Hardware,0,558.A protocol is:,Hardware,False,0,False
+554,558.A protocol is: [SEP] Website,0,558.A protocol is:,Website,False,0,False
+554,558.A protocol is: [SEP] Software license,0,558.A protocol is:,Software license,False,0,False
+554,558.A protocol is: [SEP] Encryption type,0,558.A protocol is:,Encryption type,False,0,False
+558,562.A Python for loop works with: [SEP] Counters and sequences,1,562.A Python for loop works with:,Counters and sequences,True,0,False
+558,562.A Python for loop works with: [SEP] Integers only,0,562.A Python for loop works with:,Integers only,False,0,False
+558,562.A Python for loop works with: [SEP] Conditions,0,562.A Python for loop works with:,Conditions,False,0,False
+558,562.A Python for loop works with: [SEP] Decisions,0,562.A Python for loop works with:,Decisions,False,0,False
+558,562.A Python for loop works with: [SEP] Strings only,0,562.A Python for loop works with:,Strings only,False,0,False
+567,572.A computer virus is: [SEP] Program that copies itself,1,572.A computer virus is:,Program that copies itself,True,0,False
+567,572.A computer virus is: [SEP] Hardware damage,0,572.A computer virus is:,Hardware damage,False,0,False
+567,572.A computer virus is: [SEP] A network cable,0,572.A computer virus is:,A network cable,False,0,False
+567,572.A computer virus is: [SEP] System memory,0,572.A computer virus is:,System memory,False,0,False
+567,572.A computer virus is: [SEP] A protocol,0,572.A computer virus is:,A protocol,False,0,False
+568,573.Antivirus software is a type of: [SEP] Utility software,1,573.Antivirus software is a type of:,Utility software,True,0,False
+568,573.Antivirus software is a type of: [SEP] System software,0,573.Antivirus software is a type of:,System software,False,0,False
+568,573.Antivirus software is a type of: [SEP] Application software,0,573.Antivirus software is a type of:,Application software,False,1,True
+568,573.Antivirus software is a type of: [SEP] Game software,0,573.Antivirus software is a type of:,Game software,False,0,False
+568,573.Antivirus software is a type of: [SEP] Device driver,0,573.Antivirus software is a type of:,Device driver,False,0,False
+575,580.A NOT gate output is: [SEP] Opposite of input,1,580.A NOT gate output is:,Opposite of input,True,1,True
+575,580.A NOT gate output is: [SEP] Always 1,0,580.A NOT gate output is:,Always 1,False,0,False
+575,580.A NOT gate output is: [SEP] Always 0,0,580.A NOT gate output is:,Always 0,False,0,False
+575,580.A NOT gate output is: [SEP] Same as input,0,580.A NOT gate output is:,Same as input,False,1,True
+575,580.A NOT gate output is: [SEP] Undefined,0,580.A NOT gate output is:,Undefined,False,0,False
+580,585.The default subnet mask for Class C is: [SEP] 255.255.255.0,1,585.The default subnet mask for Class C is:,255.255.255.0,True,0,False
+580,585.The default subnet mask for Class C is: [SEP] 255.0.0.0,0,585.The default subnet mask for Class C is:,255.0.0.0,False,0,False
+580,585.The default subnet mask for Class C is: [SEP] 255.255.0.0,0,585.The default subnet mask for Class C is:,255.255.0.0,False,0,False
+580,585.The default subnet mask for Class C is: [SEP] 255.255.255.255,0,585.The default subnet mask for Class C is:,255.255.255.255,False,0,False
+580,585.The default subnet mask for Class C is: [SEP] 240.0.0.0,0,585.The default subnet mask for Class C is:,240.0.0.0,False,0,False
+581,586.A URL contains: [SEP] Protocol + domain + path,1,586.A URL contains:,Protocol + domain + path,True,0,False
+581,586.A URL contains: [SEP] Only domain,0,586.A URL contains:,Only domain,False,0,False
+581,586.A URL contains: [SEP] Only IP,0,586.A URL contains:,Only IP,False,0,False
+581,586.A URL contains: [SEP] Port only,0,586.A URL contains:,Port only,False,0,False
+581,586.A URL contains: [SEP] Username only,0,586.A URL contains:,Username only,False,0,False
+583,588.The hexadecimal value of binary 1101 0110 is: [SEP] D6,1,588.The hexadecimal value of binary 1101 0110 is:,D6,True,0,False
+583,588.The hexadecimal value of binary 1101 0110 is: [SEP] C5,0,588.The hexadecimal value of binary 1101 0110 is:,C5,False,0,False
+583,588.The hexadecimal value of binary 1101 0110 is: [SEP] B2,0,588.The hexadecimal value of binary 1101 0110 is:,B2,False,0,False
+583,588.The hexadecimal value of binary 1101 0110 is: [SEP] 6D,0,588.The hexadecimal value of binary 1101 0110 is:,6D,False,0,False
+583,588.The hexadecimal value of binary 1101 0110 is: [SEP] A7,0,588.The hexadecimal value of binary 1101 0110 is:,A7,False,0,False
+589,594.A Python function is defined using: [SEP] def,1,594.A Python function is defined using:,def,True,0,False
+589,594.A Python function is defined using: [SEP] fun,0,594.A Python function is defined using:,fun,False,0,False
+589,594.A Python function is defined using: [SEP] define,0,594.A Python function is defined using:,define,False,0,False
+589,594.A Python function is defined using: [SEP] fn,0,594.A Python function is defined using:,fn,False,0,False
+589,594.A Python function is defined using: [SEP] function,0,594.A Python function is defined using:,function,False,0,False
+591,596.ROM is mainly used to store: [SEP] BIOS,1,596.ROM is mainly used to store:,BIOS,True,0,False
+591,596.ROM is mainly used to store: [SEP] Temporary data,0,596.ROM is mainly used to store:,Temporary data,False,0,False
+591,596.ROM is mainly used to store: [SEP] User files,0,596.ROM is mainly used to store:,User files,False,0,False
+591,596.ROM is mainly used to store: [SEP] Pictures,0,596.ROM is mainly used to store:,Pictures,False,0,False
+591,596.ROM is mainly used to store: [SEP] Application software,0,596.ROM is mainly used to store:,Application software,False,1,True
+593,598.A compiler translates: [SEP] Program entirely,1,598.A compiler translates:,Program entirely,True,0,False
+593,598.A compiler translates: [SEP] Line by line,0,598.A compiler translates:,Line by line,False,0,False
+593,598.A compiler translates: [SEP] SQL queries,0,598.A compiler translates:,SQL queries,False,0,False
+593,598.A compiler translates: [SEP] Machine code to high-level,0,598.A compiler translates:,Machine code to high-level,False,0,False
+593,598.A compiler translates: [SEP] Only HTML,0,598.A compiler translates:,Only HTML,False,0,False
+597,602.Which register stores the address of the next instruction? [SEP] PC,1,602.Which register stores the address of the next instruction?,PC,True,1,True
+597,602.Which register stores the address of the next instruction? [SEP] IR,0,602.Which register stores the address of the next instruction?,IR,False,0,False
+597,602.Which register stores the address of the next instruction? [SEP] MAR,0,602.Which register stores the address of the next instruction?,MAR,False,0,False
+597,602.Which register stores the address of the next instruction? [SEP] MDR,0,602.Which register stores the address of the next instruction?,MDR,False,0,False
+597,602.Which register stores the address of the next instruction? [SEP] AC,0,602.Which register stores the address of the next instruction?,AC,False,0,False
+598,603.Laser printers use: [SEP] Toner,1,603.Laser printers use:,Toner,True,0,False
+598,603.Laser printers use: [SEP] Ink cartridges,0,603.Laser printers use:,Ink cartridges,False,0,False
+598,603.Laser printers use: [SEP] Heat to burn images,0,603.Laser printers use:,Heat to burn images,False,0,False
+598,603.Laser printers use: [SEP] Light pen,0,603.Laser printers use:,Light pen,False,0,False
+598,603.Laser printers use: [SEP] Dot impact,0,603.Laser printers use:,Dot impact,False,0,False
+601,606.Which of the following is a primary key property? [SEP] Must be unique,1,606.Which of the following is a primary key property?,Must be unique,True,0,False
+601,606.Which of the following is a primary key property? [SEP] Can be NULL,0,606.Which of the following is a primary key property?,Can be NULL,False,0,False
+601,606.Which of the following is a primary key property? [SEP] Must be multi-valued,0,606.Which of the following is a primary key property?,Must be multi-valued,False,0,False
+601,606.Which of the following is a primary key property? [SEP] Must contain text only,0,606.Which of the following is a primary key property?,Must contain text only,False,0,False
+601,606.Which of the following is a primary key property? [SEP] Must be foreign key,0,606.Which of the following is a primary key property?,Must be foreign key,False,0,False
+604,609.A bar code reader is an example of: [SEP] Input,1,609.A bar code reader is an example of:,Input,True,0,False
+604,609.A bar code reader is an example of: [SEP] Output,0,609.A bar code reader is an example of:,Output,False,0,False
+604,609.A bar code reader is an example of: [SEP] Processing,0,609.A bar code reader is an example of:,Processing,False,0,False
+604,609.A bar code reader is an example of: [SEP] Storage,0,609.A bar code reader is an example of:,Storage,False,0,False
+604,609.A bar code reader is an example of: [SEP] Memory,0,609.A bar code reader is an example of:,Memory,False,0,False
+617,"622.The OS kernel manages: [SEP] RAM, processes, hardware",1,622.The OS kernel manages:,"RAM, processes, hardware",True,0,False
+617,622.The OS kernel manages: [SEP] Internet,0,622.The OS kernel manages:,Internet,False,1,True
+617,622.The OS kernel manages: [SEP] Pictures,0,622.The OS kernel manages:,Pictures,False,0,False
+617,622.The OS kernel manages: [SEP] HTML files,0,622.The OS kernel manages:,HTML files,False,1,True
+617,622.The OS kernel manages: [SEP] Programs only,0,622.The OS kernel manages:,Programs only,False,0,False
+620,625.The purpose of a flowchart is to: [SEP] Show program logic,1,625.The purpose of a flowchart is to:,Show program logic,True,0,False
+620,625.The purpose of a flowchart is to: [SEP] Write codes,0,625.The purpose of a flowchart is to:,Write codes,False,0,False
+620,625.The purpose of a flowchart is to: [SEP] Test software,0,625.The purpose of a flowchart is to:,Test software,False,0,False
+620,625.The purpose of a flowchart is to: [SEP] Create tables,0,625.The purpose of a flowchart is to:,Create tables,False,0,False
+620,625.The purpose of a flowchart is to: [SEP] Format text,0,625.The purpose of a flowchart is to:,Format text,False,0,False
+622,627.Which of the following is an example of open-source software? [SEP] Linux,1,627.Which of the following is an example of open-source software?,Linux,True,0,False
+622,627.Which of the following is an example of open-source software? [SEP] MS Office,0,627.Which of the following is an example of open-source software?,MS Office,False,0,False
+622,627.Which of the following is an example of open-source software? [SEP] Adobe Photoshop,0,627.Which of the following is an example of open-source software?,Adobe Photoshop,False,0,False
+622,627.Which of the following is an example of open-source software? [SEP] Windows,0,627.Which of the following is an example of open-source software?,Windows,False,0,False
+622,627.Which of the following is an example of open-source software? [SEP] Oracle,0,627.Which of the following is an example of open-source software?,Oracle,False,0,False
+631,636.A repeater operates at: [SEP] Physical layer,1,636.A repeater operates at:,Physical layer,True,0,False
+631,636.A repeater operates at: [SEP] Network layer,0,636.A repeater operates at:,Network layer,False,0,False
+631,636.A repeater operates at: [SEP] Data link layer,0,636.A repeater operates at:,Data link layer,False,1,True
+631,636.A repeater operates at: [SEP] Transport layer,0,636.A repeater operates at:,Transport layer,False,0,False
+631,636.A repeater operates at: [SEP] Application layer,0,636.A repeater operates at:,Application layer,False,0,False
+638,643.Which of the following is a system tool? [SEP] Device manager,1,643.Which of the following is a system tool?,Device manager,True,0,False
+638,643.Which of the following is a system tool? [SEP] Wordpad,0,643.Which of the following is a system tool?,Wordpad,False,0,False
+638,643.Which of the following is a system tool? [SEP] Calculator,0,643.Which of the following is a system tool?,Calculator,False,0,False
+638,643.Which of the following is a system tool? [SEP] Paint,0,643.Which of the following is a system tool?,Paint,False,0,False
+638,643.Which of the following is a system tool? [SEP] Notepad,0,643.Which of the following is a system tool?,Notepad,False,0,False
+644,649.Fiber optic cables transmit data using: [SEP] Light,1,649.Fiber optic cables transmit data using:,Light,True,0,False
+644,649.Fiber optic cables transmit data using: [SEP] Electrical signals,0,649.Fiber optic cables transmit data using:,Electrical signals,False,0,False
+644,649.Fiber optic cables transmit data using: [SEP] Magnetic waves,0,649.Fiber optic cables transmit data using:,Magnetic waves,False,0,False
+644,649.Fiber optic cables transmit data using: [SEP] Heat,0,649.Fiber optic cables transmit data using:,Heat,False,0,False
+644,649.Fiber optic cables transmit data using: [SEP] Radio waves,0,649.Fiber optic cables transmit data using:,Radio waves,False,1,True
+656,661.Which device is required to access the Internet using telephone lines? [SEP] Modem,1,661.Which device is required to access the Internet using telephone lines?,Modem,True,0,False
+656,661.Which device is required to access the Internet using telephone lines? [SEP] Switch,0,661.Which device is required to access the Internet using telephone lines?,Switch,False,0,False
+656,661.Which device is required to access the Internet using telephone lines? [SEP] Router,0,661.Which device is required to access the Internet using telephone lines?,Router,False,0,False
+656,661.Which device is required to access the Internet using telephone lines? [SEP] Hub,0,661.Which device is required to access the Internet using telephone lines?,Hub,False,0,False
+656,661.Which device is required to access the Internet using telephone lines? [SEP] Repeater,0,661.Which device is required to access the Internet using telephone lines?,Repeater,False,0,False
+664,669.The output of 0101 OR 0011 is: [SEP] 111,1,669.The output of 0101 OR 0011 is:,111,True,0,False
+664,669.The output of 0101 OR 0011 is: [SEP] 11,0,669.The output of 0101 OR 0011 is:,11,False,0,False
+664,669.The output of 0101 OR 0011 is: [SEP] 101,0,669.The output of 0101 OR 0011 is:,101,False,0,False
+664,669.The output of 0101 OR 0011 is: [SEP] 1,0,669.The output of 0101 OR 0011 is:,1,False,0,False
+664,669.The output of 0101 OR 0011 is: [SEP] 1111,0,669.The output of 0101 OR 0011 is:,1111,False,0,False
+666,671.The OS process state where a process is ready and waiting for CPU is: [SEP] Ready,1,671.The OS process state where a process is ready and waiting for CPU is:,Ready,True,1,True
+666,671.The OS process state where a process is ready and waiting for CPU is: [SEP] Running,0,671.The OS process state where a process is ready and waiting for CPU is:,Running,False,0,False
+666,671.The OS process state where a process is ready and waiting for CPU is: [SEP] Blocked,0,671.The OS process state where a process is ready and waiting for CPU is:,Blocked,False,0,False
+666,671.The OS process state where a process is ready and waiting for CPU is: [SEP] Terminated,0,671.The OS process state where a process is ready and waiting for CPU is:,Terminated,False,0,False
+666,671.The OS process state where a process is ready and waiting for CPU is: [SEP] New,0,671.The OS process state where a process is ready and waiting for CPU is:,New,False,1,True
+667,672.The formula to convert binary to decimal is based on: [SEP] Base-2 positional values,1,672.The formula to convert binary to decimal is based on:,Base-2 positional values,True,0,False
+667,672.The formula to convert binary to decimal is based on: [SEP] ASCII table,0,672.The formula to convert binary to decimal is based on:,ASCII table,False,0,False
+667,672.The formula to convert binary to decimal is based on: [SEP] Boolean algebra,0,672.The formula to convert binary to decimal is based on:,Boolean algebra,False,0,False
+667,672.The formula to convert binary to decimal is based on: [SEP] Base-10 fractions,0,672.The formula to convert binary to decimal is based on:,Base-10 fractions,False,0,False
+667,672.The formula to convert binary to decimal is based on: [SEP] Hexadecimal expansion,0,672.The formula to convert binary to decimal is based on:,Hexadecimal expansion,False,0,False
+668,673.A cookie in a web browser is used to: [SEP] Store user preferences,1,673.A cookie in a web browser is used to:,Store user preferences,True,0,False
+668,673.A cookie in a web browser is used to: [SEP] Encrypt pages,0,673.A cookie in a web browser is used to:,Encrypt pages,False,0,False
+668,673.A cookie in a web browser is used to: [SEP] Delete viruses,0,673.A cookie in a web browser is used to:,Delete viruses,False,0,False
+668,673.A cookie in a web browser is used to: [SEP] Open websites,0,673.A cookie in a web browser is used to:,Open websites,False,0,False
+668,673.A cookie in a web browser is used to: [SEP] Format disks,0,673.A cookie in a web browser is used to:,Format disks,False,0,False
+672,677.The decimal value of 1110? is: [SEP] 14,1,677.The decimal value of 1110? is:,14,True,0,False
+672,677.The decimal value of 1110? is: [SEP] 12,0,677.The decimal value of 1110? is:,12,False,0,False
+672,677.The decimal value of 1110? is: [SEP] 13,0,677.The decimal value of 1110? is:,13,False,0,False
+672,677.The decimal value of 1110? is: [SEP] 15,0,677.The decimal value of 1110? is:,15,False,0,False
+672,677.The decimal value of 1110? is: [SEP] 16,0,677.The decimal value of 1110? is:,16,False,0,False
+673,678.Which of the following is NOT a database model? [SEP] Linear,1,678.Which of the following is NOT a database model?,Linear,True,1,True
+673,678.Which of the following is NOT a database model? [SEP] Hierarchical,0,678.Which of the following is NOT a database model?,Hierarchical,False,0,False
+673,678.Which of the following is NOT a database model? [SEP] Relational,0,678.Which of the following is NOT a database model?,Relational,False,0,False
+673,678.Which of the following is NOT a database model? [SEP] Object-oriented,0,678.Which of the following is NOT a database model?,Object-oriented,False,0,False
+673,678.Which of the following is NOT a database model? [SEP] Network,0,678.Which of the following is NOT a database model?,Network,False,0,False
+682,687.The process of converting high-level language into machine code is called: [SEP] Compilation,1,687.The process of converting high-level language into machine code is called:,Compilation,True,1,True
+682,687.The process of converting high-level language into machine code is called: [SEP] Execution,0,687.The process of converting high-level language into machine code is called:,Execution,False,0,False
+682,687.The process of converting high-level language into machine code is called: [SEP] Interpretation,0,687.The process of converting high-level language into machine code is called:,Interpretation,False,0,False
+682,687.The process of converting high-level language into machine code is called: [SEP] Debugging,0,687.The process of converting high-level language into machine code is called:,Debugging,False,0,False
+682,687.The process of converting high-level language into machine code is called: [SEP] Linking,0,687.The process of converting high-level language into machine code is called:,Linking,False,0,False
+684,689.Which device is used to read MICR text? [SEP] Magnetic ink reader,1,689.Which device is used to read MICR text?,Magnetic ink reader,True,0,False
+684,689.Which device is used to read MICR text? [SEP] OCR reader,0,689.Which device is used to read MICR text?,OCR reader,False,0,False
+684,689.Which device is used to read MICR text? [SEP] Barcode reader,0,689.Which device is used to read MICR text?,Barcode reader,False,0,False
+684,689.Which device is used to read MICR text? [SEP] Scanner,0,689.Which device is used to read MICR text?,Scanner,False,0,False
+684,689.Which device is used to read MICR text? [SEP] RFID reader,0,689.Which device is used to read MICR text?,RFID reader,False,0,False
+685,690.The decimal value of binary 101101? is: [SEP] 45,1,690.The decimal value of binary 101101? is:,45,True,0,False
+685,690.The decimal value of binary 101101? is: [SEP] 41,0,690.The decimal value of binary 101101? is:,41,False,0,False
+685,690.The decimal value of binary 101101? is: [SEP] 55,0,690.The decimal value of binary 101101? is:,55,False,0,False
+685,690.The decimal value of binary 101101? is: [SEP] 61,0,690.The decimal value of binary 101101? is:,61,False,0,False
+685,690.The decimal value of binary 101101? is: [SEP] 43,0,690.The decimal value of binary 101101? is:,43,False,1,True
+692,697.The term firmware refers to: [SEP] Software embedded into hardware,1,697.The term firmware refers to:,Software embedded into hardware,True,0,False
+692,697.The term firmware refers to: [SEP] App software,0,697.The term firmware refers to:,App software,False,0,False
+692,697.The term firmware refers to: [SEP] Hardware drivers,0,697.The term firmware refers to:,Hardware drivers,False,0,False
+692,697.The term firmware refers to: [SEP] Portable software,0,697.The term firmware refers to:,Portable software,False,0,False
+692,697.The term firmware refers to: [SEP] System utilities,0,697.The term firmware refers to:,System utilities,False,0,False
+703,"708.In RAID 5, data protection is achieved through: [SEP] Block-level striping with distributed parity",1,"708.In RAID 5, data protection is achieved through:",Block-level striping with distributed parity,True,0,False
+703,"708.In RAID 5, data protection is achieved through: [SEP] Disk mirroring",0,"708.In RAID 5, data protection is achieved through:",Disk mirroring,False,0,False
+703,"708.In RAID 5, data protection is achieved through: [SEP] Striping without parity",0,"708.In RAID 5, data protection is achieved through:",Striping without parity,False,0,False
+703,"708.In RAID 5, data protection is achieved through: [SEP] A single parity disk",0,"708.In RAID 5, data protection is achieved through:",A single parity disk,False,0,False
+703,"708.In RAID 5, data protection is achieved through: [SEP] Three-way redundancy",0,"708.In RAID 5, data protection is achieved through:",Three-way redundancy,False,0,False
+708,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU? [SEP] It interprets and generates control signals required to execute machine instructions.,1,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU?,It interprets and generates control signals required to execute machine instructions.,True,1,True
+708,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU? [SEP] It stores user-level instructions permanently.,0,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU?,It stores user-level instructions permanently.,False,0,False
+708,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU? [SEP] It stores intermediate ALU results.,0,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU?,It stores intermediate ALU results.,False,0,False
+708,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU? [SEP] It manages data transfer between CPU and secondary storage.,0,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU?,It manages data transfer between CPU and secondary storage.,False,0,False
+708,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU? [SEP] It holds the list of hardware interrupts.,0,713.Which of the following best explains the purpose of the microprogram stored inside the control unit of a CPU?,It holds the list of hardware interrupts.,False,0,False
+711,716.Which of the following is not a feature of RISC architecture? [SEP] Multiple clock cycles for a single instruction,1,716.Which of the following is not a feature of RISC architecture?,Multiple clock cycles for a single instruction,True,0,False
+711,716.Which of the following is not a feature of RISC architecture? [SEP] Large number of general-purpose registers,0,716.Which of the following is not a feature of RISC architecture?,Large number of general-purpose registers,False,0,False
+711,"716.Which of the following is not a feature of RISC architecture? [SEP] Simple, fixed-length instructions",0,716.Which of the following is not a feature of RISC architecture?,"Simple, fixed-length instructions",False,0,False
+711,716.Which of the following is not a feature of RISC architecture? [SEP] Hardwired control unit,0,716.Which of the following is not a feature of RISC architecture?,Hardwired control unit,False,1,True
+711,716.Which of the following is not a feature of RISC architecture? [SEP] Loadstore architecture,0,716.Which of the following is not a feature of RISC architecture?,Loadstore architecture,False,0,False
+716,721.Which of the following is the primary purpose of DMA (Direct Memory Access)? [SEP] Allow I/O devices to access memory without CPU intervention,1,721.Which of the following is the primary purpose of DMA (Direct Memory Access)?,Allow I/O devices to access memory without CPU intervention,True,0,False
+716,721.Which of the following is the primary purpose of DMA (Direct Memory Access)? [SEP] Increase CPU clock speed,0,721.Which of the following is the primary purpose of DMA (Direct Memory Access)?,Increase CPU clock speed,False,0,False
+716,721.Which of the following is the primary purpose of DMA (Direct Memory Access)? [SEP] Encrypt data during transfer,0,721.Which of the following is the primary purpose of DMA (Direct Memory Access)?,Encrypt data during transfer,False,0,False
+716,721.Which of the following is the primary purpose of DMA (Direct Memory Access)? [SEP] Manage virtual memory,0,721.Which of the following is the primary purpose of DMA (Direct Memory Access)?,Manage virtual memory,False,0,False
+716,721.Which of the following is the primary purpose of DMA (Direct Memory Access)? [SEP] Perform parallel processing,0,721.Which of the following is the primary purpose of DMA (Direct Memory Access)?,Perform parallel processing,False,0,False
+722,727.The process of moving pages between RAM and secondary storage is known as: [SEP] Swapping,1,727.The process of moving pages between RAM and secondary storage is known as:,Swapping,True,0,False
+722,727.The process of moving pages between RAM and secondary storage is known as: [SEP] Page framing,0,727.The process of moving pages between RAM and secondary storage is known as:,Page framing,False,0,False
+722,727.The process of moving pages between RAM and secondary storage is known as: [SEP] Segmentation,0,727.The process of moving pages between RAM and secondary storage is known as:,Segmentation,False,0,False
+722,727.The process of moving pages between RAM and secondary storage is known as: [SEP] Clustering,0,727.The process of moving pages between RAM and secondary storage is known as:,Clustering,False,0,False
+722,727.The process of moving pages between RAM and secondary storage is known as: [SEP] Formatting,0,727.The process of moving pages between RAM and secondary storage is known as:,Formatting,False,0,False
+732,737.The hexadecimal value A3 converts to binary as: [SEP] 10100011?,1,737.The hexadecimal value A3 converts to binary as:,10100011?,True,0,False
+732,737.The hexadecimal value A3 converts to binary as: [SEP] 11110011?,0,737.The hexadecimal value A3 converts to binary as:,11110011?,False,0,False
+732,737.The hexadecimal value A3 converts to binary as: [SEP] 10111100?,0,737.The hexadecimal value A3 converts to binary as:,10111100?,False,0,False
+732,737.The hexadecimal value A3 converts to binary as: [SEP] 10011001?,0,737.The hexadecimal value A3 converts to binary as:,10011001?,False,0,False
+732,737.The hexadecimal value A3 converts to binary as: [SEP] 10110011?,0,737.The hexadecimal value A3 converts to binary as:,10110011?,False,0,False
+736,741.The device that converts digital data to analog signals over telephone lines is a: [SEP] Modem,1,741.The device that converts digital data to analog signals over telephone lines is a:,Modem,True,0,False
+736,741.The device that converts digital data to analog signals over telephone lines is a: [SEP] Router,0,741.The device that converts digital data to analog signals over telephone lines is a:,Router,False,0,False
+736,741.The device that converts digital data to analog signals over telephone lines is a: [SEP] Bridge,0,741.The device that converts digital data to analog signals over telephone lines is a:,Bridge,False,0,False
+736,741.The device that converts digital data to analog signals over telephone lines is a: [SEP] Hub,0,741.The device that converts digital data to analog signals over telephone lines is a:,Hub,False,0,False
+736,741.The device that converts digital data to analog signals over telephone lines is a: [SEP] Switch,0,741.The device that converts digital data to analog signals over telephone lines is a:,Switch,False,0,False
+758,763.Which of the following best describes the concept of interrupt-driven I/O? [SEP] I/O device notifies CPU only when attention is required,1,763.Which of the following best describes the concept of interrupt-driven I/O?,I/O device notifies CPU only when attention is required,True,0,False
+758,763.Which of the following best describes the concept of interrupt-driven I/O? [SEP] CPU continuously checks each device for data,0,763.Which of the following best describes the concept of interrupt-driven I/O?,CPU continuously checks each device for data,False,0,False
+758,763.Which of the following best describes the concept of interrupt-driven I/O? [SEP] CPU halts until I/O device completes its task,0,763.Which of the following best describes the concept of interrupt-driven I/O?,CPU halts until I/O device completes its task,False,0,False
+758,763.Which of the following best describes the concept of interrupt-driven I/O? [SEP] CPU and I/O operate without any synchronization,0,763.Which of the following best describes the concept of interrupt-driven I/O?,CPU and I/O operate without any synchronization,False,0,False
+758,763.Which of the following best describes the concept of interrupt-driven I/O? [SEP] CPU processes I/O requests strictly in FIFO order,0,763.Which of the following best describes the concept of interrupt-driven I/O?,CPU processes I/O requests strictly in FIFO order,False,0,False
+774,"779.Which process model is most suitable for large, complex projects with unclear requirements? [SEP] Spiral",1,"779.Which process model is most suitable for large, complex projects with unclear requirements?",Spiral,True,0,False
+774,"779.Which process model is most suitable for large, complex projects with unclear requirements? [SEP] Waterfall",0,"779.Which process model is most suitable for large, complex projects with unclear requirements?",Waterfall,False,0,False
+774,"779.Which process model is most suitable for large, complex projects with unclear requirements? [SEP] V-Model",0,"779.Which process model is most suitable for large, complex projects with unclear requirements?",V-Model,False,0,False
+774,"779.Which process model is most suitable for large, complex projects with unclear requirements? [SEP] Agile",0,"779.Which process model is most suitable for large, complex projects with unclear requirements?",Agile,False,0,False
+774,"779.Which process model is most suitable for large, complex projects with unclear requirements? [SEP] Iterative",0,"779.Which process model is most suitable for large, complex projects with unclear requirements?",Iterative,False,0,False
+778,783.A compiler that processes one statement at a time and generates immediate machine code is called: [SEP] Single-pass compiler,1,783.A compiler that processes one statement at a time and generates immediate machine code is called:,Single-pass compiler,True,0,False
+778,783.A compiler that processes one statement at a time and generates immediate machine code is called: [SEP] Multi-pass compiler,0,783.A compiler that processes one statement at a time and generates immediate machine code is called:,Multi-pass compiler,False,0,False
+778,783.A compiler that processes one statement at a time and generates immediate machine code is called: [SEP] Just-in-time compiler,0,783.A compiler that processes one statement at a time and generates immediate machine code is called:,Just-in-time compiler,False,0,False
+778,783.A compiler that processes one statement at a time and generates immediate machine code is called: [SEP] Interpreter,0,783.A compiler that processes one statement at a time and generates immediate machine code is called:,Interpreter,False,0,False
+778,783.A compiler that processes one statement at a time and generates immediate machine code is called: [SEP] Loader,0,783.A compiler that processes one statement at a time and generates immediate machine code is called:,Loader,False,0,False
+784,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network? [SEP] DHCP,1,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network?,DHCP,True,0,False
+784,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network? [SEP] DNS,0,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network?,DNS,False,1,True
+784,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network? [SEP] SMTP,0,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network?,SMTP,False,1,True
+784,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network? [SEP] FTP,0,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network?,FTP,False,1,True
+784,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network? [SEP] ARP,0,789.Which protocol is responsible for dynamically assigning IP addresses to devices on a network?,ARP,False,1,True
+790,"795.In memory hierarchy, which memory type offers the lowest access time? [SEP] Cache",1,"795.In memory hierarchy, which memory type offers the lowest access time?",Cache,True,0,False
+790,"795.In memory hierarchy, which memory type offers the lowest access time? [SEP] RAM",0,"795.In memory hierarchy, which memory type offers the lowest access time?",RAM,False,0,False
+790,"795.In memory hierarchy, which memory type offers the lowest access time? [SEP] Magnetic tape",0,"795.In memory hierarchy, which memory type offers the lowest access time?",Magnetic tape,False,0,False
+790,"795.In memory hierarchy, which memory type offers the lowest access time? [SEP] SSD",0,"795.In memory hierarchy, which memory type offers the lowest access time?",SSD,False,0,False
+790,"795.In memory hierarchy, which memory type offers the lowest access time? [SEP] Virtual memory",0,"795.In memory hierarchy, which memory type offers the lowest access time?",Virtual memory,False,0,False
+792,797.The hexadecimal number A3 converts to decimal: [SEP] 163,1,797.The hexadecimal number A3 converts to decimal:,163,True,0,False
+792,797.The hexadecimal number A3 converts to decimal: [SEP] 135,0,797.The hexadecimal number A3 converts to decimal:,135,False,0,False
+792,797.The hexadecimal number A3 converts to decimal: [SEP] 256,0,797.The hexadecimal number A3 converts to decimal:,256,False,0,False
+792,797.The hexadecimal number A3 converts to decimal: [SEP] 243,0,797.The hexadecimal number A3 converts to decimal:,243,False,0,False
+792,797.The hexadecimal number A3 converts to decimal: [SEP] 167,0,797.The hexadecimal number A3 converts to decimal:,167,False,0,False
+809,814.Which of the following is equivalent to the binary number 101110.011?? [SEP] 46.375,1,814.Which of the following is equivalent to the binary number 101110.011??,46.375,True,0,False
+809,814.Which of the following is equivalent to the binary number 101110.011?? [SEP] 46.25,0,814.Which of the following is equivalent to the binary number 101110.011??,46.25,False,0,False
+809,814.Which of the following is equivalent to the binary number 101110.011?? [SEP] 46.5,0,814.Which of the following is equivalent to the binary number 101110.011??,46.5,False,0,False
+809,814.Which of the following is equivalent to the binary number 101110.011?? [SEP] 47.375,0,814.Which of the following is equivalent to the binary number 101110.011??,47.375,False,0,False
+809,814.Which of the following is equivalent to the binary number 101110.011?? [SEP] 47.25,0,814.Which of the following is equivalent to the binary number 101110.011??,47.25,False,0,False
+810,815.Simplify the Boolean expression A?B + AB + A?B?. [SEP] 1,1,815.Simplify the Boolean expression A?B + AB + A?B?.,1,True,0,False
+810,815.Simplify the Boolean expression A?B + AB + A?B?. [SEP] A + B?,0,815.Simplify the Boolean expression A?B + AB + A?B?.,A + B?,False,0,False
+810,815.Simplify the Boolean expression A?B + AB + A?B?. [SEP] B + A?,0,815.Simplify the Boolean expression A?B + AB + A?B?.,B + A?,False,0,False
+810,815.Simplify the Boolean expression A?B + AB + A?B?. [SEP] A + B,0,815.Simplify the Boolean expression A?B + AB + A?B?.,A + B,False,0,False
+810,815.Simplify the Boolean expression A?B + AB + A?B?. [SEP] A,0,815.Simplify the Boolean expression A?B + AB + A?B?.,A,False,0,False
+814,819.The 1s complement of 10110010? is: [SEP] Absorption,1,819.The 1s complement of 10110010? is:,Absorption,True,0,False
+814,819.The 1s complement of 10110010? is: [SEP] Idempotent,0,819.The 1s complement of 10110010? is:,Idempotent,False,1,True
+814,819.The 1s complement of 10110010? is: [SEP] Complement,0,819.The 1s complement of 10110010? is:,Complement,False,0,False
+814,819.The 1s complement of 10110010? is: [SEP] Identity,0,819.The 1s complement of 10110010? is:,Identity,False,0,False
+814,819.The 1s complement of 10110010? is: [SEP] Involution,0,819.The 1s complement of 10110010? is:,Involution,False,0,False
+816,821.The output of a full adder is 1 when: [SEP] odd number of inputs are 1,1,821.The output of a full adder is 1 when:,odd number of inputs are 1,True,0,False
+816,821.The output of a full adder is 1 when: [SEP] one input is 1,0,821.The output of a full adder is 1 when:,one input is 1,False,1,True
+816,821.The output of a full adder is 1 when: [SEP] all inputs are 1,0,821.The output of a full adder is 1 when:,all inputs are 1,False,0,False
+816,821.The output of a full adder is 1 when: [SEP] all inputs are 0,0,821.The output of a full adder is 1 when:,all inputs are 0,False,0,False
+816,821.The output of a full adder is 1 when: [SEP] only two inputs are 1,0,821.The output of a full adder is 1 when:,only two inputs are 1,False,0,False
+817,822.How many 4-input minterms exist? [SEP] 16,1,822.How many 4-input minterms exist?,16,True,1,True
+817,822.How many 4-input minterms exist? [SEP] 4,0,822.How many 4-input minterms exist?,4,False,1,True
+817,822.How many 4-input minterms exist? [SEP] 8,0,822.How many 4-input minterms exist?,8,False,1,True
+817,822.How many 4-input minterms exist? [SEP] 12,0,822.How many 4-input minterms exist?,12,False,1,True
+817,822.How many 4-input minterms exist? [SEP] 32,0,822.How many 4-input minterms exist?,32,False,1,True
+819,824.Which circuit detects negative numbers in 2s complement? [SEP] MSB check,1,824.Which circuit detects negative numbers in 2s complement?,MSB check,True,0,False
+819,824.Which circuit detects negative numbers in 2s complement? [SEP] Overflow detection circuit,0,824.Which circuit detects negative numbers in 2s complement?,Overflow detection circuit,False,0,False
+819,824.Which circuit detects negative numbers in 2s complement? [SEP] Decoder,0,824.Which circuit detects negative numbers in 2s complement?,Decoder,False,0,False
+819,824.Which circuit detects negative numbers in 2s complement? [SEP] Multiplexer,0,824.Which circuit detects negative numbers in 2s complement?,Multiplexer,False,0,False
+819,824.Which circuit detects negative numbers in 2s complement? [SEP] Comparator,0,824.Which circuit detects negative numbers in 2s complement?,Comparator,False,0,False
+820,825.Largest unsigned 10-bit value: [SEP] 1023,1,825.Largest unsigned 10-bit value:,1023,True,0,False
+820,825.Largest unsigned 10-bit value: [SEP] 511,0,825.Largest unsigned 10-bit value:,511,False,0,False
+820,825.Largest unsigned 10-bit value: [SEP] 255,0,825.Largest unsigned 10-bit value:,255,False,0,False
+820,825.Largest unsigned 10-bit value: [SEP] 2047,0,825.Largest unsigned 10-bit value:,2047,False,0,False
+820,825.Largest unsigned 10-bit value: [SEP] 4095,0,825.Largest unsigned 10-bit value:,4095,False,0,False
+826,831.ROM is used for: [SEP] permanent instructions,1,831.ROM is used for:,permanent instructions,True,0,False
+826,831.ROM is used for: [SEP] temporary variables,0,831.ROM is used for:,temporary variables,False,0,False
+826,831.ROM is used for: [SEP] user data,0,831.ROM is used for:,user data,False,0,False
+826,831.ROM is used for: [SEP] swapping,0,831.ROM is used for:,swapping,False,0,False
+826,831.ROM is used for: [SEP] buffering,0,831.ROM is used for:,buffering,False,0,False
+829,834.Which is NOT an input device? [SEP] Dot matrix printer,1,834.Which is NOT an input device?,Dot matrix printer,True,1,True
+829,834.Which is NOT an input device? [SEP] OMR,0,834.Which is NOT an input device?,OMR,False,1,True
+829,834.Which is NOT an input device? [SEP] Barcode reader,0,834.Which is NOT an input device?,Barcode reader,False,0,False
+829,834.Which is NOT an input device? [SEP] Keyboard,0,834.Which is NOT an input device?,Keyboard,False,0,False
+829,834.Which is NOT an input device? [SEP] Mouse,0,834.Which is NOT an input device?,Mouse,False,0,False
+843,848.A private Class C IP address is: [SEP] 192.168.1.1,1,848.A private Class C IP address is:,192.168.1.1,True,0,False
+843,848.A private Class C IP address is: [SEP] 10.0.0.1,0,848.A private Class C IP address is:,10.0.0.1,False,1,True
+843,848.A private Class C IP address is: [SEP] 172.16.0.1,0,848.A private Class C IP address is:,172.16.0.1,False,0,False
+843,848.A private Class C IP address is: [SEP] 224.0.0.1,0,848.A private Class C IP address is:,224.0.0.1,False,0,False
+843,848.A private Class C IP address is: [SEP] 240.0.0.1,0,848.A private Class C IP address is:,240.0.0.1,False,0,False
+846,851.ICMP is used for: [SEP] error reporting,1,851.ICMP is used for:,error reporting,True,0,False
+846,851.ICMP is used for: [SEP] port control,0,851.ICMP is used for:,port control,False,0,False
+846,851.ICMP is used for: [SEP] routing,0,851.ICMP is used for:,routing,False,0,False
+846,851.ICMP is used for: [SEP] encryption,0,851.ICMP is used for:,encryption,False,0,False
+846,851.ICMP is used for: [SEP] authentication,0,851.ICMP is used for:,authentication,False,0,False
+857,862.Which is NOT a database model? [SEP] Duplex,1,862.Which is NOT a database model?,Duplex,True,0,False
+857,862.Which is NOT a database model? [SEP] Relational,0,862.Which is NOT a database model?,Relational,False,0,False
+857,862.Which is NOT a database model? [SEP] Hierarchical,0,862.Which is NOT a database model?,Hierarchical,False,0,False
+857,862.Which is NOT a database model? [SEP] Network,0,862.Which is NOT a database model?,Network,False,0,False
+857,862.Which is NOT a database model? [SEP] Distributed,0,862.Which is NOT a database model?,Distributed,False,0,False
+859,864.Which of the following is NOT a loop structure in Python? [SEP] repeat,1,864.Which of the following is NOT a loop structure in Python?,repeat,True,0,False
+859,864.Which of the following is NOT a loop structure in Python? [SEP] for,0,864.Which of the following is NOT a loop structure in Python?,for,False,0,False
+859,864.Which of the following is NOT a loop structure in Python? [SEP] while,0,864.Which of the following is NOT a loop structure in Python?,while,False,0,False
+859,864.Which of the following is NOT a loop structure in Python? [SEP] nested for,0,864.Which of the following is NOT a loop structure in Python?,nested for,False,0,False
+859,864.Which of the following is NOT a loop structure in Python? [SEP] for-each,0,864.Which of the following is NOT a loop structure in Python?,for-each,False,0,False
+861,866.The return type of len() is: [SEP] integer,1,866.The return type of len() is:,integer,True,0,False
+861,866.The return type of len() is: [SEP] float,0,866.The return type of len() is:,float,False,0,False
+861,866.The return type of len() is: [SEP] char,0,866.The return type of len() is:,char,False,0,False
+861,866.The return type of len() is: [SEP] string,0,866.The return type of len() is:,string,False,0,False
+861,866.The return type of len() is: [SEP] boolean,0,866.The return type of len() is:,boolean,False,0,False
+864,869.The break statement is used to: [SEP] exit loop,1,869.The break statement is used to:,exit loop,True,0,False
+864,869.The break statement is used to: [SEP] skip one iteration,0,869.The break statement is used to:,skip one iteration,False,0,False
+864,869.The break statement is used to: [SEP] pause program,0,869.The break statement is used to:,pause program,False,0,False
+864,869.The break statement is used to: [SEP] restart loop,0,869.The break statement is used to:,restart loop,False,0,False
+864,869.The break statement is used to: [SEP] throw exception,0,869.The break statement is used to:,throw exception,False,0,False
+866,872.Which attribute specifies the image location? [SEP] src,1,872.Which attribute specifies the image location?,src,True,0,False
+866,872.Which attribute specifies the image location? [SEP] link,0,872.Which attribute specifies the image location?,link,False,0,False
+866,872.Which attribute specifies the image location? [SEP] url,0,872.Which attribute specifies the image location?,url,False,0,False
+866,872.Which attribute specifies the image location? [SEP] path,0,872.Which attribute specifies the image location?,path,False,0,False
+866,872.Which attribute specifies the image location? [SEP] href,0,872.Which attribute specifies the image location?,href,False,0,False
+867,873.Which CSS property changes text color? [SEP] color,1,873.Which CSS property changes text color?,color,True,0,False
+867,873.Which CSS property changes text color? [SEP] fg,0,873.Which CSS property changes text color?,fg,False,0,False
+867,873.Which CSS property changes text color? [SEP] text-color,0,873.Which CSS property changes text color?,text-color,False,0,False
+867,873.Which CSS property changes text color? [SEP] foreground,0,873.Which CSS property changes text color?,foreground,False,0,False
+867,873.Which CSS property changes text color? [SEP] font-color,0,873.Which CSS property changes text color?,font-color,False,0,False
+869,875.Which of the following is system software? [SEP] Ubuntu,1,875.Which of the following is system software?,Ubuntu,True,0,False
+869,875.Which of the following is system software? [SEP] MS Word,0,875.Which of the following is system software?,MS Word,False,0,False
+869,875.Which of the following is system software? [SEP] Photoshop,0,875.Which of the following is system software?,Photoshop,False,0,False
+869,875.Which of the following is system software? [SEP] Oracle DB,0,875.Which of the following is system software?,Oracle DB,False,0,False
+869,875.Which of the following is system software? [SEP] Chrome,0,875.Which of the following is system software?,Chrome,False,0,False
+873,879.The phase where system requirements are gathered is: [SEP] analysis,1,879.The phase where system requirements are gathered is:,analysis,True,0,False
+873,879.The phase where system requirements are gathered is: [SEP] design,0,879.The phase where system requirements are gathered is:,design,False,0,False
+873,879.The phase where system requirements are gathered is: [SEP] implementation,0,879.The phase where system requirements are gathered is:,implementation,False,0,False
+873,879.The phase where system requirements are gathered is: [SEP] testing,0,879.The phase where system requirements are gathered is:,testing,False,0,False
+873,879.The phase where system requirements are gathered is: [SEP] maintenance,0,879.The phase where system requirements are gathered is:,maintenance,False,0,False
+877,883.The primary purpose of DFD is to represent: [SEP] data flow,1,883.The primary purpose of DFD is to represent:,data flow,True,0,False
+877,883.The primary purpose of DFD is to represent: [SEP] user interface,0,883.The primary purpose of DFD is to represent:,user interface,False,0,False
+877,883.The primary purpose of DFD is to represent: [SEP] hardware structure,0,883.The primary purpose of DFD is to represent:,hardware structure,False,0,False
+877,883.The primary purpose of DFD is to represent: [SEP] project schedule,0,883.The primary purpose of DFD is to represent:,project schedule,False,0,False
+877,883.The primary purpose of DFD is to represent: [SEP] testing steps,0,883.The primary purpose of DFD is to represent:,testing steps,False,0,False
+885,891.The process of converting requirements into a design model is: [SEP] design,1,891.The process of converting requirements into a design model is:,design,True,0,False
+885,891.The process of converting requirements into a design model is: [SEP] analysis,0,891.The process of converting requirements into a design model is:,analysis,False,0,False
+885,891.The process of converting requirements into a design model is: [SEP] deployment,0,891.The process of converting requirements into a design model is:,deployment,False,0,False
+885,891.The process of converting requirements into a design model is: [SEP] maintenance,0,891.The process of converting requirements into a design model is:,maintenance,False,0,False
+885,891.The process of converting requirements into a design model is: [SEP] testing,0,891.The process of converting requirements into a design model is:,testing,False,0,False
+896,902.A many-to-many relationship is resolved by: [SEP] composite table,1,902.A many-to-many relationship is resolved by:,composite table,True,0,False
+896,902.A many-to-many relationship is resolved by: [SEP] single table,0,902.A many-to-many relationship is resolved by:,single table,False,0,False
+896,902.A many-to-many relationship is resolved by: [SEP] weak entity,0,902.A many-to-many relationship is resolved by:,weak entity,False,0,False
+896,902.A many-to-many relationship is resolved by: [SEP] nested relation,0,902.A many-to-many relationship is resolved by:,nested relation,False,0,False
+896,902.A many-to-many relationship is resolved by: [SEP] duplicate fields,0,902.A many-to-many relationship is resolved by:,duplicate fields,False,0,False
+904,910.Fiber optic uses: [SEP] light,1,910.Fiber optic uses:,light,True,0,False
+904,910.Fiber optic uses: [SEP] radio waves,0,910.Fiber optic uses:,radio waves,False,1,True
+904,910.Fiber optic uses: [SEP] infrared,0,910.Fiber optic uses:,infrared,False,0,False
+904,910.Fiber optic uses: [SEP] electrical signals,0,910.Fiber optic uses:,electrical signals,False,0,False
+904,910.Fiber optic uses: [SEP] microwaves,0,910.Fiber optic uses:,microwaves,False,0,False
+917,923.A multitasking OS allows: [SEP] multiple tasks appear to run simultaneously,1,923.A multitasking OS allows:,multiple tasks appear to run simultaneously,True,1,True
+917,923.A multitasking OS allows: [SEP] one program at a time,0,923.A multitasking OS allows:,one program at a time,False,0,False
+917,923.A multitasking OS allows: [SEP] only background processes,0,923.A multitasking OS allows:,only background processes,False,0,False
+917,923.A multitasking OS allows: [SEP] only GUI programs,0,923.A multitasking OS allows:,only GUI programs,False,0,False
+917,923.A multitasking OS allows: [SEP] execution of OS only,0,923.A multitasking OS allows:,execution of OS only,False,0,False
+918,924.A file allocation method without external fragmentation: [SEP] linked,1,924.A file allocation method without external fragmentation:,linked,True,0,False
+918,924.A file allocation method without external fragmentation: [SEP] contiguous,0,924.A file allocation method without external fragmentation:,contiguous,False,0,False
+918,924.A file allocation method without external fragmentation: [SEP] indexed,0,924.A file allocation method without external fragmentation:,indexed,False,0,False
+918,924.A file allocation method without external fragmentation: [SEP] sequential,0,924.A file allocation method without external fragmentation:,sequential,False,1,True
+918,924.A file allocation method without external fragmentation: [SEP] track-based,0,924.A file allocation method without external fragmentation:,track-based,False,0,False
+919,925.When CPU switches between processes: [SEP] context switch,1,925.When CPU switches between processes:,context switch,True,0,False
+919,925.When CPU switches between processes: [SEP] deadlock,0,925.When CPU switches between processes:,deadlock,False,0,False
+919,925.When CPU switches between processes: [SEP] interrupt,0,925.When CPU switches between processes:,interrupt,False,0,False
+919,925.When CPU switches between processes: [SEP] swapping,0,925.When CPU switches between processes:,swapping,False,0,False
+919,925.When CPU switches between processes: [SEP] thrashing,0,925.When CPU switches between processes:,thrashing,False,0,False
+926,932.Which is a many-to-many relationship? [SEP] students  courses,1,932.Which is a many-to-many relationship?,students  courses,True,0,False
+926,932.Which is a many-to-many relationship? [SEP] one teacher  one class,0,932.Which is a many-to-many relationship?,one teacher  one class,False,0,False
+926,932.Which is a many-to-many relationship? [SEP] one student  one ID,0,932.Which is a many-to-many relationship?,one student  one ID,False,0,False
+926,932.Which is a many-to-many relationship? [SEP] hospital  address,0,932.Which is a many-to-many relationship?,hospital  address,False,0,False
+926,932.Which is a many-to-many relationship? [SEP] shop  owner,0,932.Which is a many-to-many relationship?,shop  owner,False,0,False
+929,936.An advantage of e-commerce: [SEP] reduced transaction cost,1,936.An advantage of e-commerce:,reduced transaction cost,True,1,True
+929,936.An advantage of e-commerce: [SEP] limited reach,0,936.An advantage of e-commerce:,limited reach,False,0,False
+929,936.An advantage of e-commerce: [SEP] physical presence required,0,936.An advantage of e-commerce:,physical presence required,False,0,False
+929,936.An advantage of e-commerce: [SEP] manual payment only,0,936.An advantage of e-commerce:,manual payment only,False,0,False
+929,936.An advantage of e-commerce: [SEP] fixed operating hours,0,936.An advantage of e-commerce:,fixed operating hours,False,0,False
+932,939.Which is a lossless join decomposition? [SEP] common attribute is a superkey,1,939.Which is a lossless join decomposition?,common attribute is a superkey,True,0,False
+932,939.Which is a lossless join decomposition? [SEP] FDs are cyclic,0,939.Which is a lossless join decomposition?,FDs are cyclic,False,0,False
+932,939.Which is a lossless join decomposition? [SEP] tables are identical,0,939.Which is a lossless join decomposition?,tables are identical,False,0,False
+932,939.Which is a lossless join decomposition? [SEP] PK contains null,0,939.Which is a lossless join decomposition?,PK contains null,False,0,False
+932,939.Which is a lossless join decomposition? [SEP] relations are disjoint,0,939.Which is a lossless join decomposition?,relations are disjoint,False,0,False
+935,942.The device used to avoid signal attenuation: [SEP] repeater,1,942.The device used to avoid signal attenuation:,repeater,True,0,False
+935,942.The device used to avoid signal attenuation: [SEP] hub,0,942.The device used to avoid signal attenuation:,hub,False,0,False
+935,942.The device used to avoid signal attenuation: [SEP] switch,0,942.The device used to avoid signal attenuation:,switch,False,0,False
+935,942.The device used to avoid signal attenuation: [SEP] router,0,942.The device used to avoid signal attenuation:,router,False,0,False
+935,942.The device used to avoid signal attenuation: [SEP] firewall,0,942.The device used to avoid signal attenuation:,firewall,False,0,False
+936,943.CSS property for border color: [SEP] border-color,1,943.CSS property for border color:,border-color,True,0,False
+936,943.CSS property for border color: [SEP] bordercolor,0,943.CSS property for border color:,bordercolor,False,0,False
+936,943.CSS property for border color: [SEP] color-border,0,943.CSS property for border color:,color-border,False,0,False
+936,943.CSS property for border color: [SEP] bgcolor,0,943.CSS property for border color:,bgcolor,False,0,False
+936,943.CSS property for border color: [SEP] style-border,0,943.CSS property for border color:,style-border,False,0,False
+937,944.The OS that supports multitasking: [SEP] Windows 10,1,944.The OS that supports multitasking:,Windows 10,True,0,False
+937,944.The OS that supports multitasking: [SEP] DOS,0,944.The OS that supports multitasking:,DOS,False,0,False
+937,944.The OS that supports multitasking: [SEP] MS-DOS,0,944.The OS that supports multitasking:,MS-DOS,False,0,False
+937,944.The OS that supports multitasking: [SEP] BIOS,0,944.The OS that supports multitasking:,BIOS,False,0,False
+937,944.The OS that supports multitasking: [SEP] Bootloader,0,944.The OS that supports multitasking:,Bootloader,False,0,False
+941,948.A chart in Excel is a: [SEP] representation of data,1,948.A chart in Excel is a:,representation of data,True,0,False
+941,948.A chart in Excel is a: [SEP] function,0,948.A chart in Excel is a:,function,False,0,False
+941,948.A chart in Excel is a: [SEP] formula,0,948.A chart in Excel is a:,formula,False,0,False
+941,948.A chart in Excel is a: [SEP] macro,0,948.A chart in Excel is a:,macro,False,0,False
+941,948.A chart in Excel is a: [SEP] command,0,948.A chart in Excel is a:,command,False,0,False
+942,949.CD-ROM stands for: [SEP] Compact Disk Read Only Memory,1,949.CD-ROM stands for:,Compact Disk Read Only Memory,True,0,False
+942,949.CD-ROM stands for: [SEP] Central Data Read Memory,0,949.CD-ROM stands for:,Central Data Read Memory,False,0,False
+942,949.CD-ROM stands for: [SEP] Controlled Disk ROM,0,949.CD-ROM stands for:,Controlled Disk ROM,False,0,False
+942,949.CD-ROM stands for: [SEP] Computer Digital Readable Memory,0,949.CD-ROM stands for:,Computer Digital Readable Memory,False,0,False
+942,949.CD-ROM stands for: [SEP] Central Disk Read Method,0,949.CD-ROM stands for:,Central Disk Read Method,False,0,False
+946,953.A black-box testing method: [SEP] boundary value analysis,1,953.A black-box testing method:,boundary value analysis,True,0,False
+946,953.A black-box testing method: [SEP] statement coverage,0,953.A black-box testing method:,statement coverage,False,0,False
+946,953.A black-box testing method: [SEP] code review,0,953.A black-box testing method:,code review,False,0,False
+946,953.A black-box testing method: [SEP] debugging,0,953.A black-box testing method:,debugging,False,1,True
+946,953.A black-box testing method: [SEP] tracing,0,953.A black-box testing method:,tracing,False,0,False
+948,955.Which data structure is best suited for implementing recursion? [SEP] Stack,1,955.Which data structure is best suited for implementing recursion?,Stack,True,1,True
+948,955.Which data structure is best suited for implementing recursion? [SEP] Queue,0,955.Which data structure is best suited for implementing recursion?,Queue,False,0,False
+948,955.Which data structure is best suited for implementing recursion? [SEP] Linked list,0,955.Which data structure is best suited for implementing recursion?,Linked list,False,0,False
+948,955.Which data structure is best suited for implementing recursion? [SEP] Array,0,955.Which data structure is best suited for implementing recursion?,Array,False,0,False
+948,955.Which data structure is best suited for implementing recursion? [SEP] Linked list,0,955.Which data structure is best suited for implementing recursion?,Linked list,False,0,False
+953,960.Which of the following is an example of middleware? [SEP] Apache Tomcat,1,960.Which of the following is an example of middleware?,Apache Tomcat,True,0,False
+953,960.Which of the following is an example of middleware? [SEP] Windows OS,0,960.Which of the following is an example of middleware?,Windows OS,False,0,False
+953,960.Which of the following is an example of middleware? [SEP] MySQL,0,960.Which of the following is an example of middleware?,MySQL,False,0,False
+953,960.Which of the following is an example of middleware? [SEP] Google Chrome,0,960.Which of the following is an example of middleware?,Google Chrome,False,0,False
+953,960.Which of the following is an example of middleware? [SEP] Adobe Photoshop,0,960.Which of the following is an example of middleware?,Adobe Photoshop,False,0,False
+967,974.Which of the following is used to manage relationships between tables in a database? [SEP] Foreign key,1,974.Which of the following is used to manage relationships between tables in a database?,Foreign key,True,0,False
+967,974.Which of the following is used to manage relationships between tables in a database? [SEP] Index,0,974.Which of the following is used to manage relationships between tables in a database?,Index,False,0,False
+967,974.Which of the following is used to manage relationships between tables in a database? [SEP] Primary key,0,974.Which of the following is used to manage relationships between tables in a database?,Primary key,False,0,False
+967,974.Which of the following is used to manage relationships between tables in a database? [SEP] View,0,974.Which of the following is used to manage relationships between tables in a database?,View,False,0,False
+967,974.Which of the following is used to manage relationships between tables in a database? [SEP] Trigger,0,974.Which of the following is used to manage relationships between tables in a database?,Trigger,False,0,False
+979,986.Which of the following is NOT a component of a database system? [SEP] CPU,1,986.Which of the following is NOT a component of a database system?,CPU,True,0,False
+979,986.Which of the following is NOT a component of a database system? [SEP] DBMS,0,986.Which of the following is NOT a component of a database system?,DBMS,False,0,False
+979,986.Which of the following is NOT a component of a database system? [SEP] Data,0,986.Which of the following is NOT a component of a database system?,Data,False,0,False
+979,986.Which of the following is NOT a component of a database system? [SEP] Users,0,986.Which of the following is NOT a component of a database system?,Users,False,0,False
+979,986.Which of the following is NOT a component of a database system? [SEP] Application programs,0,986.Which of the following is NOT a component of a database system?,Application programs,False,1,True
+980,987.Which of the following is NOT a type of storage access method? [SEP] Manual,1,987.Which of the following is NOT a type of storage access method?,Manual,True,0,False
+980,987.Which of the following is NOT a type of storage access method? [SEP] Sequential,0,987.Which of the following is NOT a type of storage access method?,Sequential,False,0,False
+980,987.Which of the following is NOT a type of storage access method? [SEP] Direct,0,987.Which of the following is NOT a type of storage access method?,Direct,False,0,False
+980,987.Which of the following is NOT a type of storage access method? [SEP] Random,0,987.Which of the following is NOT a type of storage access method?,Random,False,0,False
+980,987.Which of the following is NOT a type of storage access method? [SEP] Indexed,0,987.Which of the following is NOT a type of storage access method?,Indexed,False,0,False
+989,996.Which of the following is NOT a relational database management system? [SEP] MongoDB,1,996.Which of the following is NOT a relational database management system?,MongoDB,True,0,False
+989,996.Which of the following is NOT a relational database management system? [SEP] Oracle,0,996.Which of the following is NOT a relational database management system?,Oracle,False,0,False
+989,996.Which of the following is NOT a relational database management system? [SEP] MySQL,0,996.Which of the following is NOT a relational database management system?,MySQL,False,0,False
+989,996.Which of the following is NOT a relational database management system? [SEP] PostgreSQL,0,996.Which of the following is NOT a relational database management system?,PostgreSQL,False,0,False
+989,996.Which of the following is NOT a relational database management system? [SEP] MS Access,0,996.Which of the following is NOT a relational database management system?,MS Access,False,0,False
+992,999.Which of the following is used to describe the physical layout of a network? [SEP] Physical topology,1,999.Which of the following is used to describe the physical layout of a network?,Physical topology,True,0,False
+992,999.Which of the following is used to describe the physical layout of a network? [SEP] Logical topology,0,999.Which of the following is used to describe the physical layout of a network?,Logical topology,False,0,False
+992,999.Which of the following is used to describe the physical layout of a network? [SEP] Network diagram,0,999.Which of the following is used to describe the physical layout of a network?,Network diagram,False,0,False
+992,999.Which of the following is used to describe the physical layout of a network? [SEP] ER diagram,0,999.Which of the following is used to describe the physical layout of a network?,ER diagram,False,0,False
+992,999.Which of the following is used to describe the physical layout of a network? [SEP] Flowchart,0,999.Which of the following is used to describe the physical layout of a network?,Flowchart,False,0,False

@@ -1,0 +1,38 @@
+timestamp_utc,user_id,qid,question,selected,correct_answer,is_correct
+2025-12-08T07:24:24.429376,test_student_01,12,13. Which of the following best describes a switch in a network?,Monitor,It directs data only to the specific device for which the data is intended.,False
+2025-12-08T07:24:24.429376,test_student_01,45,46. Which of the following is incorrect about the waterfall model of software development?,Central Program Unit,It allows developers to collect and implement requirements throughout the project.,False
+2025-12-08T07:25:56.720919,test_student_01,12,13. Which of the following best describes a switch in a network?,It demodulates the signal back into digital form.,It directs data only to the specific device for which the data is intended.,False
+2025-12-08T07:25:56.720919,test_student_01,45,46. Which of the following is incorrect about the waterfall model of software development?,Central Program Unit,It allows developers to collect and implement requirements throughout the project.,False
+2025-12-08T07:26:51.633715,test_student_01,12,13. Which of the following best describes a switch in a network?,It directs data only to the specific device for which the data is intended.,It directs data only to the specific device for which the data is intended.,True
+2025-12-08T07:26:51.633715,test_student_01,45,46. Which of the following is incorrect about the waterfall model of software development?,Central Program Unit,It allows developers to collect and implement requirements throughout the project.,False
+2025-12-21T17:32:54.631676,test_student_01,12,13. Which of the following best describes a switch in a network?,It directs data only to the specific device for which the data is intended.,It directs data only to the specific device for which the data is intended.,True
+2025-12-21T17:32:54.631676,test_student_01,45,46. Which of the following is incorrect about the waterfall model of software development?,Central Program Unit,It allows developers to collect and implement requirements throughout the project.,False
+2026-01-01T13:19:23.567173,,838,841.SSD uses:,ROM,NAND flash,False
+2026-01-01T13:19:23.567173,,840,843.The clock speed is measured in:,,Hz,False
+2026-01-01T13:19:23.567173,,204,206.Which is NOT part of CPU?,,Monitor,False
+2026-01-01T13:19:23.567173,,582,585.The default subnet mask for Class C is:,,255.255.255.0,False
+2026-01-01T13:19:23.567173,,873,876.A process in ready state is:,,ready to run,False
+2026-01-01T13:19:23.567173,,88,89. Given below are some characteristics of Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) :A - best suited for applications that need high reliability and where the transmission time is less critical. B - faster and requires fewer resources.  C - guarantees that no packets are missing. D - packets may not arrive in order. E - used for voice communications over internet Which of the above are the characteristics of UDP?,,"B, D and E only",False
+2026-01-01T13:19:23.567173,,619,622.The OS kernel manages:,,"RAM, processes, hardware",False
+2026-01-01T13:19:23.567173,,262,265.Optical fiber uses:,,Light pulses,False
+2026-01-01T13:19:23.567173,,428,431.Which protocol is used by email clients to retrieve messages from a mail server with support for folder synchronization?,,IMAP,False
+2026-01-01T13:19:23.567173,,102,103. Computer has evolved from the early main frames to the relatively small smart devices with high computing power used today. Which of the following inventions contributed to reduce the physical size of computers?,,integrated circuits,False
+2026-01-01T13:27:31.917372,,680,683.The main component responsible for executing instructions is:,GPU,CPU,False
+2026-01-01T13:27:31.917372,,302,305.UNIX treats everything as a:,,File,False
+2026-01-01T13:27:31.917372,,640,643.Which of the following is a system tool?,,Device manager,False
+2026-01-01T13:27:31.917372,,199,201.Which is NOT a loop?,,switch,False
+2026-01-01T13:27:31.917372,,774,777.The main purpose of indexing in databases is to:,,Speed up query processing,False
+2026-01-01T13:27:31.917372,,342,345.What is the purpose of the program counter (PC) in a CPU?,,Holds next instruction address,False
+2026-01-01T13:27:31.917372,,870,873.Which CSS property changes text color?,,color,False
+2026-01-01T13:27:31.917372,,601,604.A 16-bit word can represent:,,"65,536 values",False
+2026-01-01T13:27:31.917372,,828,831.ROM is used for:,,permanent instructions,False
+2026-01-01T13:27:31.917372,,547,550.The HTML tag <hr> refers to:,,Horizontal line,False
+2026-01-01T13:30:11.371870,,125,"127. A software development company identifies that their new system development project has complex requirements and has a medium to high risk level. Further, an evaluation is needed to clear the requirements and significant changes are expected during system development. What is the most suitable software development process model for this project?",waterfall,spiral,False
+2026-01-01T13:30:17.184631,,125,"127. A software development company identifies that their new system development project has complex requirements and has a medium to high risk level. Further, an evaluation is needed to clear the requirements and significant changes are expected during system development. What is the most suitable software development process model for this project?",waterfall,spiral,False
+2026-01-01T13:35:45.231245,,873,876.A process in ready state is:,terminated,ready to run,False
+2026-01-03T19:01:15.969149,,384,387.Which of the following is an example of volatile memory?,Flash memory,Cache,False
+2026-01-03T19:03:34.461489,,730,733.Which term is used for mapping logical addresses to physical addresses?,Address binding,Address binding,True,direct_match,
+2026-01-03T19:03:38.856145,,125,"127. A software development company identifies that their new system development project has complex requirements and has a medium to high risk level. Further, an evaluation is needed to clear the requirements and significant changes are expected during system development. What is the most suitable software development process model for this project?",spiral,spiral,True,direct_match,
+2026-01-03T19:03:41.928841,,174,175.ALU stands for:,Arithmetic Logic Unit,Arithmetic Logic Unit,True,direct_match,
+2026-01-03T19:03:59.393390,,972,975.Which of the following is NOT a Python keyword?,def,switch,False,direct_match,
+2026-01-03T19:15:34.994671,,291,294.IEEE 754 single-precision floating-point uses:,48 bits,32 bits,False,direct_match,
