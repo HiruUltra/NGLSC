@@ -83,19 +83,17 @@ Integrated into a Smart Podium, CogniVoice enables hands-free, unbiased, and rea
 
  ### ⚙️ Dependencies
 
-Flask==3.0.0                 # REST API backend
-torch==2.0.0                 # Required for Whisper
-openai-whisper==20231117     # Speech-to-text
-tensorflow==2.15.0           # Required for YAMNet
-tensorflow-hub==0.15.0       # Load pre-trained YAMNet
-scikit-learn==1.3.2          # ML models & pipelines
-
-numpy==1.24.3                # Numerical operations
-pandas==2.1.3                # Question bank handling
-joblib==1.3.2                # Model serialization
-
-librosa==0.10.1              # Audio processing
-soundfile==0.12.1            # Audio I/O
+- Flask==3.0.0                 # REST API backend
+- torch==2.0.0                 # Required for Whisper
+- openai-whisper==20231117     # Speech-to-text
+- tensorflow==2.15.0           # Required for YAMNet
+- tensorflow-hub==0.15.0       # Load pre-trained YAMNet
+- scikit-learn==1.3.2          # ML models & pipelines
+- numpy==1.24.3                # Numerical operations
+- pandas==2.1.3                # Question bank handling
+- joblib==1.3.2                # Model serialization
+- librosa==0.10.1              # Audio processing
+- soundfile==0.12.1            # Audio I/O
 
 ---
 
