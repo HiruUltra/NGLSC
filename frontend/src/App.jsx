@@ -11,6 +11,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminHome from './pages/AdminHome';
 import SmartVirtualEnvironment from './pages/SmartVirtualEnvironment';
 import VideoAnalysisDashboard from './pages/VideoAnalysisDashboard';
+import AdminUsers from './pages/AdminUsers';
 
 // User Pages
 import UserHome from './pages/UserHome';
@@ -129,7 +130,7 @@ function AppRoutes() {
                 <Route path="smart-virtual" element={<SmartVirtualEnvironment />} />
                 <Route path="video-analysis" element={<VideoAnalysisDashboard />} />
                 <Route path="marks" element={<div className="p-8"><p className="text-white text-2xl font-bold">📊 Student Marks Analysis - Coming Soon</p></div>} />
-                <Route path="users" element={<div className="p-8"><p className="text-white text-2xl font-bold">👥 User Management - Coming Soon</p></div>} />
+                <Route path="users" element={<AdminUsers />} />
               </Route>
             </Routes>
           </ProtectedRoute>
