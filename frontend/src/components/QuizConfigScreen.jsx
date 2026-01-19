@@ -4,6 +4,47 @@ import { useState } from 'react';
  * QuizConfigScreen Component
  * Home page for configuring quiz parameters
  */
+
+const generateMockQuiz = (topic, count) => {
+    const mockQuestions = {
+        'Mathematics': [
+            { id: 1, question: 'What is 2 + 2?', options: ['3', '4', '5', '6'], correct: 1 },
+            { id: 2, question: 'What is the square root of 16?', options: ['2', '3', '4', '5'], correct: 2 },
+            { id: 3, question: 'What is 10 × 5?', options: ['40', '50', '60', '70'], correct: 1 },
+            { id: 4, question: 'What is 100 ÷ 4?', options: ['20', '25', '30', '35'], correct: 1 },
+            { id: 5, question: 'What is 7²?', options: ['42', '49', '56', '63'], correct: 1 },
+        ],
+        'Science': [
+            { id: 1, question: 'What is the chemical symbol for gold?', options: ['Go', 'Gd', 'Au', 'Ag'], correct: 2 },
+            { id: 2, question: 'What is the speed of light?', options: ['3×10⁸ m/s', '3×10¹⁰ m/s', '3×10⁶ m/s', '3×10¹² m/s'], correct: 0 },
+            { id: 3, question: 'What is the powerhouse of the cell?', options: ['Nucleus', 'Ribosome', 'Mitochondria', 'Chloroplast'], correct: 2 },
+            { id: 4, question: 'How many bones are in the human body?', options: ['186', '206', '226', '246'], correct: 1 },
+            { id: 5, question: 'What is the most abundant element in the universe?', options: ['Oxygen', 'Helium', 'Hydrogen', 'Carbon'], correct: 2 },
+        ],
+        'History': [
+            { id: 1, question: 'In what year did World War II end?', options: ['1943', '1944', '1945', '1946'], correct: 2 },
+            { id: 2, question: 'Who was the first President of the United States?', options: ['Jefferson', 'Washington', 'Lincoln', 'Grant'], correct: 1 },
+            { id: 3, question: 'In what year did the American Independence?', options: ['1774', '1775', '1776', '1777'], correct: 2 },
+            { id: 4, question: 'Who discovered America?', options: ['Vasco da Gama', 'Christopher Columbus', 'Magellan', 'Cabot'], correct: 1 },
+            { id: 5, question: 'In what year did the French Revolution start?', options: ['1787', '1788', '1789', '1790'], correct: 2 },
+        ],
+        'General Knowledge': [
+            { id: 1, question: 'What is the capital of France?', options: ['Lyon', 'Paris', 'Marseille', 'Nice'], correct: 1 },
+            { id: 2, question: 'What is the largest country in the world?', options: ['Canada', 'USA', 'China', 'Russia'], correct: 3 },
+            { id: 3, question: 'How many continents are there?', options: ['5', '6', '7', '8'], correct: 2 },
+            { id: 4, question: 'What is the smallest country in the world?', options: ['Monaco', 'Vatican City', 'San Marino', 'Liechtenstein'], correct: 1 },
+            { id: 5, question: 'What is the most spoken language in the world?', options: ['English', 'Spanish', 'Mandarin', 'Hindi'], correct: 2 },
+        ],
+    };
+
+    const questions = mockQuestions[topic] || mockQuestions['General Knowledge'];
+    return {
+        questions: questions.slice(0, count),
+        totalQuestions: count,
+        timeLimit: 10 * count,
+    };
+};
+
 export default function QuizConfigScreen({ onStartQuiz }) {
     const [topic, setTopic] = useState('Mathematics');
     const [numQuestions, setNumQuestions] = useState(5);
@@ -18,18 +59,25 @@ export default function QuizConfigScreen({ onStartQuiz }) {
         setError(null);
 
         try {
-            // Fetch quiz from backend
-            const response = await fetch(
-                `http://localhost:8000/generate-quiz?topic=${encodeURIComponent(topic)}&count=${numQuestions}&duration=${duration}`
-            );
-
-            if (!response.ok) {
-                throw new Error('Failed to generate quiz');
+            // Try to fetch from Python backend, fallback to mock data
+            let quizData;
+            try {
+                const response = await fetch(
+                    `http://localhost:8000/generate-quiz?topic=${encodeURIComponent(topic)}&count=${numQuestions}&duration=${duration}`,
+                    { signal: AbortSignal.timeout(3000) }
+                );
+                if (response.ok) {
+                    quizData = await response.json();
+                } else {
+                    throw new Error('Backend unavailable');
+                }
+            } catch (err) {
+                console.warn('Python API not available, using mock data:', err.message);
+                // Use mock quiz data if API is unavailable
+                quizData = generateMockQuiz(topic, numQuestions);
             }
 
-            const quizData = await response.json();
-
-            // Start quiz with fetched data
+            // Start quiz with fetched or mock data
             onStartQuiz({
                 ...quizData,
                 config: { topic, numQuestions, duration }

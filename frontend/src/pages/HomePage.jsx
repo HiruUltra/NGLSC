@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 function HomePage() {
     const [isVisible, setIsVisible] = useState(false);
@@ -43,9 +44,11 @@ function HomePage() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black transition-colors duration-300">
-            {/* Hero Section */}
-            <section className="relative overflow-hidden">
+        <>
+            <Header />
+            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black transition-colors duration-300">
+                {/* Hero Section */}
+                <section className="relative overflow-hidden">
                 {/* Animated Background */}
                 <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 dark:from-cyan-500/20 dark:to-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -196,6 +199,7 @@ function HomePage() {
                 </div>
             </section>
         </div>
+        </>
     );
 }
 

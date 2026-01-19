@@ -1,153 +1,169 @@
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import ThemeToggle from './components/ThemeToggle';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
+
+// Auth Pages
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+// Admin Pages
+import AdminDashboard from './pages/AdminDashboard';
+import AdminHome from './pages/AdminHome';
+import SmartVirtualEnvironment from './pages/SmartVirtualEnvironment';
+import VideoAnalysisDashboard from './pages/VideoAnalysisDashboard';
+
+// User Pages
+import UserHome from './pages/UserHome';
+import SmartAssignment from './pages/SmartAssignment';
+import CognivoiceViva from './pages/CognivoiceViva';
 import QuizConfigScreen from './components/QuizConfigScreen';
 import QuizComponent from './components/QuizComponent';
 import QuizResults from './components/QuizResults';
+
+// Components
+import Layout from './components/Layout';
 import ProctoringWidget from './components/ProctoringWidget';
-import LectureRecorderPage from './pages/LectureRecorderPage';
-import AttendanceCounterPage from './pages/AttendanceCounterPage';
 import './App.css';
 
-// Main quiz app component
+// Protected Route Component
+function ProtectedRoute({ children, requiredRole = null }) {
+  const token = localStorage.getItem('token');
+  const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+
+  if (!token) {
+    return <Navigate to="/login" />;
+  }
+
+  if (requiredRole && user?.role !== requiredRole) {
+    return <Navigate to={user?.role === 'Admin' ? '/admin/home' : '/home'} />;
+  }
+
+  return children;
+}
+
+// Quiz App Wrapper
 function QuizApp() {
-    const [appState, setAppState] = useState('config'); // 'config', 'quiz', 'results'
-    const [quizData, setQuizData] = useState(null);
-    const [quizResult, setQuizResult] = useState(null);
-    const [language, setLanguage] = useState('en'); // 'en' or 'si'
+  const [appState, setAppState] = useState('config');
+  const [quizData, setQuizData] = useState(null);
+  const [quizResult, setQuizResult] = useState(null);
 
-    const handleStartQuiz = (data) => {
-        setQuizData(data);
-        setAppState('quiz');
-    };
+  const handleStartQuiz = (data) => {
+    setQuizData(data);
+    setAppState('quiz');
+  };
 
-    const handleSubmitQuiz = (result) => {
-        setQuizResult(result);
-        setAppState('results');
-    };
+  const handleSubmitQuiz = (result) => {
+    setQuizResult(result);
+    setAppState('results');
+  };
 
-    const handleRetakeQuiz = () => {
-        setQuizData(null);
-        setQuizResult(null);
-        setAppState('config');
-    };
+  const handleRetakeQuiz = () => {
+    setQuizData(null);
+    setQuizResult(null);
+    setAppState('config');
+  };
 
-    // Only show proctoring during quiz
-    const isExamActive = appState === 'quiz';
+  const isExamActive = appState === 'quiz';
 
-    // Config screen (no proctoring)
-    if (appState === 'config') {
-        return (
-            <Layout>
-                <QuizConfigScreen onStartQuiz={handleStartQuiz} />
-            </Layout>
-        );
-    }
-
-    // Results screen (no proctoring)
-    if (appState === 'results') {
-        return <QuizResults result={quizResult} onRetakeQuiz={handleRetakeQuiz} />;
-    }
-
-    // Quiz screen (with proctoring)
+  if (appState === 'config') {
     return (
-        <div className="app-container min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-            {/* Header */}
-            <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 backdrop-blur-xl shadow-sm transition-colors duration-300">
-                <div className="px-6 py-4 flex items-center justify-between">
-                    <div>
-                        <h1 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2 transition-colors duration-300">
-                            <span className="text-3xl">🎓</span>
-                            AI Exam Proctoring System
-                        </h1>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Monitored Exam in Progress</p>
-                    </div>
+      <Layout>
+        <QuizConfigScreen onStartQuiz={handleStartQuiz} />
+      </Layout>
+    );
+  }
 
-                    <div className="flex items-center gap-3">
-                        {/* Language Toggle */}
-                        <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700/50 p-2 rounded-xl border border-gray-200 dark:border-gray-600/50 transition-colors duration-300">
-                            <button
-                                onClick={() => setLanguage('en')}
-                                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${language === 'en'
-                                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30'
-                                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                                    }`}
-                            >
-                                English
-                            </button>
-                            <button
-                                onClick={() => setLanguage('si')}
-                                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${language === 'si'
-                                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30'
-                                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                                    }`}
-                            >
-                                සිංහල
-                            </button>
-                        </div>
+  if (appState === 'results') {
+    return <QuizResults result={quizResult} onRetakeQuiz={handleRetakeQuiz} />;
+  }
 
-                        <ThemeToggle />
-                    </div>
-                </div>
-            </header>
-
-            {/* Main Content Area */}
-            <div className="h-[calc(100vh-80px)] flex">
-                {/* Quiz Area - Takes most of the space */}
-                <div className="flex-1 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
-                    <QuizComponent
-                        quizData={quizData}
-                        onSubmit={handleSubmitQuiz}
-                    />
-                </div>
-
-                {/* Proctoring Sidebar */}
-                <div className="w-96 p-4 bg-gray-50 dark:bg-gray-800/50 border-l border-gray-200 dark:border-gray-700/50 overflow-y-auto transition-colors duration-300">
-                    <ProctoringWidget
-                        isActive={isExamActive}
-                        language={language}
-                    />
-                </div>
-            </div>
+  return (
+    <div className="app-container min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 backdrop-blur-xl shadow-sm transition-colors duration-300">
+        <div className="px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2 transition-colors duration-300">
+              <span className="text-3xl">🎓</span>
+              NGLSC - Quiz System
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Monitored Exam in Progress</p>
+          </div>
         </div>
-    );
+      </header>
+
+      <div className="h-[calc(100vh-80px)] flex">
+        <div className="flex-1 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
+          <QuizComponent
+            quizData={quizData}
+            onSubmit={handleSubmitQuiz}
+          />
+        </div>
+
+        <div className="w-96 p-4 bg-gray-50 dark:bg-gray-800/50 border-l border-gray-200 dark:border-gray-700/50 overflow-y-auto transition-colors duration-300">
+          <ProctoringWidget
+            isActive={isExamActive}
+            language="en"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
+// Main App Routes
+function AppRoutes() {
+  return (
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
+      {/* Admin Routes */}
+      <Route
+        path="/admin/*"
+        element={
+          <ProtectedRoute requiredRole="Admin">
+            <Routes>
+              <Route element={<AdminDashboard />}>
+                <Route path="home" element={<AdminHome />} />
+                <Route path="smart-virtual" element={<SmartVirtualEnvironment />} />
+                <Route path="video-analysis" element={<VideoAnalysisDashboard />} />
+                <Route path="marks" element={<div className="p-8"><p className="text-white text-2xl font-bold">📊 Student Marks Analysis - Coming Soon</p></div>} />
+                <Route path="users" element={<div className="p-8"><p className="text-white text-2xl font-bold">👥 User Management - Coming Soon</p></div>} />
+              </Route>
+            </Routes>
+          </ProtectedRoute>
+        }
+      />
 
-function App() {
-    return (
-        <ThemeProvider>
-            <BrowserRouter>
-                <Routes>
-                    {/* Home Page Route */}
-                    <Route path="/home" element={<Layout><HomePage /></Layout>} />
+      {/* User Routes */}
+      <Route path="/home" element={<UserHome />} />
 
-                    {/* Default route redirects to home */}
-                    <Route path="/" element={<Layout><HomePage /></Layout>} />
+      <Route path="/quiz" element={
+        <ProtectedRoute>
+          <QuizApp />
+        </ProtectedRoute>
+      } />
 
-                    {/* Quiz System Route */}
-                    <Route path="/quiz" element={<QuizApp />} />
+      <Route path="/assignments" element={<SmartAssignment />} />
 
-                    {/* Lecture Recorder Route */}
-                    <Route
-                        path="/lecture-recorder"
-                        element={<Layout><LectureRecorderPage /></Layout>}
-                    />
+      <Route path="/cognivoice" element={<CognivoiceViva />} />
 
-                    {/* Attendance Counter Route */}
-                    <Route
-                        path="/attendance-counter"
-                        element={<Layout><AttendanceCounterPage /></Layout>}
-                    />
-                </Routes>
-            </BrowserRouter>
-        </ThemeProvider>
-    );
+      {/* Root Route */}
+      <Route path="/" element={<Navigate to="/home" />} />
+      <Route path="*" element={<Navigate to="/home" />} />
+    </Routes>
+  );
 }
 
-export default App;
+// Main App Component
+export default function App() {
+  return (
+    <ThemeProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ThemeProvider>
+  );
+}
 
