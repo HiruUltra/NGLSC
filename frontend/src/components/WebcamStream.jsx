@@ -17,6 +17,11 @@ export default function WebcamStream({ isConnected, sendMessage }) {
     useEffect(() => {
         const startCamera = async () => {
             try {
+                // Safety check: navigator.mediaDevices might be undefined in non-secure contexts (not HTTPS or localhost)
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    throw new Error('Camera initialization failed: Device is not in a secure context (HTTPS/localhost) or browser not supported.');
+                }
+
                 const stream = await navigator.mediaDevices.getUserMedia({
                     video: {
                         width: { ideal: 640 },
@@ -40,6 +45,8 @@ export default function WebcamStream({ isConnected, sendMessage }) {
                     setError('Camera permission denied. Please allow camera access.');
                 } else if (err.name === 'NotFoundError') {
                     setError('No camera found. Please connect a camera.');
+                } else if (err.message.includes('secure context')) {
+                    setError(err.message);
                 } else {
                     setError(`Camera error: ${err.message}`);
                 }

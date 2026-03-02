@@ -44,6 +44,12 @@ const VoiceRecorder = () => {
         try {
             console.log('Initializing recorder...');
 
+            // Safety check: navigator.mediaDevices might be undefined in non-secure contexts (not HTTPS or localhost)
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                setBrowserSupported(false);
+                throw new Error('Camera/Microphone initialization failed: Device is not in a secure context (HTTPS/localhost) or browser not supported.');
+            }
+
             // Get camera and microphone access FIRST
             setStatus('🎥 Requesting camera and microphone access...');
             const stream = await navigator.mediaDevices.getUserMedia({

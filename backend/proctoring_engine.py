@@ -26,13 +26,23 @@ class ProctoringEngine:
     
     def __init__(self):
         """Initialize MediaPipe Face Mesh and state tracking"""
-        self.mp_face_mesh = mp.solutions.face_mesh
-        self.face_mesh = self.mp_face_mesh.FaceMesh(
-            max_num_faces=MAX_NUM_FACES,
-            refine_landmarks=True,
-            min_detection_confidence=MIN_DETECTION_CONFIDENCE,
-            min_tracking_confidence=MIN_TRACKING_CONFIDENCE
-        )
+        try:
+            self.mp_face_mesh = mp.solutions.face_mesh
+            self.face_mesh = self.mp_face_mesh.FaceMesh(
+                max_num_faces=MAX_NUM_FACES,
+                refine_landmarks=True,
+                min_detection_confidence=MIN_DETECTION_CONFIDENCE,
+                min_tracking_confidence=MIN_TRACKING_CONFIDENCE
+            )
+            self.initialized = True
+            print("MediaPipe Face Mesh initialized successfully")
+        except AttributeError as e:
+            print(f"ERROR: MediaPipe 'solutions' not found. This is common on Python 3.12 (Windows).")
+            print(f"Please use Python 3.11 or wait for a compatible MediaPipe release.")
+            self.initialized = False
+        except Exception as e:
+            print(f"ERROR initializing MediaPipe: {e}")
+            self.initialized = False
         
         # State tracking
         self.head_turn_start_time = None
@@ -68,6 +78,10 @@ class ProctoringEngine:
         height, width = frame.shape[:2]
         
         # Process with MediaPipe
+        if not self.initialized:
+            status.status = "error_mediapipe_not_found"
+            return None, status
+
         results = self.face_mesh.process(rgb_frame)
         
         # Initialize status

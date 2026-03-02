@@ -5,7 +5,7 @@ import StatusMonitor from './StatusMonitor';
 import AudioAlert from './AudioAlert';
 import { useWebSocket } from '../hooks/useWebSocket';
 
-const WEBSOCKET_URL = 'ws://localhost:8000/ws/proctoring';
+const WEBSOCKET_URL = `ws://${window.location.hostname}:8000/ws/proctoring`;
 
 /**
  * ProctoringWidget Component
