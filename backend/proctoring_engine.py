@@ -5,6 +5,8 @@ Handles face detection, head pose estimation, and mouth movement detection
 import cv2
 import numpy as np
 import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
 import time
 from typing import Optional, Tuple, Dict
 from models import AlertType, AlertEvent, Severity, StatusUpdate
@@ -25,23 +27,26 @@ class ProctoringEngine:
     """Main proctoring engine for analyzing video frames"""
     
     def __init__(self):
-        """Initialize MediaPipe Face Mesh and state tracking"""
+        """Initialize MediaPipe Face Landmarker and state tracking"""
         try:
-            self.mp_face_mesh = mp.solutions.face_mesh
-            self.face_mesh = self.mp_face_mesh.FaceMesh(
-                max_num_faces=MAX_NUM_FACES,
-                refine_landmarks=True,
-                min_detection_confidence=MIN_DETECTION_CONFIDENCE,
-                min_tracking_confidence=MIN_TRACKING_CONFIDENCE
+            # Initialize MediaPipe Tasks Face Landmarker
+            model_path = 'mediapipe_models/face_landmarker.task'
+            base_options = python.BaseOptions(model_asset_path=model_path)
+            options = vision.FaceLandmarkerOptions(
+                base_options=base_options,
+                running_mode=vision.RunningMode.IMAGE,
+                num_faces=MAX_NUM_FACES,
+                min_face_detection_confidence=MIN_DETECTION_CONFIDENCE,
+                min_face_presence_confidence=MIN_DETECTION_CONFIDENCE,
+                min_tracking_confidence=MIN_TRACKING_CONFIDENCE,
+                output_face_blendshapes=True,
+                output_facial_transformation_matrixes=True
             )
+            self.landmarker = vision.FaceLandmarker.create_from_options(options)
             self.initialized = True
-            print("MediaPipe Face Mesh initialized successfully")
-        except AttributeError as e:
-            print(f"ERROR: MediaPipe 'solutions' not found. This is common on Python 3.12 (Windows).")
-            print(f"Please use Python 3.11 or wait for a compatible MediaPipe release.")
-            self.initialized = False
+            print(f"MediaPipe Face Landmarker initialized successfully from {model_path}")
         except Exception as e:
-            print(f"ERROR initializing MediaPipe: {e}")
+            print(f"ERROR initializing MediaPipe Tasks: {e}")
             self.initialized = False
         
         # State tracking
@@ -82,7 +87,11 @@ class ProctoringEngine:
             status.status = "error_mediapipe_not_found"
             return None, status
 
-        results = self.face_mesh.process(rgb_frame)
+        # Convert to MediaPipe Image object
+        mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
+        
+        # Detect landmarks
+        result = self.landmarker.detect(mp_image)
         
         # Initialize status
         status = StatusUpdate(
@@ -93,7 +102,7 @@ class ProctoringEngine:
         
         alert = None
         
-        if not results.multi_face_landmarks:
+        if not result.face_landmarks:
             # No face detected
             alert = self._create_alert(AlertType.NO_FACE, current_time)
             status.status = "no_face"
@@ -101,7 +110,7 @@ class ProctoringEngine:
         else:
             # Face detected
             status.face_detected = True
-            face_landmarks = results.multi_face_landmarks[0]
+            face_landmarks = result.face_landmarks[0]
             
             # Calculate head pose
             yaw_angle, pitch_angle, roll_angle = self._calculate_head_pose(
@@ -151,12 +160,12 @@ class ProctoringEngine:
         # 263: Right eye right corner, 61: Left mouth corner, 291: Right mouth corner
         
         image_points = np.array([
-            (face_landmarks.landmark[1].x * width, face_landmarks.landmark[1].y * height),      # Nose tip
-            (face_landmarks.landmark[152].x * width, face_landmarks.landmark[152].y * height),  # Chin
-            (face_landmarks.landmark[33].x * width, face_landmarks.landmark[33].y * height),    # Left eye
-            (face_landmarks.landmark[263].x * width, face_landmarks.landmark[263].y * height),  # Right eye
-            (face_landmarks.landmark[61].x * width, face_landmarks.landmark[61].y * height),    # Left mouth
-            (face_landmarks.landmark[291].x * width, face_landmarks.landmark[291].y * height)   # Right mouth
+            (face_landmarks[1].x * width, face_landmarks[1].y * height),      # Nose tip
+            (face_landmarks[152].x * width, face_landmarks[152].y * height),  # Chin
+            (face_landmarks[33].x * width, face_landmarks[33].y * height),    # Left eye
+            (face_landmarks[263].x * width, face_landmarks[263].y * height),  # Right eye
+            (face_landmarks[61].x * width, face_landmarks[61].y * height),    # Left mouth
+            (face_landmarks[291].x * width, face_landmarks[291].y * height)   # Right mouth
         ], dtype="double")
         
         # Camera internals (approximate)
@@ -224,9 +233,9 @@ class ProctoringEngine:
         # Get coordinates
         def get_coord(idx):
             return np.array([
-                face_landmarks.landmark[idx].x,
-                face_landmarks.landmark[idx].y,
-                face_landmarks.landmark[idx].z
+                face_landmarks[idx].x,
+                face_landmarks[idx].y,
+                face_landmarks[idx].z
             ])
         
         # Vertical distances
@@ -358,4 +367,5 @@ class ProctoringEngine:
     
     def cleanup(self):
         """Cleanup resources"""
-        self.face_mesh.close()
+        if self.initialized:
+            self.landmarker.close()
