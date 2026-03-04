@@ -78,3 +78,24 @@ class TokenData(BaseModel):
     """Token data for decoding"""
     username: Optional[str] = None
     role: Optional[str] = None
+
+
+# --- Analytics Models ---
+
+class QuizSubmission(BaseModel):
+    """Model for student quiz result submission"""
+    username: Optional[str] = None
+    topic: str
+    score: int
+    total: int
+    percentage: float
+    duration_seconds: int
+    timestamp: Optional[datetime] = None
+
+class ViolationRecord(BaseModel):
+    """Model for recording a proctoring violation"""
+    username: Optional[str] = None
+    violation_type: AlertType
+    severity: Severity
+    timestamp: Optional[datetime] = None
+    details: Optional[str] = None

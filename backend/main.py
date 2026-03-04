@@ -4,6 +4,8 @@ FastAPI WebSocket server for real-time exam proctoring
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, UploadFile, File, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from contextlib import asynccontextmanager
+from typing import Optional
 import cv2
 import numpy as np
 import base64
@@ -13,7 +15,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 from proctoring_engine import ProctoringEngine
-from models import AlertEvent, FrameData, User, UserCreate, Token, UserInDB
+from models import AlertEvent, FrameData, User, UserCreate, Token, UserInDB, QuizSubmission, ViolationRecord, AlertType
 from quiz_generator import generate_quiz, QuizConfig, QuizResponse
 import auth
 from database import connect_to_mongo, close_mongo_connection, get_database
@@ -25,11 +27,20 @@ from jwt.exceptions import InvalidTokenError
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Connect to MongoDB
+    await connect_to_mongo()
+    yield
+    # Shutdown: Close MongoDB connection
+    await close_mongo_connection()
+
 # Initialize FastAPI app
 app = FastAPI(
     title="AI Exam Proctoring System",
     description="Real-time exam monitoring using computer vision",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # CORS middleware for frontend communication
@@ -43,14 +54,6 @@ app.add_middleware(
 
 # Authentication setup
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
-
-@app.on_event("startup")
-async def startup_db_client():
-    await connect_to_mongo()
-
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    await close_mongo_connection()
 
 # Auth Helpers
 async def get_current_user(token: str = Depends(oauth2_scheme)):
@@ -269,6 +272,60 @@ async def generate_quiz_endpoint(topic: str, count: int = 5, duration: int = 10,
         raise HTTPException(status_code=500, detail=f"Failed to generate quiz: {str(e)}")
 
 
+# --- Analytics & Submission Routes ---
+
+@app.post("/api/quiz/submit")
+async def submit_quiz(submission: QuizSubmission, current_user: User = Depends(check_role("student"))):
+    """Save student quiz results"""
+    db = get_database()
+    submission_dict = submission.dict()
+    submission_dict["username"] = current_user.username  # Force correct username
+    submission_dict["timestamp"] = datetime.now()
+    
+    await db.quiz_results.insert_one(submission_dict)
+    return {"success": True, "message": "Quiz results saved"}
+
+@app.get("/api/admin/analytics")
+async def get_analytics(current_user: User = Depends(check_role("admin"))):
+    """Aggregate stats for admin dashboard"""
+    db = get_database()
+    
+    # High score
+    high_score = await db.quiz_results.find_one(sort=[("percentage", -1)])
+    
+    # Average score
+    pipeline = [{"$group": {"_id": None, "avg_score": {"$avg": "$percentage"}}}]
+    avg_score_res = await db.quiz_results.aggregate(pipeline).to_list(1)
+    avg_score = avg_score_res[0]["avg_score"] if avg_score_res else 0
+    
+    # Total quizzes
+    total_quizzes = await db.quiz_results.count_documents({})
+    
+    # Top performers (best confidence - lowest violations)
+    # This is a bit complex without session IDs, let's simplify for now
+    # and just show top 5 by percentage
+    top_performers = await db.quiz_results.find({}, sort=[("percentage", -1)]).to_list(10)
+    for p in top_performers:
+        p["_id"] = str(p["_id"])
+    
+    return {
+        "high_score": high_score["percentage"] if high_score else 0,
+        "avg_score": round(avg_score, 1),
+        "total_quizzes": total_quizzes,
+        "top_performers": top_performers
+    }
+
+@app.get("/api/admin/violations")
+async def get_violations(current_user: User = Depends(check_role("admin"))):
+    """Get detailed list of violations"""
+    db = get_database()
+    violations = await db.violations.find({}, sort=[("timestamp", -1)]).to_list(100)
+    for v in violations:
+        v["_id"] = str(v["_id"])
+        v["timestamp"] = v["timestamp"].isoformat()
+    return violations
+
+
 @app.get("/")
 async def root():
     """Health check endpoint"""
@@ -290,19 +347,27 @@ async def health():
 
 
 @app.websocket("/ws/proctoring")
-async def websocket_endpoint(websocket: WebSocket):
+async def websocket_endpoint(websocket: WebSocket, token: Optional[str] = None):
     """
     WebSocket endpoint for real-time frame processing
-    
-    Protocol:
-    - Client sends: JSON with base64 encoded frame
-    - Server sends: JSON with alert events and status updates
     """
     await websocket.accept()
-    logger.info("WebSocket connection established")
+    
+    # Simple token validation for WebSocket
+    username = "anonymous"
+    if token:
+        try:
+            payload = jwt.decode(token, auth.SECRET_KEY, algorithms=[auth.ALGORITHM])
+            username = payload.get("sub", "anonymous")
+        except Exception as e:
+            logger.warning(f"WebSocket auth failed: {e}")
+            # We still allow connection but as anonymous
+    
+    logger.info(f"WebSocket connection established for user: {username}")
     
     # Initialize proctoring engine for this connection
     engine = ProctoringEngine()
+    db = get_database()
     
     try:
         while True:
@@ -319,11 +384,6 @@ async def websocket_endpoint(websocket: WebSocket):
                 frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
                 
                 if frame is None:
-                    logger.warning("Failed to decode frame")
-                    await websocket.send_json({
-                        "type": "error",
-                        "message": "Invalid frame data"
-                    })
                     continue
                 
                 # Process frame with proctoring engine
@@ -337,33 +397,29 @@ async def websocket_endpoint(websocket: WebSocket):
                 
                 # Send alert if triggered
                 if alert:
-                    logger.info(f"Alert triggered: {alert.alert_type}")
+                    # Record violation to DB
+                    if alert.severity in ["warning", "critical"]:
+                        violation = {
+                            "username": username,
+                            "violation_type": alert.alert_type,
+                            "severity": alert.severity,
+                            "timestamp": datetime.now(),
+                            "details": alert.message_en
+                        }
+                        await db.violations.insert_one(violation)
+                    
                     await websocket.send_json({
                         "type": "alert",
                         "data": alert.dict()
                     })
                 
-            except json.JSONDecodeError as e:
-                logger.error(f"JSON decode error: {e}")
-                await websocket.send_json({
-                    "type": "error",
-                    "message": "Invalid JSON format"
-                })
             except Exception as e:
                 logger.error(f"Frame processing error: {e}")
-                await websocket.send_json({
-                    "type": "error",
-                    "message": f"Processing error: {str(e)}"
-                })
-    
+                
     except WebSocketDisconnect:
-        logger.info("WebSocket connection closed")
-    except Exception as e:
-        logger.error(f"WebSocket error: {e}")
+        logger.info(f"WebSocket connection closed for user: {username}")
     finally:
-        # Cleanup resources
         engine.cleanup()
-        logger.info("Proctoring engine cleaned up")
 
 
 if __name__ == "__main__":

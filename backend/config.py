@@ -46,3 +46,8 @@ ALERT_MESSAGES = {
         "si": "සියල්ල හරි. ඔබේ විභාගය දිගටම කරන්න."
     }
 }
+
+# Generative AI API Keys
+ANTHROPIC_API_KEY = "your_anthropic_key_here"
+GEMINI_API_KEY = "your_gemini_key_here"
+DEEPSEEK_API_KEY = "your_deepseek_key_here"

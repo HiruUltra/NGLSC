@@ -1,10 +1,11 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useAuth } from '../context/AuthContext';
 
 function Header() {
     const location = useLocation();
-    const { user, logout, token } = useAuth();
+    const { user, logout, token, isAdmin } = useAuth(); // Added isAdmin, kept token
+    const navigate = useNavigate(); // Added useNavigate
 
     const navLinks = [
         { path: '/home', label: 'Home', icon: '🏠', roles: ['admin', 'student'] },
@@ -55,6 +56,18 @@ function Header() {
 
                         {token ? (
                             <div className="flex items-center gap-3 ml-1">
+                                {/* Admin specific links */}
+                                {isAdmin && (
+                                    <Link
+                                        to="/admin/dashboard"
+                                        className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${location.pathname === '/admin/dashboard'
+                                                ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30'
+                                                : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                            }`}
+                                    >
+                                        📊 Dashboard
+                                    </Link>
+                                )}
                                 <div className="hidden lg:block text-right">
                                     <p className="text-xs font-bold text-gray-900 dark:text-white leading-tight">
                                         {user?.full_name || user?.username}

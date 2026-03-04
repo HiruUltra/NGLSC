@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import ThemeToggle from './components/ThemeToggle';
 import Layout from './components/Layout';
@@ -14,10 +14,13 @@ import QuizResults from './components/QuizResults';
 import ProctoringWidget from './components/ProctoringWidget';
 import LectureRecorderPage from './pages/LectureRecorderPage';
 import AttendanceCounterPage from './pages/AttendanceCounterPage';
+import AdminDashboard from './pages/AdminDashboard';
+import axios from 'axios';
 import './App.css';
 
 // Main quiz app component
 function QuizApp() {
+    const { token } = useAuth();
     const [appState, setAppState] = useState('config'); // 'config', 'quiz', 'results'
     const [quizData, setQuizData] = useState(null);
     const [quizResult, setQuizResult] = useState(null);
@@ -28,7 +31,21 @@ function QuizApp() {
         setAppState('quiz');
     };
 
-    const handleSubmitQuiz = (result) => {
+    const handleSubmitQuiz = async (result) => {
+        try {
+            // Send results to backend
+            if (token) {
+                await axios.post('http://localhost:8000/api/quiz/submit', {
+                    topic: quizData.topic,
+                    score: result.score,
+                    total: result.total,
+                    percentage: parseFloat(result.percentage),
+                    duration_seconds: (quizData.duration_minutes * 60) - result.timeRemaining,
+                }, { headers: { Authorization: `Bearer ${token}` } });
+            }
+        } catch (err) {
+            console.error('Failed to submit results:', err);
+        }
         setQuizResult(result);
         setAppState('results');
     };
@@ -166,6 +183,13 @@ function App() {
                                 </ProtectedRoute>
                             }
                         />
+
+                        {/* Admin Dashboard Route */}
+                        <Route path="/admin/dashboard" element={
+                            <ProtectedRoute role="admin">
+                                <Layout><AdminDashboard /></Layout>
+                            </ProtectedRoute>
+                        } />
                     </Routes>
                 </BrowserRouter>
             </AuthProvider>

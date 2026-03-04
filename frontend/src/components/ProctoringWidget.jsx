@@ -3,9 +3,8 @@ import WebcamStream from './WebcamStream';
 import AlertDisplay from './AlertDisplay';
 import StatusMonitor from './StatusMonitor';
 import AudioAlert from './AudioAlert';
+import { useAuth } from '../context/AuthContext';
 import { useWebSocket } from '../hooks/useWebSocket';
-
-const WEBSOCKET_URL = `ws://${window.location.hostname}:8000/ws/proctoring`;
 
 /**
  * ProctoringWidget Component
@@ -13,6 +12,9 @@ const WEBSOCKET_URL = `ws://${window.location.hostname}:8000/ws/proctoring`;
  * Only active when isActive prop is true
  */
 export default function ProctoringWidget({ isActive, language = 'en' }) {
+    const { token } = useAuth();
+    const WEBSOCKET_URL = `ws://${window.location.hostname}:8000/ws/proctoring?token=${token}`;
+
     const { isConnected, lastMessage, error, sendMessage } = useWebSocket(
         isActive ? WEBSOCKET_URL : null // Only connect when active
     );

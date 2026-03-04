@@ -2,8 +2,10 @@
 Quiz generation logic and mock question database
 """
 import random
-from typing import List, Dict
+import logging
+from typing import List, Dict, Optional
 from pydantic import BaseModel
+import quiz_ai
 
 
 class QuizQuestion(BaseModel):
@@ -204,7 +206,8 @@ QUESTION_BANK = {
 
 def generate_quiz(topic: str, num_questions: int) -> List[QuizQuestion]:
     """
-    Generate a quiz with random questions from the question bank
+    Generate a quiz using Generative AI (Claude, Gemini, or DeepSeek)
+    with a fallback to the local question bank.
     
     Args:
         topic: Topic/subject for the quiz
@@ -213,31 +216,61 @@ def generate_quiz(topic: str, num_questions: int) -> List[QuizQuestion]:
     Returns:
         List of QuizQuestion objects
     """
-    # Find matching topic (case-insensitive partial match)
+    try:
+        # 1. Attempt AI Generation
+        logger.info(f"Generating AI quiz for topic: {topic}")
+        ai_questions = quiz_ai.generate_quiz(topic, num_questions)
+        
+        if ai_questions:
+            questions = []
+            for idx, q in enumerate(ai_questions):
+                try:
+                    # Map AI format to QuizQuestion model
+                    options = q.get("options", [])
+                    correct_text = q.get("correctAnswer", "")
+                    
+                    # Find index of correct answer
+                    correct_index = 0
+                    if correct_text in options:
+                        correct_index = options.index(correct_text)
+                    
+                    questions.append(
+                        QuizQuestion(
+                            id=idx + 1,
+                            question=q.get("question", "Unknown Question"),
+                            options=options,
+                            correct_answer=correct_index
+                        )
+                    )
+                except Exception as ex:
+                    logger.error(f"Error mapping AI question: {ex}")
+                    continue
+            
+            if questions:
+                return questions
+
+    except Exception as e:
+        logger.error(f"AI generation failed, falling back to local bank: {e}")
+
+    # 2. Fallback to Local Question Bank
     matching_topic = None
     for bank_topic in QUESTION_BANK.keys():
         if topic.lower() in bank_topic.lower() or bank_topic.lower() in topic.lower():
             matching_topic = bank_topic
             break
     
-    # If no match, use General Knowledge
     if not matching_topic:
         matching_topic = "General Knowledge"
     
-    # Get questions from the bank
     available_questions = QUESTION_BANK[matching_topic].copy()
     
-    # If requested more questions than available, repeat questions
     if num_questions > len(available_questions):
-        # Repeat the questions to meet the requirement
         multiplier = (num_questions // len(available_questions)) + 1
         available_questions = available_questions * multiplier
     
-    # Randomly select questions
     selected = random.sample(available_questions, min(num_questions, len(available_questions)))
     
-    # Convert to QuizQuestion objects with IDs
-    questions = [
+    return [
         QuizQuestion(
             id=idx + 1,
             question=q["question"],
@@ -246,5 +279,6 @@ def generate_quiz(topic: str, num_questions: int) -> List[QuizQuestion]:
         )
         for idx, q in enumerate(selected)
     ]
-    
-    return questions
+
+# Setup logger for this module
+logger = logging.getLogger(__name__)

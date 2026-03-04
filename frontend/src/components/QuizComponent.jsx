@@ -59,6 +59,7 @@ export default function QuizComponent({ quizData, onSubmit }) {
             score: correct,
             total: quizData.questions.length,
             percentage: ((correct / quizData.questions.length) * 100).toFixed(1),
+            timeRemaining,
             autoSubmit
         };
 
@@ -90,10 +91,10 @@ export default function QuizComponent({ quizData, onSubmit }) {
 
                     {/* Timer */}
                     <div className={`text-center p-4 rounded-xl border ${timeRemaining < 60
-                            ? 'bg-red-500/10 border-red-500/30'
-                            : timeRemaining < 300
-                                ? 'bg-yellow-500/10 border-yellow-500/30'
-                                : 'bg-green-500/10 border-green-500/30'
+                        ? 'bg-red-500/10 border-red-500/30'
+                        : timeRemaining < 300
+                            ? 'bg-yellow-500/10 border-yellow-500/30'
+                            : 'bg-green-500/10 border-green-500/30'
                         }`}>
                         <div className="text-3xl font-bold text-white mb-1">
                             {formatTime(timeRemaining)}
@@ -128,14 +129,14 @@ export default function QuizComponent({ quizData, onSubmit }) {
                                 key={index}
                                 onClick={() => handleAnswerSelect(currentQ.id, index)}
                                 className={`w-full p-5 rounded-xl border-2 text-left transition-all transform hover:scale-102 ${selectedAnswer === index
-                                        ? 'bg-purple-600/20 border-purple-500 shadow-lg shadow-purple-500/20'
-                                        : 'bg-gray-800/30 border-gray-700 hover:border-gray-600'
+                                    ? 'bg-purple-600/20 border-purple-500 shadow-lg shadow-purple-500/20'
+                                    : 'bg-gray-800/30 border-gray-700 hover:border-gray-600'
                                     }`}
                             >
                                 <div className="flex items-center gap-4">
                                     <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-bold ${selectedAnswer === index
-                                            ? 'bg-purple-600 border-purple-500 text-white'
-                                            : 'border-gray-600 text-gray-400'
+                                        ? 'bg-purple-600 border-purple-500 text-white'
+                                        : 'border-gray-600 text-gray-400'
                                         }`}>
                                         {String.fromCharCode(65 + index)}
                                     </div>
@@ -157,8 +158,8 @@ export default function QuizComponent({ quizData, onSubmit }) {
                         onClick={handlePrevious}
                         disabled={currentQuestion === 0}
                         className={`px-6 py-3 rounded-xl font-medium transition-all ${currentQuestion === 0
-                                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                                : 'bg-gray-700 text-white hover:bg-gray-600'
+                            ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                            : 'bg-gray-700 text-white hover:bg-gray-600'
                             }`}
                     >
                         ← Previous
