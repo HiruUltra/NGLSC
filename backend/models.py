@@ -4,7 +4,7 @@ Pydantic models for WebSocket communication
 from pydantic import BaseModel
 from enum import Enum
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 
 class AlertType(str, Enum):
@@ -49,3 +49,32 @@ class StatusUpdate(BaseModel):
     head_pose: Optional[dict] = None
     mouth_status: Optional[str] = None
     timestamp: str
+
+# --- Authentication Models ---
+
+class User(BaseModel):
+    """User model for database"""
+    username: str
+    email: str
+    full_name: Optional[str] = None
+    role: str # 'admin' or 'student'
+    disabled: Optional[bool] = None
+
+class UserCreate(User):
+    """User creation model"""
+    password: str
+
+class UserInDB(User):
+    """User in database with hashed password"""
+    hashed_password: str
+
+class Token(BaseModel):
+    """Token model for response"""
+    access_token: str
+    token_type: str
+    role: str
+
+class TokenData(BaseModel):
+    """Token data for decoding"""
+    username: Optional[str] = None
+    role: Optional[str] = None

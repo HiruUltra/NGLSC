@@ -1,7 +1,7 @@
 """
 FastAPI WebSocket server for real-time exam proctoring
 """
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, UploadFile, File
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, UploadFile, File, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import cv2
@@ -13,8 +13,13 @@ import os
 from datetime import datetime
 from pathlib import Path
 from proctoring_engine import ProctoringEngine
-from models import AlertEvent, FrameData
+from models import AlertEvent, FrameData, User, UserCreate, Token, UserInDB
 from quiz_generator import generate_quiz, QuizConfig, QuizResponse
+import auth
+from database import connect_to_mongo, close_mongo_connection, get_database
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+import jwt
+from jwt.exceptions import InvalidTokenError
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -35,6 +40,44 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Authentication setup
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
+
+@app.on_event("startup")
+async def startup_db_client():
+    await connect_to_mongo()
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    await close_mongo_connection()
+
+# Auth Helpers
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=401,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    payload = auth.decode_access_token(token)
+    if payload is None:
+        raise credentials_exception
+    username: str = payload.get("sub")
+    if username is None:
+        raise credentials_exception
+    
+    db = get_database()
+    user_dict = await db.users.find_one({"username": username})
+    if user_dict is None:
+        raise credentials_exception
+    return User(**user_dict)
+
+def check_role(role: str):
+    async def role_checker(current_user: User = Depends(get_current_user)):
+        if current_user.role != role and current_user.role != "admin":
+            raise HTTPException(status_code=403, detail="Not enough permissions")
+        return current_user
+    return role_checker
 
 
 @app.get("/")
@@ -58,13 +101,51 @@ async def health():
     }
 
 
+# --- Auth Routes ---
+
+@app.post("/auth/register", response_model=User)
+async def register(user_in: UserCreate):
+    db = get_database()
+    # Check if user exists
+    existing_user = await db.users.find_one({"username": user_in.username})
+    if existing_user:
+        raise HTTPException(status_code=400, detail="Username already registered")
+    
+    # Hash password
+    hashed_password = auth.get_password_hash(user_in.password)
+    user_dict = user_in.dict()
+    del user_dict["password"]
+    user_dict["hashed_password"] = hashed_password
+    
+    # Save to DB
+    await db.users.insert_one(user_dict)
+    return user_in
+
+@app.post("/auth/login", response_model=Token)
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    db = get_database()
+    user_dict = await db.users.find_one({"username": form_data.username})
+    if not user_dict or not auth.verify_password(form_data.password, user_dict["hashed_password"]):
+        raise HTTPException(status_code=401, detail="Incorrect username or password")
+    
+    access_token = auth.create_access_token(data={"sub": user_dict["username"], "role": user_dict["role"]})
+    return {
+        "access_token": access_token, 
+        "token_type": "bearer",
+        "role": user_dict["role"]
+    }
+
+@app.get("/auth/me", response_model=User)
+async def read_users_me(current_user: User = Depends(get_current_user)):
+    return current_user
+
 # Lecture gallery directory
 LECTURE_GALLERY_DIR = Path("lecture_gallery")
 LECTURE_GALLERY_DIR.mkdir(exist_ok=True)
 
 
 @app.post("/upload-lecture")
-async def upload_lecture(file: UploadFile = File(...)):
+async def upload_lecture(file: UploadFile = File(...), current_user: User = Depends(check_role("admin"))):
     """
     Upload a lecture video recording
     
@@ -118,7 +199,7 @@ async def upload_lecture(file: UploadFile = File(...)):
 
 
 @app.get("/lectures")
-async def list_lectures():
+async def list_lectures(current_user: User = Depends(check_role("admin"))):
     """
     Get list of all uploaded lecture videos
     
@@ -155,7 +236,7 @@ async def list_lectures():
 
 
 @app.get("/generate-quiz", response_model=QuizResponse)
-async def generate_quiz_endpoint(topic: str, count: int = 5, duration: int = 10):
+async def generate_quiz_endpoint(topic: str, count: int = 5, duration: int = 10, current_user: User = Depends(check_role("student"))):
     """
     Generate a quiz with random questions
     

@@ -1,9 +1,13 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import ThemeToggle from './components/ThemeToggle';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 import QuizConfigScreen from './components/QuizConfigScreen';
 import QuizComponent from './components/QuizComponent';
 import QuizResults from './components/QuizResults';
@@ -116,35 +120,55 @@ function QuizApp() {
     );
 }
 
-
-
 function App() {
     return (
         <ThemeProvider>
-            <BrowserRouter>
-                <Routes>
-                    {/* Home Page Route */}
-                    <Route path="/home" element={<Layout><HomePage /></Layout>} />
+            <AuthProvider>
+                <BrowserRouter>
+                    <Routes>
+                        {/* Auth Routes */}
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/signup" element={<SignupPage />} />
 
-                    {/* Default route redirects to home */}
-                    <Route path="/" element={<Layout><HomePage /></Layout>} />
+                        {/* Home Page Route - Accessible to all logged in users */}
+                        <Route path="/home" element={
+                            <ProtectedRoute>
+                                <Layout><HomePage /></Layout>
+                            </ProtectedRoute>
+                        } />
 
-                    {/* Quiz System Route */}
-                    <Route path="/quiz" element={<QuizApp />} />
+                        {/* Default route redirects to home or login */}
+                        <Route path="/" element={<Navigate to="/home" replace />} />
 
-                    {/* Lecture Recorder Route */}
-                    <Route
-                        path="/lecture-recorder"
-                        element={<Layout><LectureRecorderPage /></Layout>}
-                    />
+                        {/* Quiz System Route - Student and Admin */}
+                        <Route path="/quiz" element={
+                            <ProtectedRoute role="student">
+                                <QuizApp />
+                            </ProtectedRoute>
+                        } />
 
-                    {/* Attendance Counter Route */}
-                    <Route
-                        path="/attendance-counter"
-                        element={<Layout><AttendanceCounterPage /></Layout>}
-                    />
-                </Routes>
-            </BrowserRouter>
+                        {/* Lecture Recorder Route - Admin only */}
+                        <Route
+                            path="/lecture-recorder"
+                            element={
+                                <ProtectedRoute role="admin">
+                                    <Layout><LectureRecorderPage /></Layout>
+                                </ProtectedRoute>
+                            }
+                        />
+
+                        {/* Attendance Counter Route - Admin only */}
+                        <Route
+                            path="/attendance-counter"
+                            element={
+                                <ProtectedRoute role="admin">
+                                    <Layout><AttendanceCounterPage /></Layout>
+                                </ProtectedRoute>
+                            }
+                        />
+                    </Routes>
+                </BrowserRouter>
+            </AuthProvider>
         </ThemeProvider>
     );
 }
