@@ -12,7 +12,7 @@ function Footer() {
                         <div className="flex items-center gap-2">
                             <span className="text-3xl">🎓</span>
                             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                                AI Proctoring System
+                                Next Gen Learning Smart Classroom - NGLSC
                             </h3>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -85,7 +85,7 @@ function Footer() {
                                 className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200 text-sm"
                             >
                                 <span>📧</span>
-                                <span>support@aiproctoring.com</span>
+                                <span>support@nglsc.com</span>
                             </a>
                             <div className="flex gap-4 pt-2">
                                 <a
@@ -117,7 +117,7 @@ function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                        &copy; {currentYear} AI Proctoring & Learning System. All rights reserved.
+                        &copy; {currentYear} Next Gen Learning Smart Classroom - NGLSC. All rights reserved.
                     </p>
                 </div>
             </div>

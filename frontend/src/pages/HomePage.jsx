@@ -11,7 +11,7 @@ function HomePage() {
     const features = [
         {
             icon: '📝',
-            title: 'AI Proctoring Quiz System',
+            title: 'NGLSC Smart Quiz System',
             description: 'Advanced AI-powered examination monitoring with real-time webcam tracking, violation detection, and automated alerts.',
             gradient: 'from-cyan-500 to-blue-500',
             link: '/quiz',
@@ -61,7 +61,7 @@ function HomePage() {
                             </div>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 animate-gradient">
-                                    AI Proctoring & Learning
+                                    Next Gen Learning Smart Classroom - NGLSC
                                 </span>
                             </h1>
                             <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">

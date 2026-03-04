@@ -45,7 +45,7 @@ export default function SignupPage() {
                         Create Account
                     </h2>
                     <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
-                        Join the AI Proctoring System today
+                        Join the Next Gen Learning Smart Classroom - NGLSC
                     </p>
                 </div>
 
@@ -122,8 +122,8 @@ export default function SignupPage() {
                                     type="button"
                                     onClick={() => setFormData({ ...formData, role: 'student' })}
                                     className={`py-3 px-4 rounded-xl text-sm font-bold border-2 transition-all duration-300 ${formData.role === 'student'
-                                            ? 'bg-cyan-500/10 border-cyan-500 text-cyan-600 dark:text-cyan-400'
-                                            : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600'
+                                        ? 'bg-cyan-500/10 border-cyan-500 text-cyan-600 dark:text-cyan-400'
+                                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600'
                                         }`}
                                 >
                                     👨‍🎓 Student
@@ -132,8 +132,8 @@ export default function SignupPage() {
                                     type="button"
                                     onClick={() => setFormData({ ...formData, role: 'admin' })}
                                     className={`py-3 px-4 rounded-xl text-sm font-bold border-2 transition-all duration-300 ${formData.role === 'admin'
-                                            ? 'bg-cyan-500/10 border-cyan-500 text-cyan-600 dark:text-cyan-400'
-                                            : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600'
+                                        ? 'bg-cyan-500/10 border-cyan-500 text-cyan-600 dark:text-cyan-400'
+                                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600'
                                         }`}
                                 >
                                     👨‍🏫 Admin

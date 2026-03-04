@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 /**
  * QuizConfigScreen Component
@@ -10,6 +11,7 @@ export default function QuizConfigScreen({ onStartQuiz }) {
     const [duration, setDuration] = useState(10);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const { token } = useAuth();
 
     const topics = ['Mathematics', 'Science', 'History', 'General Knowledge'];
 
@@ -20,7 +22,12 @@ export default function QuizConfigScreen({ onStartQuiz }) {
         try {
             // Fetch quiz from backend
             const response = await fetch(
-                `http://localhost:8000/generate-quiz?topic=${encodeURIComponent(topic)}&count=${numQuestions}&duration=${duration}`
+                `http://localhost:8000/generate-quiz?topic=${encodeURIComponent(topic)}&count=${numQuestions}&duration=${duration}`,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                }
             );
 
             if (!response.ok) {
@@ -49,7 +56,7 @@ export default function QuizConfigScreen({ onStartQuiz }) {
                 <div className="text-center mb-12 animate-slide-in-down">
                     <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-center gap-3 transition-colors duration-300">
                         <span className="text-6xl">🎓</span>
-                        AI Exam Proctoring System
+                        Next Gen Learning Smart Classroom - NGLSC
                     </h1>
                     <p className="text-gray-600 dark:text-gray-300 text-lg transition-colors duration-300">Configure your quiz to begin the monitored exam</p>
                 </div>

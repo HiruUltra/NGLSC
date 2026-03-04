@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 const VoiceRecorder = () => {
     const [isListening, setIsListening] = useState(false);
@@ -10,6 +11,7 @@ const VoiceRecorder = () => {
     const [uploadStatus, setUploadStatus] = useState('');
     const [browserSupported, setBrowserSupported] = useState(true);
     const [voiceCommandEnabled, setVoiceCommandEnabled] = useState(false); // Voice command mode toggle
+    const { token } = useAuth();
 
     const videoRef = useRef(null);
     const mediaRecorderRef = useRef(null);
@@ -312,6 +314,9 @@ const VoiceRecorder = () => {
 
             const response = await fetch('http://localhost:8000/upload-lecture', {
                 method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                },
                 body: formData
             });
 

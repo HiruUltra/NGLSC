@@ -57,10 +57,10 @@ export default function QuizResults({ result, onRetakeQuiz }) {
                     {/* Grade Badge */}
                     <div className="inline-block mb-8">
                         <div className={`px-8 py-4 rounded-2xl bg-gradient-to-r ${percentage >= 70
-                                ? 'from-green-600 to-emerald-600'
-                                : percentage >= 50
-                                    ? 'from-yellow-600 to-orange-600'
-                                    : 'from-red-600 to-pink-600'
+                            ? 'from-green-600 to-emerald-600'
+                            : percentage >= 50
+                                ? 'from-yellow-600 to-orange-600'
+                                : 'from-red-600 to-pink-600'
                             }`}>
                             <div className="text-sm text-white/80 mb-1">Grade</div>
                             <div className="text-4xl font-bold text-white">{gradeInfo.grade}</div>
@@ -96,7 +96,7 @@ export default function QuizResults({ result, onRetakeQuiz }) {
 
                 {/* Footer */}
                 <div className="text-center mt-8 text-gray-400 text-sm">
-                    <p>Thank you for using AI Exam Proctoring System</p>
+                    <p>Thank you for using Next Gen Learning Smart Classroom - NGLSC</p>
                 </div>
             </div>
         </div>

@@ -27,10 +27,10 @@ function Header() {
                         <div className="text-2xl sm:text-3xl">🎓</div>
                         <div>
                             <h1 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white transition-colors duration-300">
-                                AI Proctoring & Learning System
+                                Next Gen Learning Smart Classroom - NGLSC
                             </h1>
                             <p className="text-gray-600 dark:text-gray-400 text-xs mt-0.5 transition-colors duration-300 hidden sm:block">
-                                Exam Monitoring & Lecture Recording
+                                Advanced Academic Intelligence & Monitoring
                             </p>
                         </div>
                     </Link>

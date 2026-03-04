@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 const LectureGallery = () => {
     const [lectures, setLectures] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const { token } = useAuth();
 
     useEffect(() => {
         fetchLectures();
@@ -14,7 +16,11 @@ const LectureGallery = () => {
 
     const fetchLectures = async () => {
         try {
-            const response = await fetch('http://localhost:8000/lectures');
+            const response = await fetch('http://localhost:8000/lectures', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
             if (!response.ok) {
                 throw new Error('Failed to fetch lectures');
             }

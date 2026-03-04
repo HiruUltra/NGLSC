@@ -65,7 +65,7 @@ function QuizApp() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2 transition-colors duration-300">
                             <span className="text-3xl">🎓</span>
-                            AI Exam Proctoring System
+                            Next Gen Learning Smart Classroom - NGLSC
                         </h1>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mt-1 transition-colors duration-300">Monitored Exam in Progress</p>
                     </div>
