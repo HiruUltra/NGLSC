@@ -11,39 +11,36 @@ import { useWebSocket } from '../hooks/useWebSocket';
  * Sidebar widget that handles all proctoring features
  * Only active when isActive prop is true
  */
-export default function ProctoringWidget({ isActive, language = 'en' }) {
-    const { token } = useAuth();
-    const WEBSOCKET_URL = `ws://${window.location.hostname}:8000/ws/proctoring?token=${token}`;
-
-    const { isConnected, lastMessage, error, sendMessage } = useWebSocket(
-        isActive ? WEBSOCKET_URL : null // Only connect when active
-    );
-
+export default function ProctoringWidget({
+    isActive,
+    language = 'en',
+    externalAlert,
+    isConnected,
+    sendMessage,
+    lastMessage,
+    error
+}) {
     const [currentAlert, setCurrentAlert] = useState(null);
     const [status, setStatus] = useState(null);
     const [violationHistory, setViolationHistory] = useState([]);
 
-    // Handle incoming WebSocket messages
+    // Sync external alert to local display
     useEffect(() => {
-        if (!lastMessage) return;
-
-        if (lastMessage.type === 'alert') {
-            const alertData = lastMessage.data;
-            setCurrentAlert(alertData);
-
-            // Add to violation history if it's an actual violation
-            if (alertData.severity === 'critical' || alertData.severity === 'warning') {
-                setViolationHistory(prev => [...prev, alertData]);
+        if (externalAlert) {
+            setCurrentAlert(externalAlert);
+            if (externalAlert.severity === 'critical' || externalAlert.severity === 'warning') {
+                setViolationHistory(prev => [...prev, externalAlert]);
             }
+            // Alert auto-clears in App.jsx state, but we can also handle local UI transition
+        } else {
+            setCurrentAlert(null);
+        }
+    }, [externalAlert]);
 
-            // Clear alert after 5 seconds
-            setTimeout(() => {
-                setCurrentAlert(null);
-            }, 5000);
-        } else if (lastMessage.type === 'status') {
+    // Handle status messages from websocket
+    useEffect(() => {
+        if (lastMessage?.type === 'status') {
             setStatus(lastMessage.data);
-        } else if (lastMessage.type === 'error') {
-            console.error('Backend error:', lastMessage.message);
         }
     }, [lastMessage]);
 

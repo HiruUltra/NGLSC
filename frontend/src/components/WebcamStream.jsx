@@ -139,8 +139,8 @@ export default function WebcamStream({ isConnected, sendMessage }) {
                 {/* Connection status */}
                 <div className="absolute top-4 right-4">
                     <span className={`text-xs font-medium px-3 py-1 rounded-full backdrop-blur-sm ${isConnected
-                            ? 'bg-green-500/20 text-green-300 border border-green-500/30'
-                            : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                        ? 'bg-green-500/20 text-green-300 border border-green-500/30'
+                        : 'bg-red-500/20 text-red-300 border border-red-500/30'
                         }`}>
                         {isConnected ? '● Connected' : '○ Disconnected'}
                     </span>
@@ -158,7 +158,7 @@ export default function WebcamStream({ isConnected, sendMessage }) {
                 )}
             </div>
 
-            <style jsx>{`
+            <style>{`
         .status-indicator {
           width: 10px;
           height: 10px;

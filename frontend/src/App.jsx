@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -12,9 +12,13 @@ import QuizConfigScreen from './components/QuizConfigScreen';
 import QuizComponent from './components/QuizComponent';
 import QuizResults from './components/QuizResults';
 import ProctoringWidget from './components/ProctoringWidget';
+import ExamHall from './components/3d/ExamHall';
+import QuizSidePanel from './components/QuizSidePanel';
+import ErrorBoundary from './components/ErrorBoundary';
 import LectureRecorderPage from './pages/LectureRecorderPage';
 import AttendanceCounterPage from './pages/AttendanceCounterPage';
 import AdminDashboard from './pages/AdminDashboard';
+import { useWebSocket } from './hooks/useWebSocket';
 import axios from 'axios';
 import './App.css';
 
@@ -25,6 +29,22 @@ function QuizApp() {
     const [quizData, setQuizData] = useState(null);
     const [quizResult, setQuizResult] = useState(null);
     const [language, setLanguage] = useState('en'); // 'en' or 'si'
+    const [currentAlert, setCurrentAlert] = useState(null);
+
+    // Proctoring Hook
+    const isExamActive = appState === 'quiz';
+    const websocketUrl = isExamActive && token ? `ws://${window.location.hostname}:8000/ws/proctoring?token=${token}` : null;
+    const { isConnected, lastMessage, sendMessage, error: websocketError } = useWebSocket(websocketUrl);
+
+    // Sync alerts from websocket to state
+    useEffect(() => {
+        if (lastMessage?.type === 'alert') {
+            setCurrentAlert(lastMessage.data);
+            // Auto-clear alert for 3D/UI
+            const timer = setTimeout(() => setCurrentAlert(null), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [lastMessage]);
 
     const handleStartQuiz = (data) => {
         setQuizData(data);
@@ -55,9 +75,6 @@ function QuizApp() {
         setQuizResult(null);
         setAppState('config');
     };
-
-    // Only show proctoring during quiz
-    const isExamActive = appState === 'quiz';
 
     // Config screen (no proctoring)
     if (appState === 'config') {
@@ -117,12 +134,19 @@ function QuizApp() {
 
             {/* Main Content Area */}
             <div className="h-[calc(100vh-80px)] flex">
-                {/* Quiz Area - Takes most of the space */}
-                <div className="flex-1 overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
-                    <QuizComponent
+                {/* 2D Quiz Sidebar (Left) */}
+                {isExamActive && (
+                    <QuizSidePanel
                         quizData={quizData}
-                        onSubmit={handleSubmitQuiz}
+                        onQuizSubmit={handleSubmitQuiz}
                     />
+                )}
+
+                {/* 3D Exam Hall Area - Takes most of the space (Center) */}
+                <div className="flex-1 overflow-hidden bg-black transition-colors duration-300 relative">
+                    <ErrorBoundary>
+                        <ExamHall currentAlert={currentAlert} />
+                    </ErrorBoundary>
                 </div>
 
                 {/* Proctoring Sidebar */}
@@ -130,6 +154,11 @@ function QuizApp() {
                     <ProctoringWidget
                         isActive={isExamActive}
                         language={language}
+                        externalAlert={currentAlert}
+                        isConnected={isConnected}
+                        sendMessage={sendMessage}
+                        lastMessage={lastMessage}
+                        error={websocketError}
                     />
                 </div>
             </div>
