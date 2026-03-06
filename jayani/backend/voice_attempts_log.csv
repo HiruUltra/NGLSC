@@ -1,0 +1,194 @@
+timestamp,question_id,question_text,transcript,grade_level,grade_marks,coverage
+2026-02-03T15:30:10,Q4,What is the 'Von Neumann Architecture'?,it is a computer architecture designed that consists of a processing unit control unit memory input output mechanisms and a bassist,GOOD,10,0.8461538461538461
+2026-02-03T16:01:56,Q85,What is the function of input() in Python?,,INCORRECT,0,0.0
+2026-02-03T16:03:08,Q85,What is the function of input() in Python?,it allows the user to enter the data for the keyboard which is written as a string,GOOD,10,0.875
+2026-02-03T16:05:07,Q231,What is 'Maintenance' in SDLC?,the final phase in all the correct errors improving performance and adapting the software to change the environment,GOOD,10,0.9090909090909091
+2026-02-03T16:05:41,Q228,What is a 'Sequence Diagram'?,a ml diagram that shows how objects interact with each other in a specific time series,GOOD,10,0.8181818181818182
+2026-02-03T16:06:31,Q108,What is the purpose of the open() function in Python?,it opens a file and returns a file project which follows writing writing and adapting to the file,PARTIAL,7,0.5555555555555556
+2026-02-03T16:07:06,Q36,What are 'Functional Requirements'?,requirements that define specific behaviors of functions and the system what the system should,GOOD,10,0.8888888888888888
+2026-02-03T16:07:40,Q196,What is 'Parity Bit'?,a bit added to a string of binary code to ensure that the total number of ib1 bit is in the string is even or boom,GOOD,10,0.7692307692307693
+2026-02-03T16:08:08,Q89,What is 'Indentation' in Python?,white space at beginning of a line use the define the scope of loop functions and control structures blocks of course,GOOD,10,0.8333333333333334
+2026-02-03T16:08:54,Q38,What is a 'Database Management System' (DBMS)?,a dbms is software that interface interact with end users applications and the database itself to come capture and analyze data,GOOD,10,1.0
+2026-02-03T16:09:28,Q247,What is a 'Karnaugh Map' (K-Map)?,a meter door is specified by the lg bra expressions i organizing true table values into a grid,PARTIAL,7,0.5
+2026-02-03T16:09:56,Q45,What is a 'Primary Key'?,a primary case is specific choice that means that include that so i,INCORRECT,0,0.21428571428571427
+2026-02-03T17:45:34,Q153,What is the 'Accumulator' in a CPU?,it is a register in the alu that holds intermediate arithmetic and logic results during process,GOOD,10,1.0
+2026-02-03T17:45:46,Q115,State De Morgan's First Law.,,INCORRECT,0,0.0
+2026-02-03T17:46:40,Q198,What is 'One's Complement'?,a method to represent negative numbers by imitation of the beats of the positive number,PARTIAL,7,0.6666666666666666
+2026-02-03T17:47:08,Q234,What is 'System Testing'?,test in the complete and integrated software product to verify that it needs specific requirements,GOOD,10,0.7777777777777778
+2026-02-03T17:47:10,Q186,What is a 'XOR' (Exclusive OR) Gate?,,INCORRECT,0,0.0
+2026-02-03T17:47:11,Q110,"What does file mode ""a"" signify in Python?",,INCORRECT,0,0.0
+2026-02-03T17:47:13,Q154,What is the 'Instruction Register' (IR)?,,INCORRECT,0,0.0
+2026-02-03T17:47:14,Q188,What is a 'Sequential Circuit'?,,INCORRECT,0,0.0
+2026-02-03T17:47:15,Q106,What is the Serial.println() function used for?,,INCORRECT,0,0.0
+2026-02-03T17:47:17,Q175,What is a 'CLI' (Command Line Interface)?,,INCORRECT,0,0.0
+2026-02-03T18:18:29,Q183,What is a 'Logic Gate'?,,INCORRECT,0,0.0
+2026-02-03T18:18:50,Q82,What is 'Inline CSS'?,mms,INCORRECT,0,0.0
+2026-02-03T18:19:05,Q41,What is an 'Attribute' in an ERD?,we will immediately admit to it,INCORRECT,0,0.0
+2026-02-03T18:19:12,Q221,What is 'Requirement Gathering' in SDLC?,it s a f k matemusic,INCORRECT,0,0.0
+2026-02-03T18:19:18,Q32,What is 'Packet Switching'?,i agree,INCORRECT,0,0.0
+2026-02-03T18:19:22,Q244,What is 'Boolean Algebra'?,need to get real out again,INCORRECT,0,0.0
+2026-02-03T18:19:25,Q181,What is 'Spyware'?,,INCORRECT,0,0.0
+2026-02-03T18:19:29,Q92,What is the else statement?,,INCORRECT,0,0.0
+2026-02-03T18:19:31,Q107,Define 'Syntax Error' in programming.,,INCORRECT,0,0.0
+2026-02-03T18:19:37,Q24,What is 'Guided Media'?,give it that out,INCORRECT,0,0.0
+2026-02-03T22:35:18,Q129,What is 'Throughput'?,testing one two three again and then after a while i had to,INCORRECT,0,0.09090909090909091
+2026-02-03T22:38:31,Q83,What is an 'Interpreter' in Python?,,INCORRECT,0,0.0
+2026-02-03T22:38:47,Q83,What is an 'Interpreter' in Python?,testoo 120 fantastick,INCORRECT,0,0.0
+2026-02-03T22:46:28,Q168,What is 'Rotational Latency'?,the time waiting for the disk sector the rotate use under the right and right,PARTIAL,7,0.6666666666666666
+2026-02-03T22:47:02,Q204,What is 'Fiber Optic' transmission?,the laws digital data transformation over long distance and at high data rates then the electric system by using plus or light draw glasses glasses traits,PARTIAL,7,0.6470588235294118
+2026-02-03T22:47:27,Q223,What is 'Technical Feasibility'?,as a result of the organization has the technology and resources to build the system,GOOD,10,0.75
+2026-02-03T22:48:07,Q135,What is an 'IP Address'?,an internet protocol ip address is a num america label assigned tool each device connected to a computer network that uses the internet protocol communication,GOOD,10,0.9166666666666666
+2026-02-03T22:48:24,Q211,What is the 'Session Layer' in the OSI model?,id manages the establishment maintains and termination of connections sections between the application,GOOD,10,0.75
+2026-02-03T22:48:46,Q111,What is the function of f.read() in Python?,it reads the enter content of the file or a specific number of characters and return it as a string,GOOD,10,0.8888888888888888
+2026-02-03T22:49:10,Q56,What is the function of 'DNS' (Domain Name System)?,dns translate human reliable domain names like www google com and ip address that computers use to identify each user,GOOD,10,0.8823529411764706
+2026-02-03T22:49:18,Q141,What is the ALTER TABLE command used for?,blah blah blah blah blah,INCORRECT,0,0.0
+2026-02-03T22:49:50,Q122,What is 'Sign-Magnitude' representation?,a method of representing signed number with the most significant bit msb is the sign bit and the remaining bits represent the magnet you,GOOD,10,0.8571428571428571
+2026-02-03T23:01:16,Q126,What is 'Clock Speed' in a CPU?,the rate at which a processor execute interaction typically measured in hertz or gigahertz,PARTIAL,7,0.7272727272727273
+2026-02-03T23:02:45,Q72,What is '2NF' (Second Normal Form)?,the relation is in 2nf is it is in 1nf and every non primer key attribute is fully functionally dependent on the primary key no partial dependency,GOOD,10,0.9333333333333333
+2026-02-03T23:03:08,Q102,What is the function of analogWrite() in Arduino?,it writes analog values pwm vr to a pin typically use the face on iled or control motor speed,GOOD,10,0.8461538461538461
+2026-02-03T23:03:31,Q236,What is 'Pseudocode'?,so dogo and information high level description of the operation practical of computer program or other algorithms,GOOD,10,0.8
+2026-02-03T23:04:05,Q116,State De Morgan's Second Law.,the complement of the sum of two variables is equal to product of their they are completely complement a plus b inverse samanai a inverse dot b inverse,GOOD,10,1.0
+2026-02-03T23:04:42,Q205,What is the function of a 'Modem'?,a modulator the modulator convert digital signs of a computer in analog signals of transformation for telephone line and vice vice,PARTIAL,7,0.7142857142857143
+2026-02-03T23:05:14,Q132,What is 'Half-Duplex' transmission?,a communication mode where data can flow is both directions but not similarity example walking,GOOD,10,0.7692307692307693
+2026-02-03T23:05:34,Q44,What is 'SQL' (Structured Query Language)?,sql leads standard language for storing manipulating and retrieving data is database,GOOD,10,1.0
+2026-02-03T23:05:53,Q238,What is a 'Runtime Error'?,and error that occur while the program is running often cause is the crash division by 0,GOOD,10,0.8
+2026-02-03T23:06:16,Q49,What is 'White Box Testing'?,a testing method with the dia internal structure designing implementation of this item begin testing test is known to the test,PARTIAL,7,0.6363636363636364
+2026-02-03T23:24:37,Q246,What is 'De Morgan’s Law'?,roll in boolean algebra at the state the relationship between ando and all operations and is equal to ov with inverse input,PARTIAL,7,0.6363636363636364
+2026-02-03T23:24:58,Q208,Define 'Network Protocol'.,a set of rules and commissions that define how data is turned transmit and received overnator,PARTIAL,7,0.7
+2026-02-03T23:25:25,Q151,What is 'Acceptance Testing'?,formal testing with the received that use and need requirements and business process conducted to determine whether or not a system is satisfied with the accepted criteria,GOOD,10,0.875
+2026-02-03T23:25:43,Q247,What is a 'Karnaugh Map' (K-Map)?,the method to simplify boolean algebra expressions by organizing truth table value in the grid,GOOD,10,1.0
+2026-02-03T23:26:07,Q180,What is a 'Trojan Horse'?,in a way that mirrors uses of its true intent both can a distinction itself a discriminative,WEAK,3,0.4
+2026-02-03T23:26:29,Q249,What is a 'Full Adder'?,a communal circuit that adds 3 bits to inputs and a carry in and output a sum and a carrier,PARTIAL,7,0.6363636363636364
+2026-02-03T23:26:55,Q159,What is the 'Address Bus'?,a undirectional bus used by the cpu to specific the physical address of the memory location it won t do xess,PARTIAL,7,0.7272727272727273
+2026-02-03T23:27:21,Q11,What is a 'Flip-Flop' in digital circuits?,a flip flop is a circuit that has to stable state and can be used to store state information a single bit of data,GOOD,10,0.9333333333333333
+2026-02-03T23:27:51,Q111,What is the function of f.read() in Python?,it reads the entire content of the file of a specific name number of characters and rest stay free,GOOD,10,0.7777777777777778
+2026-02-03T23:28:17,Q122,What is 'Sign-Magnitude' representation?,a method of representing sign numbers whether the most significant bit msb is the sign bit and the remain which represent magnetune,PARTIAL,7,0.7142857142857143
+2026-02-08T13:40:32,Q187,Building Blocks of IS,What is a 'Combinational Circuit'?,a digital logic circuit where the output depends only on the present combination of input variables example added,GOOD,8,0.7916666666666666
+2026-02-08T13:41:18,Q65,DBMS,What is a 'Candidate Key'?,a candidate key is a column or set of columns in a table that can ununitly identify and database without referring to any other data,PARTIAL,7,0.7499999999999999
+2026-02-08T13:42:28,Q201,Data Representation,What is 'Unicode'?,and international encoding standard for use with different languages and transcripts by which each letter digit or symbols in a sign in unique numerical value,GOOD,9,0.8791666666666667
+2026-02-08T13:42:35,Q21,Networking,What is 'Half-Duplex Mode'?,,INCORRECT,0,0.0
+2026-02-08T13:43:00,Q21,Networking,What is 'Half-Duplex Mode'?,taraela,INCORRECT,0,0.0
+2026-02-08T13:43:10,Q31,Networking,What is a 'Router'?,rautai is a router rautai is a interior,INCORRECT,1,0.07777777777777777
+2026-02-08T13:43:20,Q80,Web Technologies,What does the <ol> tag create?,oil oil tech piece create by the dmld using,INCORRECT,1,0.09999999999999999
+2026-02-08T13:43:28,Q239,Programming,What is 'Variable Scope'?,variable scope is the variable scope that s why i am telling you,INCORRECT,1,0.07777777777777777
+2026-02-08T13:43:39,Q40,DBMS,What is an 'Entity' in a database?,antipy diagram moves the relationships with the two combinations of entities,INCORRECT,0,0.0
+2026-02-08T13:43:50,Q157,Building Blocks of IS,Define 'System Bus'.,system bass is the number of counts the ram or which losses using,INCORRECT,1,0.05833333333333333
+2026-02-08T13:44:00,Q120,Data Representation,What is 'ASCII'?,ask is the numerical converting method,INCORRECT,0,0.0
+2026-02-08T14:03:59,Q118,Building Blocks of IS,What is a 'Full Adder'?,a logic circuit that adds 3 bits to significant bits and a carry bit and outputs some of a carry,WEAK,4,0.38589743589743586
+2026-02-08T14:04:21,Q128,Networking,Define 'Bandwidth' in networking.,the maximum rate of data transfer across a given path usually measured in bit per second,GOOD,10,0.95
+2026-02-08T14:04:52,Q248,Building Blocks of IS,What is a 'Half Adder'?,a combinational circuit that adds two single bit binary bits and produces some and a carry bit,PARTIAL,7,0.734090909090909
+2026-02-08T14:05:27,Q14,Operating Systems,Define 'Context Switching'.,context switching is the process of strong the state of the process or thread so that these can be restored and renamed executed execution later,GOOD,8,0.75
+2026-02-08T14:05:58,Q64,Systems Analysis,What is an 'External Entity' in Systems Analysis?,and so was all the stimulation of data that is outside the boundaries of the system begin to study customer supply,PARTIAL,5,0.5305555555555556
+2026-02-08T14:06:37,Q175,Operating Systems,What is a 'CLI' (Command Line Interface)?,and in the viz datten process command command to a computer program it in the form of lines of text,GOOD,9,0.8791666666666667
+2026-02-08T14:06:48,Q221,Systems Analysis,What is 'Requirement Gathering' in SDLC?,,INCORRECT,0,0.0
+2026-02-08T14:07:03,Q221,Systems Analysis,What is 'Requirement Gathering' in SDLC?,testing is the requirement rather in esvlc key words input like that,INCORRECT,0,0.016666666666666666
+2026-02-08T14:07:31,Q92,Programming,What is the else statement?,this statement is the in method given idea that have two different states that is one or positive one or negative light,INCORRECT,1,0.07777777777777777
+2026-02-08T14:07:37,Q226,Systems Analysis,What is a 'Use Case Diagram'?,2s case diagram is a use case diagram,INCORRECT,1,0.06999999999999999
+2026-02-08T14:07:49,Q176,ICT and Society,What is 'Open Source Software'?,the open source of data is the can all members can use free that not paying money,INCORRECT,2,0.23055555555555554
+2026-02-08T14:38:35,Q115,Building Blocks of IS,State De Morgan's First Law.,the complement of the product of two variables is equal to the sum of their complement a b minus minus equal a dash plus b dash,GOOD,9,0.8722222222222221
+2026-02-08T14:39:09,Q63,Systems Analysis,What represents a 'Data Store' in a DFD?,data story presented repository with the data is stored for data use dp depicted by open it id,PARTIAL,7,0.6583333333333333
+2026-02-08T14:39:30,Q195,Data Representation,What is the 'LSB' (Least Significant Bit)?,the bit in a multiple bit binary number with the smallest value right most bit,GOOD,10,0.975
+2026-02-08T14:39:52,Q88,Programming,How do you create a comment in Python?,by using the hair symbol at the beginning of the line or cold block,PARTIAL,6,0.625
+2026-02-08T14:40:12,Q129,Networking,What is 'Throughput'?,the actual most of data that is a successfully movement mode for one place to another in a given time period,GOOD,8,0.7727272727272727
+2026-02-08T14:40:43,Q188,Building Blocks of IS,What is a 'Sequential Circuit'?,and logical critical that s what logical second where the output depend on the present where you have the input signals as well as the e sequence of past input has memory,GOOD,9,0.8566666666666667
+2026-02-08T14:41:06,Q54,Networking,What is 'Ring Topology'?,an network configuration via device connections creates a circuit data path with each network device connected to two others,GOOD,8,0.8083333333333333
+2026-02-08T14:41:35,Q243,Programming,What is 'Modular Programming'?,the software design techniques that impresses the functionality of the program into dependent in changeable models,PARTIAL,5,0.5449999999999999
+2026-02-08T14:42:02,Q162,Building Blocks of IS,What is 'DRAM' (Dynamic RAM)?,a type of volatile memory that used to pass it as 2 stored data required very deep refreshing used for main system memory,PARTIAL,7,0.6967948717948718
+2026-02-08T14:42:26,Q235,Systems Analysis,What is 'User Acceptance Testing' (UAT)?,the final base of this thing we are the end user verified that the system works for the real world business scenario,GOOD,8,0.8009615384615384
+2026-02-08T15:07:43,Q240,Programming,What is 'Type Casting'?,a process of converting a value from one time to another,PARTIAL,6,0.5888888888888889
+2026-02-08T15:08:07,Q57,Networking,What is 'DHCP' (Dynamic Host Configuration Protocol)?,an network management protocol used to automatically assign ip address and another communication parameters to device connected to the nitter,GOOD,10,0.9874999999999999
+2026-02-08T15:08:30,Q10,Building Blocks of IS,Describe the function of an 'AND' gate.,and end gate traders produce as high input 1 only if all its input are high 1,GOOD,8,0.7958333333333333
+2026-02-08T15:08:53,Q210,Networking,What is the 'Presentation Layer' in the OSI model?,it ensure that data is in a usable format and is with the data in captions and big captions occur,PARTIAL,6,0.5625
+2026-02-08T15:09:13,Q107,Programming,Define 'Syntax Error' in programming.,and later in the source code of the program caused by violating the language grammatical rules,GOOD,8,0.8305555555555555
+2026-02-08T15:09:38,Q29,Networking,What is a 'MAC Address'?,a unique identifier aside to a network interface controller nic 4 used as a network address in communications beating a network segment,GOOD,8,0.7512820512820513
+2026-02-08T15:10:05,Q229,Systems Analysis,What is a 'Class Diagram'?,first the structure of the gam that describes the structure of the system by showing the systems class there are tributes operations and relationships,GOOD,8,0.759090909090909
+2026-02-08T15:10:35,Q13,Operating Systems,What is 'Process Management' in an OS?,it in the has managed the creator scheduling and termination of process programs in execute by redd backed cpu,PARTIAL,6,0.5888888888888889
+2026-02-08T15:11:09,Q219,DBMS,What is 'Referential Integrity'?,seems these playground heartsford staff keep all these old tools to test context and installation of controlled hockey principles and events,INCORRECT,0,0.0
+2026-02-08T15:11:30,Q37,Systems Analysis,What are 'Non-Functional Requirements'?,requirement that is specific criteria that can be used up judge the operation of system how the system performs like security osp,GOOD,9,0.858974358974359
+2026-02-08T17:30:24,Q22,Networking,What is 'Full-Duplex Mode'?,data can be transmited in both directions similarity telephone conversations,GOOD,8,0.8041666666666666
+2026-02-08T17:30:47,Q67,DBMS,Define 'Cardinality' in ER Diagrams.,cardinary define the numerical attributes of the relationship between 2 entity s example,PARTIAL,6,0.6
+2026-02-08T17:31:06,Q126,Building Blocks of IS,What is 'Clock Speed' in a CPU?,the rate that witcher process execute interactions typically measured in hertz or giga hertz,PARTIAL,7,0.6954545454545454
+2026-02-08T17:31:31,Q51,Systems Analysis,What is 'Direct Cutover' deployment?,the deployments met with the old system is stopped and the new system is started immediately you will see a link on the next specific deck,PARTIAL,7,0.7166666666666666
+2026-02-08T17:31:53,Q98,Programming,What is 'Object Code'?,a development method whether the os system is stopped and the new system is started immediately usually on a specific date,INCORRECT,0,0.0
+2026-02-08T17:32:14,Q116,Building Blocks of IS,State De Morgan's Second Law.,the complete of the sum of two variables in equal the product of their completements,GOOD,10,0.95
+2026-02-08T17:32:40,Q203,Networking,Difference between 'Guided' and 'Unguided' media.,guided media use the physical path like cables to transmit signals where as unguided media transmit signals to the air wireless,GOOD,9,0.8988095238095238
+2026-02-08T17:32:58,Q66,DBMS,What is a 'Composite Key'?,a primary key that consists of two more columns attributes to uniquely identify a record,GOOD,10,0.9874999999999999
+2026-02-08T17:33:22,Q53,Networking,Describe 'Bus Topology'.,urnetworks setup with the ease compute and network device is connected to a signal cable or blackboard,PARTIAL,5,0.5033333333333333
+2026-02-08T17:33:44,Q178,ICT and Society,What is 'Malware'?,when the scenes of their design 2 cause damage to a computer serve client or computer,PARTIAL,6,0.5916666666666666
+2026-02-10T22:04:34,Q104,IoT,Why is a resistor used with an LED in Arduino circuits?,testing is why it is the least i use with led in arduino circuit,INCORRECT,1,0.06999999999999999
+2026-02-10T22:05:25,Q197,Data Representation,What is 'Sign and Magnitude' representation?,what is sya in and magnitude response you representation,INCORRECT,2,0.16363636363636364
+2026-02-10T22:13:34,Q181,ICT and Society,What is 'Spyware'?,what is spive air,INCORRECT,0,0.0
+2026-02-10T22:13:48,Q127,Building Blocks of IS,What is 'Cache Memory'?,but he is cashmever,INCORRECT,0,0.0
+2026-02-10T22:14:13,Q143,DBMS,What is 'Referential Integrity'?,what is referential interview,INCORRECT,0,0.0
+2026-02-10T22:14:19,Q223,Systems Analysis,What is 'Technical Feasibility'?,what is technical feasibility,INCORRECT,0,0.0
+2026-02-10T22:14:29,Q7,Data Representation,What is 'Two's Complement'?,t s 2 compliments,INCORRECT,0,0.0
+2026-02-10T22:59:25,Q44,DBMS,What is 'SQL' (Structured Query Language)?,sql is a standard language for sorting manipulating and retrieving data in database,GOOD,10,0.9833333333333333
+2026-02-10T22:59:52,Q150,Systems Analysis,What is 'System Testing'?,testing conduct on complete integrated system to evaluate the system comp files within with its specific required,PARTIAL,7,0.6944444444444444
+2026-02-10T23:00:12,Q128,Networking,Define 'Bandwidth' in networking.,the maximum rate of data transfer across a given path usually measured in beats per second,GOOD,9,0.8916666666666666
+2026-02-10T23:00:44,Q110,Programming,"What does file mode ""a"" signify in Python?",keep open a file for appliteing data is written to the end of the file without overwriting,PARTIAL,7,0.6649999999999999
+2026-02-10T23:01:11,Q156,Building Blocks of IS,What is the 'Memory Data Register' (MDR)?,in all the data we can transfer to or from the memory frame,PARTIAL,6,0.6074999999999999
+2026-02-10T23:01:41,Q143,DBMS,What is 'Referential Integrity'?,her database concept ensured that relationship between tables remains consistent for in key value must match a primary key in the parent table,PARTIAL,5,0.485
+2026-02-10T23:02:22,Q85,Programming,What is the function of input() in Python?,it allows the user to enter data from the keyboard which is written as a string,GOOD,9,0.8749999999999999
+2026-02-10T23:02:47,Q236,Programming,What is 'Pseudocode'?,and informers high level description of operating practicers of a computer program or other algorithm,GOOD,8,0.76
+2026-02-10T23:03:18,Q91,Programming,What does the if statement do?,it is a control flow statement execute a block code only if a specified condition is true,GOOD,10,0.9666666666666667
+2026-02-10T23:03:43,Q71,DBMS,What is '1NF' (First Normal Form)?,priority of a relation is relational data whether they are table as no repeating groups and all attributes are automatic,PARTIAL,6,0.6307692307692307
+2026-02-10T23:32:03,Q34,Systems Analysis,What is the 'Waterfall Model'?,linear square layer software development life cycle sdsc model way of progress in flows downwards through face like requirement designing implementation and,PARTIAL,6,0.5784313725490197
+2026-02-10T23:32:29,Q53,Networking,Describe 'Bus Topology'.,a network setup where each computer and network device is connected to single cable or backboard,GOOD,8,0.7966666666666666
+2026-02-10T23:32:53,Q231,Systems Analysis,What is 'Maintenance' in SDLC?,the final phase involving corrective errors improving performance and adapting the software to change the environment,GOOD,8,0.8238636363636364
+2026-02-10T23:33:29,Q106,IoT,What is the Serial.println() function used for?,it s print data to the serial port as human reelable as key that followed by a carrying carriage returned character,PARTIAL,6,0.6166666666666667
+2026-02-10T23:33:53,Q186,Building Blocks of IS,What is a 'XOR' (Exclusive OR) Gate?,a digital logic circuit where the output depends only on the parent component of input variables,WEAK,3,0.2958333333333333
+2026-02-10T23:34:22,Q42,DBMS,Define 'Normalization' in databases.,normalization is the process of organizing data in database 2 reduce reduce scene and build,PARTIAL,6,0.6016666666666666
+2026-02-10T23:35:11,Q205,Networking,What is the function of a 'Modem'?,a modulator demodulator convert digital signals from a computer into a log signal from transmission over a timphone lines and vice verse,PARTIAL,7,0.7166666666666667
+2026-02-10T23:35:22,Q99,Programming,What is a 'Compiler'?,it is the campai la is the checa in the baguette,INCORRECT,0,0.0
+2026-02-10T23:35:33,Q29,Networking,What is a 'MAC Address'?,the mac address is the physical address in the physical device,INCORRECT,2,0.191025641025641
+2026-02-10T23:35:49,Q174,Operating Systems,What is a 'GUI' (Graphical User Interface)?,the graphical user interface is that means what is the display ink user to graphical,WEAK,3,0.32121212121212117
+2026-02-11T00:10:28,Q121,Data Representation,What is 'BCD' (Binary Coded Decimal)?,a glass of binary encoding of decimal number where which decimal jit is represented by a fixed number of bits usually for,GOOD,8,0.75
+2026-02-11T00:10:55,Q20,Networking,What is 'Simplex Mode' in transmission?,in simplex mode communication is any directional data flow in only one direction example radiobirdscards broadcast d,GOOD,9,0.9196969696969697
+2026-02-11T00:11:17,Q178,ICT and Society,What is 'Malware'?,militius software designed to cause damage to a computer server client or computer network,GOOD,8,0.8097222222222221
+2026-02-11T00:11:47,Q4,Building Blocks of IS,What is the 'Von Neumann Architecture'?,it is a computer architecture design that consists of a processing unit control unit memory input output mechanisms and a bus system,GOOD,10,0.95
+2026-02-11T00:12:10,Q185,Building Blocks of IS,What is a 'NOR' Gate?,allow you to create that produce a high output only if all the inputs are low zero,PARTIAL,7,0.7266666666666666
+2026-02-11T00:12:47,Q191,Building Blocks of IS,What is a 'Flip-Flop'?,the circuit that has two stable state and can be used to store state information a single bit,GOOD,10,0.95
+2026-02-11T00:13:02,Q186,Building Blocks of IS,What is a 'XOR' (Exclusive OR) Gate?,oxr gate is the logicate using an ogat inverse part is the oxrr,INCORRECT,1,0.05833333333333333
+2026-02-11T00:13:20,Q154,Building Blocks of IS,What is the 'Instruction Register' (IR)?,in the registration area there is the vatis of the keyway,INCORRECT,0,0.0
+2026-02-11T00:13:30,Q72,DBMS,What is '2NF' (Second Normal Form)?,2 nf is second normal form like that is very beauty,INCORRECT,0,0.04666666666666666
+2026-02-11T00:13:40,Q231,Systems Analysis,What is 'Maintenance' in SDLC?,and maintain a stlc architecture system and i should use in do,INCORRECT,0,0.0
+2026-02-18T00:05:17,Q126,Building Blocks of IS,What is 'Clock Speed' in a CPU?,,INCORRECT,0,0.0
+2026-02-18T00:12:51,Q91,Programming,What does the if statement do?,test in 123123 you can see that you have 123 b1 123 b1 you can see that you have 123 b1,INCORRECT,0,0.0
+2026-03-03T21:04:54,Q200,Data Representation,What is 'ASCII'?,american standard code for information integrated earth character in coding standard for text,GOOD,9,0.8624999999999999
+2026-03-03T21:05:25,Q22,Networking,What is 'Full-Duplex Mode'?,data can be transmitted in both direction similarity example telephone illuminations,PARTIAL,7,0.7166666666666666
+2026-03-03T21:05:57,Q34,Systems Analysis,What is the 'Waterfall Model'?,it is a linear sequential designing approach for software development with the process flows down towards true phases like requirements analysis designing implementation and testing,PARTIAL,7,0.6941176470588235
+2026-03-03T21:06:23,Q236,Programming,What is 'Pseudocode'?,and information on the high level description of the operational part is the principle of a computer program or other algorithm,GOOD,8,0.76
+2026-03-03T21:06:32,Q155,Building Blocks of IS,What is the function of the 'Memory Address Register' (MAR)?,lala lala testing 1 2 3 vatis the function of the memory address register,WEAK,3,0.3
+2026-03-03T21:06:40,Q189,Building Blocks of IS,What is a 'Half Adder'?,what is the half elder,INCORRECT,0,0.0
+2026-03-03T21:06:51,Q70,DBMS,What is DML (Data Manipulation Language)?,what is dml data manipulation language dms,INCORRECT,1,0.10833333333333334
+2026-03-03T21:07:00,Q72,DBMS,What is '2NF' (Second Normal Form)?,that is the nf2 normal 4,INCORRECT,0,0.0
+2026-03-03T21:07:18,Q132,Networking,What is 'Half-Duplex' transmission?,in this part we obtain bits of filibus double x transformation,INCORRECT,0,0.0
+2026-03-03T21:07:24,Q188,Building Blocks of IS,What is a 'Sequential Circuit'?,what is her sequential circuit,INCORRECT,0,0.04666666666666666
+2026-03-03T21:24:03,Q36,Systems Analysis,What are 'Functional Requirements'?,requirements that refine specific behaviors or functional of the system that the system should do,GOOD,8,0.8132936507936507
+2026-03-03T21:24:38,Q238,Programming,What is a 'Runtime Error'?,an error that occur while the program is running often cause is 2 crash divisional by 0,GOOD,8,0.8099999999999999
+2026-03-03T21:24:59,Q181,ICT and Society,What is 'Spyware'?,software that aims to gather information about the person or organization without their knowledge,GOOD,10,0.95
+2026-03-03T21:25:29,Q68,DBMS,What is a 'One-to-Many' relationship?,a relationship where a single record in table can be related to one or more records in table b butter record in table b is related to only one record in table a,GOOD,8,0.8416666666666666
+2026-03-03T21:25:54,Q74,Systems Analysis,What is the 'Waterfall Model'?,a linear sequential software development lifecycle model vr process progress flaws downwards true face like requirement designing implementation and maintenance,PARTIAL,6,0.5927631578947368
+2026-03-03T21:26:14,Q140,DBMS,What does the DROP TABLE command do?,it deletes an extension table and all its data for the database,GOOD,8,0.7875000000000001
+2026-03-03T21:26:18,Q31,Networking,What is a 'Router'?,what is a router,INCORRECT,1,0.07777777777777777
+2026-03-03T21:26:27,Q6,Data Representation,Convert the binary number 1010 to decimal.,convert the binary number 10102 desimum,WEAK,4,0.36666666666666664
+2026-03-03T21:26:32,Q196,Data Representation,What is 'Parity Bit'?,what is petty beat,INCORRECT,0,0.0
+2026-03-03T21:26:38,Q117,Building Blocks of IS,What is a 'Half Adder'?,what these are half ended,INCORRECT,0,0.0
+2026-03-05T19:57:03,Q83,Programming,What is an 'Interpreter' in Python?,,INCORRECT,0,0.0
+2026-03-05T20:40:36,Q152,Building Blocks of IS,What is the function of the 'Program Counter' (PC)?,,INCORRECT,0,0.0
+2026-03-05T20:41:57,Q95,Programming,What does the or logical operator do?,,INCORRECT,0,0.0
+2026-03-05T20:56:56,Q92,Programming,What is the else statement?,,INCORRECT,0,0.0
+2026-03-05T20:57:30,Q76,Systems Analysis,What is 'Phased Implementation'?,,INCORRECT,0,0.0
+2026-03-06T09:33:39,Q241,Programming,What is a 'Function Parameter'?,,INCORRECT,0,0.0
+2026-03-06T09:34:10,Q241,Programming,What is a 'Function Parameter'?,,INCORRECT,0,0.0
+2026-03-06T09:37:32,Q78,Web Technologies,What is an HTML 'Attribute'?,lhtml attribute,INCORRECT,1,0.05384615384615385
+2026-03-06T12:29:55,Q65,DBMS,What is a 'Candidate Key'?,candidate key,INCORRECT,1,0.09999999999999999
+2026-03-06T12:30:23,Q167,Building Blocks of IS,What is 'Seek Time' in hard disks?,seek time,INCORRECT,1,0.12777777777777777
+2026-03-06T12:31:41,Q149,Systems Analysis,What is 'Unit Testing'?,a level of software testing where individual units come components of software are tested,GOOD,10,0.95
+2026-03-06T12:32:07,Q172,Operating Systems,What is 'Deadlock' in an Operating System?,our dead to block is the operating system,INCORRECT,1,0.09666666666666666
+2026-03-06T12:38:08,Q39,DBMS,What is an 'ER Diagram' (ERD)?,and entity relationship diagram shows the relationship of entity set stored in a database using trafficking symbols,GOOD,9,0.8530303030303031
+2026-03-06T12:38:25,Q245,Building Blocks of IS,What is a 'Truth Table'?,drew deall,INCORRECT,0,0.0
+2026-03-06T12:38:40,Q204,Networking,What is 'Fiber Optic' transmission?,a fiber optic transmission,INCORRECT,0,0.041176470588235294
+2026-03-06T12:39:18,Q109,Programming,"What does file mode ""r"" signify in Python?",you must learn about new information and you must understand,INCORRECT,0,0.0
+2026-03-06T12:39:39,Q223,Systems Analysis,What is 'Technical Feasibility'?,what is technical feasibility,INCORRECT,0,0.0
+2026-03-06T12:40:03,Q202,Networking,What is 'Circuit Switching'?,ah so get ru,INCORRECT,0,0.0
