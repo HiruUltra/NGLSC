@@ -174,21 +174,53 @@ timestamp,question_id,question_text,transcript,grade_level,grade_marks,coverage
 2026-03-03T21:26:27,Q6,Data Representation,Convert the binary number 1010 to decimal.,convert the binary number 10102 desimum,WEAK,4,0.36666666666666664
 2026-03-03T21:26:32,Q196,Data Representation,What is 'Parity Bit'?,what is petty beat,INCORRECT,0,0.0
 2026-03-03T21:26:38,Q117,Building Blocks of IS,What is a 'Half Adder'?,what these are half ended,INCORRECT,0,0.0
-2026-03-05T19:57:03,Q83,Programming,What is an 'Interpreter' in Python?,,INCORRECT,0,0.0
-2026-03-05T20:40:36,Q152,Building Blocks of IS,What is the function of the 'Program Counter' (PC)?,,INCORRECT,0,0.0
-2026-03-05T20:41:57,Q95,Programming,What does the or logical operator do?,,INCORRECT,0,0.0
-2026-03-05T20:56:56,Q92,Programming,What is the else statement?,,INCORRECT,0,0.0
-2026-03-05T20:57:30,Q76,Systems Analysis,What is 'Phased Implementation'?,,INCORRECT,0,0.0
-2026-03-06T09:33:39,Q241,Programming,What is a 'Function Parameter'?,,INCORRECT,0,0.0
-2026-03-06T09:34:10,Q241,Programming,What is a 'Function Parameter'?,,INCORRECT,0,0.0
-2026-03-06T09:37:32,Q78,Web Technologies,What is an HTML 'Attribute'?,lhtml attribute,INCORRECT,1,0.05384615384615385
-2026-03-06T12:29:55,Q65,DBMS,What is a 'Candidate Key'?,candidate key,INCORRECT,1,0.09999999999999999
-2026-03-06T12:30:23,Q167,Building Blocks of IS,What is 'Seek Time' in hard disks?,seek time,INCORRECT,1,0.12777777777777777
-2026-03-06T12:31:41,Q149,Systems Analysis,What is 'Unit Testing'?,a level of software testing where individual units come components of software are tested,GOOD,10,0.95
-2026-03-06T12:32:07,Q172,Operating Systems,What is 'Deadlock' in an Operating System?,our dead to block is the operating system,INCORRECT,1,0.09666666666666666
-2026-03-06T12:38:08,Q39,DBMS,What is an 'ER Diagram' (ERD)?,and entity relationship diagram shows the relationship of entity set stored in a database using trafficking symbols,GOOD,9,0.8530303030303031
-2026-03-06T12:38:25,Q245,Building Blocks of IS,What is a 'Truth Table'?,drew deall,INCORRECT,0,0.0
-2026-03-06T12:38:40,Q204,Networking,What is 'Fiber Optic' transmission?,a fiber optic transmission,INCORRECT,0,0.041176470588235294
-2026-03-06T12:39:18,Q109,Programming,"What does file mode ""r"" signify in Python?",you must learn about new information and you must understand,INCORRECT,0,0.0
-2026-03-06T12:39:39,Q223,Systems Analysis,What is 'Technical Feasibility'?,what is technical feasibility,INCORRECT,0,0.0
-2026-03-06T12:40:03,Q202,Networking,What is 'Circuit Switching'?,ah so get ru,INCORRECT,0,0.0
+2026-03-05T20:46:28,Q170,Operating Systems,What is an 'Interrupt' in OS?,a single two the process emptied by hardware or software indicating an event that needs implemented actions,PARTIAL,5,0.5158333333333334
+2026-03-05T20:47:02,Q6,Data Representation,Convert the binary number 1010 to decimal.,the binary number 1010 is equal to 10 in decimal 8 plus 0 plus 2 plus 0,GOOD,10,0.9833333333333333
+2026-03-05T20:47:34,Q158,Building Blocks of IS,What is the 'Data Bus'?,a petriation bus used to transfer actual data between the cpu memory and iot devices,GOOD,9,0.8508333333333333
+2026-03-05T20:48:01,Q162,Building Blocks of IS,What is 'DRAM' (Dynamic RAM)?,a type of wallet t wallet i memory that use capacitors to store data and require predict refreshing useful main system memory,GOOD,8,0.7506410256410256
+2026-03-05T20:48:21,Q36,Systems Analysis,What are 'Functional Requirements'?,requirements that define specific behaviors or functions of the system what the system should be do,GOOD,9,0.9267857142857142
+2026-03-05T20:48:42,Q42,DBMS,Define 'Normalization' in databases.,normalization needs to process of organizing data in the database to reduce reduce and improve data integrity,GOOD,8,0.8405555555555555
+2026-03-05T20:49:23,Q204,Networking,What is 'Fiber Optic' transmission?,it allows digital data transformation over loading distance and add higher data rate that electric symbol systems by using the pulses of light to glasses straight,PARTIAL,7,0.7019607843137253
+2026-03-05T20:49:49,Q239,Programming,What is 'Variable Scope'?,the recreation of the court with a variable less visible land accessible example local wise global,PARTIAL,6,0.5888888888888889
+2026-03-05T20:50:08,Q5,Building Blocks of IS,What is a 'Volatile Memory'?,autotile memory is computer storage that only maintains its data while the device is powered example ram,GOOD,8,0.8482683982683983
+2026-03-05T20:50:29,Q53,Networking,Describe 'Bus Topology'.,a network setup where which computer and network device is connected to a signal cable or blackboard,PARTIAL,6,0.5733333333333333
+2026-03-05T21:01:53,Q20,Networking,What is 'Simplex Mode' in transmission?,in simplex mode communication needs undirectional data flows in only one direction example use all radio robots,GOOD,9,0.9030303030303031
+2026-03-05T21:02:27,Q147,Systems Analysis,What is 'Black Box Testing'?,a method of software testing that examining the functionality of an application without beeping into its internal structure or workers,PARTIAL,7,0.6840909090909091
+2026-03-05T21:03:55,Q50,Systems Analysis,What is 'Parallel Deployment'?,a development method for the new system and the all system run similarity for a period of time to ensure the new system works correctly,PARTIAL,6,0.6346153846153846
+2026-03-05T21:04:22,Q122,Data Representation,What is 'Sign-Magnitude' representation?,a method of representing signed number we are the more significant bit msp is the signed bit and the remain bit represent the magnitude,PARTIAL,6,0.65
+2026-03-05T21:04:52,Q56,Networking,What is the function of 'DNS' (Domain Name System)?,dns translations human rehabilable domains names like www google com into ip address that computers used to identify each other,GOOD,8,0.8176470588235294
+2026-03-05T21:05:09,Q36,Systems Analysis,What are 'Functional Requirements'?,requirements that define specific behaviors or functions of the system what the system should do,GOOD,9,0.9267857142857142
+2026-03-05T21:05:36,Q222,Systems Analysis,What is 'Feasibility Study'?,and analysis used to determine the variability of the idea in ensuring a project is legally technically and economically justified,GOOD,8,0.828030303030303
+2026-03-05T21:05:59,Q241,Programming,What is a 'Function Parameter'?,a variable use in a function to refer to one of the piece of data provided as input into the functions,GOOD,10,0.95
+2026-03-05T21:06:26,Q48,Systems Analysis,What is 'Black Box Testing'?,a software testing method in which in the internal structure design implementation of the item begin tested is no to the tester,GOOD,8,0.7714743589743589
+2026-03-05T21:06:51,Q65,DBMS,What is a 'Candidate Key'?,a candidate key is a column or set of columns in a table that can uniquely identify any data records without referring to the another any data,GOOD,9,0.85625
+2026-03-06T14:32:53,Q40,DBMS,What is an 'Entity' in a database?,any entity is an object or concept in the real world that is distributed from all the objects students card,GOOD,8,0.7727272727272727
+2026-03-06T14:33:25,Q25,Networking,What is 'Fiber Optic' cable?,a cable continuous glasses or plastic fibers that transmit data using light plus,PARTIAL,5,0.4928571428571428
+2026-03-06T14:33:51,Q170,Operating Systems,What is an 'Interrupt' in OS?,a signal to the process estimated by hardware software including an event that need implemented attention,PARTIAL,7,0.7108333333333333
+2026-03-06T14:34:12,Q158,Building Blocks of IS,What is the 'Data Bus'?,a bus used to transfer actual data between the cpu memory and iaot devices,GOOD,9,0.8508333333333333
+2026-03-06T14:34:19,Q195,Data Representation,What is the 'LSB' (Least Significant Bit)?,but it is the lsb,INCORRECT,0,0.0
+2026-03-06T14:34:24,Q136,Networking,What is the function of a 'Router'?,but it is the functional of router,INCORRECT,0,0.0
+2026-03-06T14:34:29,Q74,Systems Analysis,What is the 'Waterfall Model'?,what is the waterfall model,INCORRECT,0,0.03684210526315789
+2026-03-06T14:34:35,Q19,Networking,Define 'Data Transmission Speed' (Bandwidth).,what is the data transmission speed bandwidth,INCORRECT,1,0.08571428571428572
+2026-03-06T14:34:40,Q32,Networking,What is 'Packet Switching'?,what is the packet switch up,INCORRECT,1,0.10384615384615385
+2026-03-06T14:34:45,Q151,Systems Analysis,What is 'Acceptance Testing'?,what is exception test team,INCORRECT,0,0.0
+2026-03-06T15:58:20,Q67,DBMS,Define 'Cardinality' in ER Diagrams.,define cardinal in year desktop,INCORRECT,1,0.13999999999999999
+2026-03-06T15:58:38,Q8,Data Representation,What is 'Unicode'?,what is unicode,INCORRECT,0,0.049999999999999996
+2026-03-06T15:58:45,Q20,Networking,What is 'Simplex Mode' in transmission?,what is simplex mode in transformation,INCORRECT,1,0.14393939393939392
+2026-03-06T15:58:51,Q58,Networking,Difference between LAN and WAN.,define between land and land,INCORRECT,0,0.041176470588235294
+2026-03-06T15:58:56,Q68,DBMS,What is a 'One-to-Many' relationship?,but is one to many relationship,INCORRECT,2,0.22499999999999998
+2026-03-06T15:59:02,Q91,Programming,What does the if statement do?,what does the if statement 2,INCORRECT,1,0.12727272727272726
+2026-03-06T15:59:07,Q114,Building Blocks of IS,What is a 'Logic Gate'?,but it s a logic gate,INCORRECT,2,0.18166666666666664
+2026-03-06T15:59:13,Q164,Building Blocks of IS,What is 'BIOS' (Basic Input/Output System)?,what is dos,INCORRECT,0,0.0
+2026-03-06T15:59:18,Q11,Building Blocks of IS,What is a 'Flip-Flop' in digital circuits?,what is it,INCORRECT,0,0.0
+2026-03-06T15:59:22,Q40,DBMS,What is an 'Entity' in a database?,what is it,INCORRECT,0,0.0
+2026-03-06T17:06:56,Q211,Networking,What is the 'Session Layer' in the OSI model?,what is the session layer in the osi model,INCORRECT,2,0.16666666666666666
+2026-03-06T17:07:06,Q193,Data Representation,What is 'Hexadecimal Number System'?,hicks are decimal number system,INCORRECT,2,0.19999999999999998
+2026-03-06T17:07:13,Q124,Data Representation,What is 'Two's Complement'?,parties tools compliment,INCORRECT,0,0.0
+2026-03-06T17:07:26,Q246,Building Blocks of IS,What is 'De Morgans Law'?,they also have crossed the street at home,INCORRECT,0,0.0
+2026-03-06T17:07:36,Q35,Systems Analysis,What is a 'Feasibility Study'?,facibility study,INCORRECT,0,0.0
+2026-03-06T17:07:46,Q89,Programming,What is 'Indentation' in Python?,what is orientation in python,INCORRECT,0,0.0
+2026-03-06T17:07:58,Q133,Networking,What is 'Full-Duplex' transmission?,full continuity of low,INCORRECT,1,0.06999999999999999
+2026-03-06T17:08:08,Q84,Programming,What is the function of print() in Python?,what is the functional function of printing,INCORRECT,0,0.0
+2026-03-06T17:08:19,Q180,ICT and Society,What is a 'Trojan Horse'?,joshun speaker georgia pres m wi hansen torse and,INCORRECT,0,0.0
+2026-03-06T17:08:30,Q34,Systems Analysis,What is the 'Waterfall Model'?,like these waterfoil models,INCORRECT,1,0.05784313725490196

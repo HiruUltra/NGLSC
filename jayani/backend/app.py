@@ -1,5 +1,8 @@
+
 import os
 from datetime import datetime, timezone
+from contextlib import asynccontextmanager
+
 from bson import ObjectId
 from dotenv import load_dotenv
 
@@ -9,19 +12,29 @@ from pydantic import BaseModel
 
 from dbconnect import init_db, col
 from auth import router as auth_router, get_current_user
+from quiz_api import router as quiz_router
 
 from starlette.middleware.wsgi import WSGIMiddleware
 from voicemodel import voice_app
-from quiz_api import router as quiz_router
-
 
 load_dotenv()
 
-app = FastAPI(title="Backend + Mongo + JWT (No Mongo Auth)")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
+
+
+app = FastAPI(
+    title="Backend + Mongo + JWT (No Mongo Auth)",
+    lifespan=lifespan,
+)
 
 # Mount Flask ICT/Voice service under /ict
 app.mount("/ict", WSGIMiddleware(voice_app))
 app.include_router(quiz_router)
+app.include_router(auth_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -34,17 +47,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.on_event("startup")
-def startup():
-    init_db()
-
-app.include_router(auth_router)
-
 
 @app.get("/api/health")
 def health():
     return {"ok": True, "time": datetime.now(timezone.utc).isoformat()}
-
 
 
 class ItemIn(BaseModel):
@@ -72,18 +78,25 @@ def list_items(user=Depends(get_current_user)):
     items = col("items")
     out = []
     for d in items.find({"user_id": user["id"]}).sort("created_at", -1).limit(100):
-        out.append({
-            "id": str(d["_id"]),
-            "title": d.get("title", ""),
-            "created_at": d.get("created_at"),
-        })
+        out.append(
+            {
+                "id": str(d["_id"]),
+                "title": d.get("title", ""),
+                "created_at": d.get("created_at"),
+            }
+        )
     return {"items": out}
 
 
 @app.delete("/api/items/{item_id}")
 def delete_item(item_id: str, user=Depends(get_current_user)):
     items = col("items")
-    res = items.delete_one({"_id": ObjectId(item_id), "user_id": user["id"]})
+    try:
+        oid = ObjectId(item_id)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid item id")
+
+    res = items.delete_one({"_id": oid, "user_id": user["id"]})
     if res.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Not found")
     return {"deleted": True}
@@ -91,5 +104,6 @@ def delete_item(item_id: str, user=Depends(get_current_user)):
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.getenv("PORT", "8000"))
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
+
+    port = int(os.getenv("PORT", "5000"))
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)

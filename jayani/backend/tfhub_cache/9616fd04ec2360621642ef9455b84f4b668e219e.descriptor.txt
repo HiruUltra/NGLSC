@@ -1,0 +1,3 @@
+Module: https://tfhub.dev/google/yamnet/1
+Download Time: 2026-03-06 17:01:44.567633
+Downloader Hostname: DESKTOP-59AC18N (PID:2232)

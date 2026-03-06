@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { apiFetch } from "../utils/api";
-
+import { Play, Square } from "lucide-react";
 // ✅ PDF tools
 import jsPDF from "jspdf";
 
@@ -722,12 +722,28 @@ async function downloadReport() {
 
                     {/* ✅ PLAY / STOP button */}
                     <button
-                      onClick={() => handleSpeak("worst", worstSpeakText)}
-                      className="h-9 w-9 rounded-full bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition"
-                      title={speakingKey === "worst" ? "Stop" : "Play voice"}
-                    >
-                      {speakingKey === "worst" ? "Stop" : "Play"}
-                    </button>
+  onClick={() => handleSpeak("worst", worstSpeakText)}
+  type="button"
+  className={[
+    "group inline-flex h-9 w-9 items-center justify-center rounded-full",
+    "border border-slate-200 bg-white/80 shadow-sm backdrop-blur",
+    "hover:bg-white hover:shadow-md hover:-translate-y-[1px]",
+    "active:translate-y-0 active:shadow-sm",
+    "dark:border-slate-700 dark:bg-slate-800/80 dark:hover:bg-slate-800",
+    "transition-all duration-200",
+    speakingKey === "worst"
+      ? "border-emerald-300 bg-emerald-50/70 dark:border-emerald-500/40 dark:bg-emerald-500/10"
+      : "",
+  ].join(" ")}
+  title={speakingKey === "worst" ? "Stop" : "Play voice"}
+  aria-label={speakingKey === "worst" ? "Stop voice" : "Play voice"}
+>
+  {speakingKey === "worst" ? (
+    <Square className="h-4 w-4 text-emerald-600 dark:text-emerald-300" />
+  ) : (
+    <Play className="h-4 w-4 text-slate-700 dark:text-slate-200" />
+  )}
+</button>
                   </div>
                 </div>
 
@@ -773,12 +789,33 @@ async function downloadReport() {
 
                     {/* ✅ PLAY / STOP button */}
                     <button
-                      onClick={() => handleSpeak("best", bestSpeakText)}
-                      className="h-9 w-9 rounded-full bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition"
-                      title={speakingKey === "best" ? "Stop" : "Play voice"}
-                    >
-                      {speakingKey === "best" ? "Stop" : "Play"}
-                    </button>
+  onClick={() => handleSpeak("best", bestSpeakText)}
+  className="h-9 w-9 rounded-full bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-105 transition"
+  title={speakingKey === "best" ? "Stop" : "Play voice"}
+  aria-label={speakingKey === "best" ? "Stop voice" : "Play voice"}
+>
+  {speakingKey === "best" ? (
+    // ✅ STOP icon
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 text-emerald-600 dark:text-emerald-300"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <rect x="7" y="7" width="10" height="10" rx="2" />
+    </svg>
+  ) : (
+    // ✅ PLAY icon
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 text-slate-700 dark:text-slate-200"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10-6.5a1 1 0 0 0 0-1.72l-10-6.5A1 1 0 0 0 8 5.5z" />
+    </svg>
+  )}
+</button>
                   </div>
                 </div>
 
