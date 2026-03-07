@@ -24,7 +24,7 @@ import './App.css';
 
 // Main quiz app component
 function QuizApp() {
-    const { token } = useAuth();
+    const { token, user } = useAuth();
     const [appState, setAppState] = useState('config'); // 'config', 'quiz', 'results'
     const [quizData, setQuizData] = useState(null);
     const [quizResult, setQuizResult] = useState(null);
@@ -145,7 +145,7 @@ function QuizApp() {
                 {/* 3D Exam Hall Area - Takes most of the space (Center) */}
                 <div className="flex-1 overflow-hidden bg-black transition-colors duration-300 relative">
                     <ErrorBoundary>
-                        <ExamHall currentAlert={currentAlert} />
+                        <ExamHall currentAlert={currentAlert} userName={user?.full_name || user?.username} />
                     </ErrorBoundary>
                 </div>
 
