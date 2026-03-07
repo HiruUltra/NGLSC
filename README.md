@@ -1,6 +1,37 @@
 # Next-Generation Smart Classroom
 
 This project implements an AI-powered smart classroom system...
+
+## 🚀 Backend Setup
+
+> **Important:** Never commit the `venv/` directory. Each developer must create their own virtual environment locally.
+
+### Prerequisites
+- Python 3.12 (or compatible version)
+
+### Steps
+
+```bash
+# Navigate to the backend directory
+cd backend
+
+# Create a new virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
+# On Windows (CMD):
+.\venv\Scripts\activate.bat
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python main.py
+```
 # Next-Generation Smart Classroom System
 
 ## 📘 Project Overview
